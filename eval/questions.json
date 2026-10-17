@@ -1,0 +1,455 @@
+{
+  "_note": "질문 해석 평가셋. expected는 사람이 정한 정답(회사명은 질문에 쓰인 그대로, 상대 연도·연도 없음·복수 회사·지원 밖 작업은 null). dev는 프롬프트 개선에 써도 되고, final은 최종 확인 전용(프롬프트·예시에 넣지 않는다). 2차 추가분(dev_hard, final_hard)은 오타·반말·영어·약칭·복수 작업·비교 같은 어려운 질문이다. final(1차)은 이미 한 번 실행했다. 복수 작업·비교 질문은 한 번에 한 작업만 지원하므로 task를 null로 정했다.",
+  "items": [
+    {
+      "id": "d01",
+      "split": "dev",
+      "question": "삼성전자 2024년 실적 알려줘",
+      "expected": {
+        "company": "삼성전자",
+        "year": 2024,
+        "task": "실적 조회"
+      }
+    },
+    {
+      "id": "d02",
+      "split": "dev",
+      "question": "SK하이닉스 2023년 영업이익률이 얼마야?",
+      "expected": {
+        "company": "SK하이닉스",
+        "year": 2023,
+        "task": "영업이익률 계산"
+      }
+    },
+    {
+      "id": "d03",
+      "split": "dev",
+      "question": "현대자동차의 2025년 매출 성장률 계산해줘",
+      "expected": {
+        "company": "현대자동차",
+        "year": 2025,
+        "task": "매출 성장률 계산"
+      }
+    },
+    {
+      "id": "d04",
+      "split": "dev",
+      "question": "2022년 삼성전자 매출액이랑 영업이익 보여줘",
+      "expected": {
+        "company": "삼성전자",
+        "year": 2022,
+        "task": "실적 조회"
+      }
+    },
+    {
+      "id": "d05",
+      "split": "dev",
+      "question": "카카오 2024 사업연도 영업이익률",
+      "expected": {
+        "company": "카카오",
+        "year": 2024,
+        "task": "영업이익률 계산"
+      }
+    },
+    {
+      "id": "d06",
+      "split": "dev",
+      "question": "NAVER 2023년에 매출이 전년 대비 얼마나 늘었어?",
+      "expected": {
+        "company": "NAVER",
+        "year": 2023,
+        "task": "매출 성장률 계산"
+      }
+    },
+    {
+      "id": "d07",
+      "split": "dev",
+      "question": "기아 2024년 영업이익 얼마였지?",
+      "expected": {
+        "company": "기아",
+        "year": 2024,
+        "task": "실적 조회"
+      }
+    },
+    {
+      "id": "d08",
+      "split": "dev",
+      "question": "삼성전자 영업이익률 알려줘",
+      "expected": {
+        "company": "삼성전자",
+        "year": null,
+        "task": "영업이익률 계산"
+      }
+    },
+    {
+      "id": "d09",
+      "split": "dev",
+      "question": "2024년 영업이익률은?",
+      "expected": {
+        "company": null,
+        "year": 2024,
+        "task": "영업이익률 계산"
+      }
+    },
+    {
+      "id": "d10",
+      "split": "dev",
+      "question": "삼성전자 2024년 주가 예측해줘",
+      "expected": {
+        "company": "삼성전자",
+        "year": 2024,
+        "task": null
+      }
+    },
+    {
+      "id": "d11",
+      "split": "dev",
+      "question": "삼성전자랑 SK하이닉스 2024년 영업이익률 비교해줘",
+      "expected": {
+        "company": null,
+        "year": 2024,
+        "task": "영업이익률 계산"
+      }
+    },
+    {
+      "id": "d12",
+      "split": "dev",
+      "question": "삼전 2024년 매출 성장률",
+      "expected": {
+        "company": "삼전",
+        "year": 2024,
+        "task": "매출 성장률 계산"
+      }
+    },
+    {
+      "id": "d13",
+      "split": "dev",
+      "question": "삼성전자 작년 실적",
+      "expected": {
+        "company": "삼성전자",
+        "year": null,
+        "task": "실적 조회"
+      }
+    },
+    {
+      "id": "d14",
+      "split": "dev",
+      "question": "삼성전자 2024년 영업이익이 매출에서 차지하는 비율",
+      "expected": {
+        "company": "삼성전자",
+        "year": 2024,
+        "task": "영업이익률 계산"
+      }
+    },
+    {
+      "id": "f01",
+      "split": "final",
+      "question": "LG에너지솔루션 2024년 실적 조회",
+      "expected": {
+        "company": "LG에너지솔루션",
+        "year": 2024,
+        "task": "실적 조회"
+      }
+    },
+    {
+      "id": "f02",
+      "split": "final",
+      "question": "셀트리온 2023년 영업이익률 계산해 줘",
+      "expected": {
+        "company": "셀트리온",
+        "year": 2023,
+        "task": "영업이익률 계산"
+      }
+    },
+    {
+      "id": "f03",
+      "split": "final",
+      "question": "POSCO홀딩스의 2025년 매출 증가율",
+      "expected": {
+        "company": "POSCO홀딩스",
+        "year": 2025,
+        "task": "매출 성장률 계산"
+      }
+    },
+    {
+      "id": "f04",
+      "split": "final",
+      "question": "현대자동차 2022년 영업이익이랑 매출",
+      "expected": {
+        "company": "현대자동차",
+        "year": 2022,
+        "task": "실적 조회"
+      }
+    },
+    {
+      "id": "f05",
+      "split": "final",
+      "question": "하이닉스 2024년 영업이익률",
+      "expected": {
+        "company": "하이닉스",
+        "year": 2024,
+        "task": "영업이익률 계산"
+      }
+    },
+    {
+      "id": "f06",
+      "split": "final",
+      "question": "SK하이닉스 매출 성장률",
+      "expected": {
+        "company": "SK하이닉스",
+        "year": null,
+        "task": "매출 성장률 계산"
+      }
+    },
+    {
+      "id": "f07",
+      "split": "final",
+      "question": "올해 영업이익률 알려줘",
+      "expected": {
+        "company": null,
+        "year": null,
+        "task": "영업이익률 계산"
+      }
+    },
+    {
+      "id": "f08",
+      "split": "final",
+      "question": "삼성전자 투자해도 될까?",
+      "expected": {
+        "company": "삼성전자",
+        "year": null,
+        "task": null
+      }
+    },
+    {
+      "id": "f09",
+      "split": "final",
+      "question": "카카오 2025년 실적",
+      "expected": {
+        "company": "카카오",
+        "year": 2025,
+        "task": "실적 조회"
+      }
+    },
+    {
+      "id": "f10",
+      "split": "final",
+      "question": "삼성전자 2023년 대비 2024년 매출이 몇 퍼센트 증가했는지",
+      "expected": {
+        "company": "삼성전자",
+        "year": 2024,
+        "task": "매출 성장률 계산"
+      }
+    },
+    {
+      "id": "f11",
+      "split": "final",
+      "question": "네이버 2024년 영업이익률",
+      "expected": {
+        "company": "네이버",
+        "year": 2024,
+        "task": "영업이익률 계산"
+      }
+    },
+    {
+      "id": "h01",
+      "split": "dev_hard",
+      "question": "삼성전자 24년 영업이익률",
+      "expected": {
+        "company": "삼성전자",
+        "year": 2024,
+        "task": "영업이익률 계산"
+      }
+    },
+    {
+      "id": "h02",
+      "split": "dev_hard",
+      "question": "삼성전자 2024년 영업이익율 알려줘",
+      "expected": {
+        "company": "삼성전자",
+        "year": 2024,
+        "task": "영업이익률 계산"
+      }
+    },
+    {
+      "id": "h03",
+      "split": "dev_hard",
+      "question": "하이닉스 작년 말고 2023년 실적 줘",
+      "expected": {
+        "company": "하이닉스",
+        "year": 2023,
+        "task": "실적 조회"
+      }
+    },
+    {
+      "id": "h04",
+      "split": "dev_hard",
+      "question": "카카오 2024년 매출 얼마 늘었냐",
+      "expected": {
+        "company": "카카오",
+        "year": 2024,
+        "task": "매출 성장률 계산"
+      }
+    },
+    {
+      "id": "h05",
+      "split": "dev_hard",
+      "question": "삼성전자 2024년 영업이익률이랑 매출 성장률 둘 다 알려줘",
+      "expected": {
+        "company": "삼성전자",
+        "year": 2024,
+        "task": null
+      }
+    },
+    {
+      "id": "h06",
+      "split": "dev_hard",
+      "question": "기아 2023년 매출이 전년보다 올랐어?",
+      "expected": {
+        "company": "기아",
+        "year": 2023,
+        "task": "매출 성장률 계산"
+      }
+    },
+    {
+      "id": "h07",
+      "split": "dev_hard",
+      "question": "naver 2024 operating margin",
+      "expected": {
+        "company": "naver",
+        "year": 2024,
+        "task": "영업이익률 계산"
+      }
+    },
+    {
+      "id": "h08",
+      "split": "dev_hard",
+      "question": "현대차 2024년 실적",
+      "expected": {
+        "company": "현대차",
+        "year": 2024,
+        "task": "실적 조회"
+      }
+    },
+    {
+      "id": "h09",
+      "split": "dev_hard",
+      "question": "삼성전자 2025년이랑 2024년 중에 영업이익 어디가 높아?",
+      "expected": {
+        "company": "삼성전자",
+        "year": 2025,
+        "task": null
+      }
+    },
+    {
+      "id": "h10",
+      "split": "dev_hard",
+      "question": "2024년 삼성전자 SK하이닉스 현대자동차 매출액",
+      "expected": {
+        "company": null,
+        "year": 2024,
+        "task": "실적 조회"
+      }
+    },
+    {
+      "id": "g01",
+      "split": "final_hard",
+      "question": "셀트리온 23년 매출 성장률",
+      "expected": {
+        "company": "셀트리온",
+        "year": 2023,
+        "task": "매출 성장률 계산"
+      }
+    },
+    {
+      "id": "g02",
+      "split": "final_hard",
+      "question": "기아 2024년 영업이익율 알려줘",
+      "expected": {
+        "company": "기아",
+        "year": 2024,
+        "task": "영업이익률 계산"
+      }
+    },
+    {
+      "id": "g03",
+      "split": "final_hard",
+      "question": "카카오 2025년 영업이익 얼마냐?",
+      "expected": {
+        "company": "카카오",
+        "year": 2025,
+        "task": "실적 조회"
+      }
+    },
+    {
+      "id": "g04",
+      "split": "final_hard",
+      "question": "SK하이닉스 2024년 영업이익률이랑 실적 같이 보여줘",
+      "expected": {
+        "company": "SK하이닉스",
+        "year": 2024,
+        "task": null
+      }
+    },
+    {
+      "id": "g05",
+      "split": "final_hard",
+      "question": "삼성 2024년 실적",
+      "expected": {
+        "company": "삼성",
+        "year": 2024,
+        "task": "실적 조회"
+      }
+    },
+    {
+      "id": "g06",
+      "split": "final_hard",
+      "question": "NAVER 2024 영업이익률 vs 카카오",
+      "expected": {
+        "company": null,
+        "year": 2024,
+        "task": "영업이익률 계산"
+      }
+    },
+    {
+      "id": "g07",
+      "split": "final_hard",
+      "question": "현대자동차 2024년 매출이 반토막 났어?",
+      "expected": {
+        "company": "현대자동차",
+        "year": 2024,
+        "task": "매출 성장률 계산"
+      }
+    },
+    {
+      "id": "g08",
+      "split": "final_hard",
+      "question": "삼성전자 2023",
+      "expected": {
+        "company": "삼성전자",
+        "year": 2023,
+        "task": null
+      }
+    },
+    {
+      "id": "g09",
+      "split": "final_hard",
+      "question": "ㅋㅋ 카카오 2024년 영업이익률 궁금함",
+      "expected": {
+        "company": "카카오",
+        "year": 2024,
+        "task": "영업이익률 계산"
+      }
+    },
+    {
+      "id": "g10",
+      "split": "final_hard",
+      "question": "삼성전자 FY2024 영업이익률",
+      "expected": {
+        "company": "삼성전자",
+        "year": 2024,
+        "task": "영업이익률 계산"
+      }
+    }
+  ]
+}

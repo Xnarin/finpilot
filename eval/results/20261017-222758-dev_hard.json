@@ -1,0 +1,243 @@
+{
+ "meta": {
+  "run_at": "2026-10-17T22:27:57",
+  "model": "gemini-3.5-flash-lite",
+  "temperature": 0,
+  "prompt_sha256": "fb05c08f8805",
+  "dataset_sha256": "9866d8fa6d02",
+  "langsmith_project": "finpilot-eval",
+  "repeats": 1
+ },
+ "summary": {
+  "split": "dev_hard",
+  "n": 10,
+  "all_correct": 8,
+  "company_correct": 9,
+  "year_correct": 9,
+  "task_correct": 9,
+  "errors": 0,
+  "mean_ms": 1206.8317599972943
+ },
+ "rows": [
+  {
+   "id": "h01",
+   "question": "삼성전자 24년 영업이익률",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "got": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 1798.2818000018597
+  },
+  {
+   "id": "h02",
+   "question": "삼성전자 2024년 영업이익율 알려줘",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "got": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 1391.4326000085566
+  },
+  {
+   "id": "h03",
+   "question": "하이닉스 작년 말고 2023년 실적 줘",
+   "expected": {
+    "company": "하이닉스",
+    "year": 2023,
+    "task": "실적 조회"
+   },
+   "got": {
+    "company": "하이닉스",
+    "year": 2023,
+    "task": "실적 조회"
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 944.1657999996096
+  },
+  {
+   "id": "h04",
+   "question": "카카오 2024년 매출 얼마 늘었냐",
+   "expected": {
+    "company": "카카오",
+    "year": 2024,
+    "task": "매출 성장률 계산"
+   },
+   "got": {
+    "company": "카카오",
+    "year": 2024,
+    "task": "매출 성장률 계산"
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 1258.1743999908213
+  },
+  {
+   "id": "h05",
+   "question": "삼성전자 2024년 영업이익률이랑 매출 성장률 둘 다 알려줘",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": null
+   },
+   "got": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": null
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 1051.1849999893457
+  },
+  {
+   "id": "h06",
+   "question": "기아 2023년 매출이 전년보다 올랐어?",
+   "expected": {
+    "company": "기아",
+    "year": 2023,
+    "task": "매출 성장률 계산"
+   },
+   "got": {
+    "company": "기아",
+    "year": 2023,
+    "task": "매출 성장률 계산"
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 973.5180000134278
+  },
+  {
+   "id": "h07",
+   "question": "naver 2024 operating margin",
+   "expected": {
+    "company": "naver",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "got": {
+    "company": "naver",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 933.6617999942973
+  },
+  {
+   "id": "h08",
+   "question": "현대차 2024년 실적",
+   "expected": {
+    "company": "현대차",
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "got": {
+    "company": "현대차",
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 1332.5792999821715
+  },
+  {
+   "id": "h09",
+   "question": "삼성전자 2025년이랑 2024년 중에 영업이익 어디가 높아?",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2025,
+    "task": null
+   },
+   "got": {
+    "company": null,
+    "year": null,
+    "task": null
+   },
+   "error": null,
+   "field_ok": {
+    "company": false,
+    "year": false,
+    "task": true
+   },
+   "all_ok": false,
+   "ms": 1389.8718999989796
+  },
+  {
+   "id": "h10",
+   "question": "2024년 삼성전자 SK하이닉스 현대자동차 매출액",
+   "expected": {
+    "company": null,
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "got": {
+    "company": null,
+    "year": 2024,
+    "task": null
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": false
+   },
+   "all_ok": false,
+   "ms": 995.4469999938738
+  }
+ ]
+}

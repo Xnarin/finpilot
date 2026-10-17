@@ -1,0 +1,265 @@
+{
+ "meta": {
+  "run_at": "2026-10-17T22:29:34",
+  "model": "gemini-3.5-flash-lite",
+  "temperature": 0,
+  "prompt_sha256": "a7fa13a808a2",
+  "dataset_sha256": "9866d8fa6d02",
+  "langsmith_project": "finpilot-eval",
+  "repeats": 1
+ },
+ "summary": {
+  "split": "final",
+  "n": 11,
+  "all_correct": 11,
+  "company_correct": 11,
+  "year_correct": 11,
+  "task_correct": 11,
+  "errors": 0,
+  "mean_ms": 1211.209172729551
+ },
+ "rows": [
+  {
+   "id": "f01",
+   "question": "LG에너지솔루션 2024년 실적 조회",
+   "expected": {
+    "company": "LG에너지솔루션",
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "got": {
+    "company": "LG에너지솔루션",
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 2108.0142999999225
+  },
+  {
+   "id": "f02",
+   "question": "셀트리온 2023년 영업이익률 계산해 줘",
+   "expected": {
+    "company": "셀트리온",
+    "year": 2023,
+    "task": "영업이익률 계산"
+   },
+   "got": {
+    "company": "셀트리온",
+    "year": 2023,
+    "task": "영업이익률 계산"
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 1017.6859000057448
+  },
+  {
+   "id": "f03",
+   "question": "POSCO홀딩스의 2025년 매출 증가율",
+   "expected": {
+    "company": "POSCO홀딩스",
+    "year": 2025,
+    "task": "매출 성장률 계산"
+   },
+   "got": {
+    "company": "POSCO홀딩스",
+    "year": 2025,
+    "task": "매출 성장률 계산"
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 1546.9834000105038
+  },
+  {
+   "id": "f04",
+   "question": "현대자동차 2022년 영업이익이랑 매출",
+   "expected": {
+    "company": "현대자동차",
+    "year": 2022,
+    "task": "실적 조회"
+   },
+   "got": {
+    "company": "현대자동차",
+    "year": 2022,
+    "task": "실적 조회"
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 1427.795600000536
+  },
+  {
+   "id": "f05",
+   "question": "하이닉스 2024년 영업이익률",
+   "expected": {
+    "company": "하이닉스",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "got": {
+    "company": "하이닉스",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 908.459700003732
+  },
+  {
+   "id": "f06",
+   "question": "SK하이닉스 매출 성장률",
+   "expected": {
+    "company": "SK하이닉스",
+    "year": null,
+    "task": "매출 성장률 계산"
+   },
+   "got": {
+    "company": "SK하이닉스",
+    "year": null,
+    "task": "매출 성장률 계산"
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 1141.6388000070583
+  },
+  {
+   "id": "f07",
+   "question": "올해 영업이익률 알려줘",
+   "expected": {
+    "company": null,
+    "year": null,
+    "task": "영업이익률 계산"
+   },
+   "got": {
+    "company": null,
+    "year": null,
+    "task": "영업이익률 계산"
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 902.112700016005
+  },
+  {
+   "id": "f08",
+   "question": "삼성전자 투자해도 될까?",
+   "expected": {
+    "company": "삼성전자",
+    "year": null,
+    "task": null
+   },
+   "got": {
+    "company": "삼성전자",
+    "year": null,
+    "task": null
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 912.2254999820143
+  },
+  {
+   "id": "f09",
+   "question": "카카오 2025년 실적",
+   "expected": {
+    "company": "카카오",
+    "year": 2025,
+    "task": "실적 조회"
+   },
+   "got": {
+    "company": "카카오",
+    "year": 2025,
+    "task": "실적 조회"
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 850.5690000019968
+  },
+  {
+   "id": "f10",
+   "question": "삼성전자 2023년 대비 2024년 매출이 몇 퍼센트 증가했는지",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": "매출 성장률 계산"
+   },
+   "got": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": "매출 성장률 계산"
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 1131.8559999926947
+  },
+  {
+   "id": "f11",
+   "question": "네이버 2024년 영업이익률",
+   "expected": {
+    "company": "네이버",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "got": {
+    "company": "네이버",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "error": null,
+   "field_ok": {
+    "company": true,
+    "year": true,
+    "task": true
+   },
+   "all_ok": true,
+   "ms": 1375.9600000048522
+  }
+ ]
+}
