@@ -31,7 +31,8 @@ streamlit run app.py
 ## 테스트
 
 ```bash
-python -m pytest
+python -m pytest              # 오프라인 단위 테스트
+python -m pytest tests_live   # 실제 OpenDART 호출(키 필요), 사용자가 원문 대조한 수치와 비교
 ```
 
 테스트는 가상·고정 응답을 사용하므로 네트워크와 키가 필요 없습니다. 통과해도 실제 OpenDART 연동 성공을 뜻하지는 않으며, 실제 연동은 화면 실행으로 확인합니다.
@@ -60,7 +61,9 @@ python -m pytest
 | 2026-10-17 | 화면에서 오류 상황 직접 확인 (확인자: 사용자): 없는 회사, 부분 이름, 금융업, 데이터 없음, 틀린 키(`API_ERROR`, 키 미노출) 등 | 의도한 오류 코드로 표시 |
 | 2026-10-17 | 질문 해석 평가 (Gemini 실호출, 1회, 프롬프트 튜닝 없이 첫 버전) | dev 14/14, final 11/11 (기업·연도·작업 모두 일치). 표본이 작아 일반 정확도로 해석하지 말 것 |
 | 2026-10-17 | 화면 로직 시뮬레이션(AppTest): 질문 → 해석 → 조회 → 계산, 연도 누락 질문 중단. LangSmith에 trace 도착 확인(API 조회) | 정상 |
-| 2026-10-17 | 질문 해석 2차 평가(어려운 질문 20개 추가, 프롬프트 v4) | dev 13/14, dev_hard 10/10, final 11/11, final_hard 7/10. 상세·실패 사례는 `docs/eval_results.md` |
+| 2026-10-17 | 질문 해석 2차 평가(어려운 질문 20개 추가, 프롬프트 v4) | dev 13/14, dev_hard 10/10, final 11/11, final_hard 7/10. 상세·실패 사례는 `docs/evaluation/eval_results.md` |
+| 2026-10-17 | 전체 45문항 3회 반복(135회) + 실제 OpenDART 회귀 테스트(12개 조합, 사용자 원문 대조값) + LangSmith trace 비밀값 점검(200 run) | 호출 단위 93.3%, 비일관 2문항 / 13개 통과 / 비밀값 0건. `docs/evaluation/eval_results.md`·`docs/verification/test_results.md` 참고 |
+| 2026-10-18 | 평가 질문 114개의 정답을 사용자가 검토 (확인자: 사용자) | 이견 없음(별도 수정 메모 없음). 기준선 태그 `baseline-single-request` 생성 |
 
 원문 대조 방법: `https://dart.fss.or.kr/dsaf001/main.do?rcpNo=<접수번호>` → 연결 손익계산서의 당기 열, 단위(백만원) 환산 후 비교. 새 회사나 계정 규칙을 추가할 때마다 같은 방법으로 대조하고 이 표에 추가한다.
 
@@ -68,7 +71,11 @@ python -m pytest
 
 - `question.py`: 모델 `gemini-3.5-flash-lite`(temperature 0, 구조화 JSON 출력)로 {company, year, task}만 추출합니다. 연도 없음·"작년/올해" 같은 상대 연도·복수 회사·지원 밖 작업은 `null`로 두고, 하나라도 비면 추측하지 않고 `QUESTION_INCOMPLETE`로 멈춥니다. 회사명은 약칭 보정 없이 쓰인 그대로 넘기고, 못 찾으면 회사 후보를 되묻습니다. 한 번에 하나의 작업만 지원하므로 복수 작업·연도 간 우열 비교는 task를 비웁니다.
 - LangSmith: `ask` → `parse_question`(llm) → `run` → `fetch_financials`(tool) 흐름이 한 요청의 trace로 남습니다. 전송 입력은 질문 문장과 회사·연도·작업뿐이며 키는 포함하지 않습니다. 화면은 tracing 켜짐/꺼짐만 보여 주고, 전송 성공 여부는 SDK가 백그라운드로 처리해 확인하지 못합니다. 이 trace는 실제 실행 관찰용이며 품질 평가가 아닙니다.
-- 평가: `python -m eval.run_eval dev|final|all` (실제 Gemini 호출, LangSmith 프로젝트 `finpilot-eval`). 질문 45개(`eval/questions.json`: dev 14·final 11·dev_hard 10·final_hard 10)의 정답은 사람이 정했고 필드별 일치를 코드로 판정합니다. 결과·모델·프롬프트/데이터셋 해시는 `eval/results/`에 저장됩니다.
+- 평가: `python -m eval.run_eval dev|final|dev_hard|final_hard|all [반복횟수]` (실제 Gemini 호출, LangSmith 프로젝트 `finpilot-eval`). 질문 45개(`eval/questions.json`: dev 14·final 11·dev_hard 10·final_hard 10, 검토용 목록 `docs/evaluation/eval_questions.md`, 질문별 응답 `docs/evaluation/eval_responses.md`, 답하지 못한 경우 백로그 `docs/backlog/unresolved_cases.md`)의 정답은 사람이 정했고 필드별 일치를 코드로 판정합니다. 결과·모델·프롬프트/데이터셋 해시는 `eval/results/`에 저장됩니다.
+
+## 문서 목차
+
+모든 문서와 평가 결과 파일의 목차: [docs/index.md](docs/index.md)
 
 ## 구조
 

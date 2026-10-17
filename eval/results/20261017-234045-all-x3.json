@@ -1,0 +1,3314 @@
+{
+ "meta": {
+  "run_at": "2026-10-17T23:40:45",
+  "model": "gemini-3.5-flash-lite",
+  "temperature": 0,
+  "prompt_sha256": "a7fa13a808a2",
+  "dataset_sha256": "9866d8fa6d02",
+  "langsmith_project": "finpilot-eval",
+  "repeats": 3
+ },
+ "summary": {
+  "split": "all",
+  "questions": 45,
+  "repeats": 3,
+  "runs": 135,
+  "run_accuracy_all_fields": 0.9333333333333333,
+  "run_accuracy_company": 1.0,
+  "run_accuracy_year": 1.0,
+  "run_accuracy_task": 0.9333333333333333,
+  "questions_always_correct": 41,
+  "questions_inconsistent": 2,
+  "call_errors": 0,
+  "mean_ms": 1092.930317035859,
+  "input_tokens_per_call": 325.68888888888887,
+  "output_tokens_per_call": 29.08888888888889
+ },
+ "rows": [
+  {
+   "id": "d01",
+   "question": "삼성전자 2024년 실적 알려줘",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1833.7000000174157,
+     "usage": {
+      "input_tokens": 324,
+      "output_tokens": 33,
+      "total_tokens": 357
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 859.6037999959663,
+     "usage": {
+      "input_tokens": 324,
+      "output_tokens": 33,
+      "total_tokens": 357
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 927.5389999966137,
+     "usage": {
+      "input_tokens": 324,
+      "output_tokens": 33,
+      "total_tokens": 357
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "d02",
+   "question": "SK하이닉스 2023년 영업이익률이 얼마야?",
+   "expected": {
+    "company": "SK하이닉스",
+    "year": 2023,
+    "task": "영업이익률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "SK하이닉스",
+      "year": 2023,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1155.2520999975968,
+     "usage": {
+      "input_tokens": 330,
+      "output_tokens": 29,
+      "total_tokens": 359
+     }
+    },
+    {
+     "got": {
+      "company": "SK하이닉스",
+      "year": 2023,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 986.3568000146188,
+     "usage": {
+      "input_tokens": 330,
+      "output_tokens": 38,
+      "total_tokens": 368
+     }
+    },
+    {
+     "got": {
+      "company": "SK하이닉스",
+      "year": 2023,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1332.909999997355,
+     "usage": {
+      "input_tokens": 330,
+      "output_tokens": 38,
+      "total_tokens": 368
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "d03",
+   "question": "현대자동차의 2025년 매출 성장률 계산해줘",
+   "expected": {
+    "company": "현대자동차",
+    "year": 2025,
+    "task": "매출 성장률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "현대자동차",
+      "year": 2025,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1391.1565000016708,
+     "usage": {
+      "input_tokens": 328,
+      "output_tokens": 36,
+      "total_tokens": 364
+     }
+    },
+    {
+     "got": {
+      "company": "현대자동차",
+      "year": 2025,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1124.2339000164066,
+     "usage": {
+      "input_tokens": 328,
+      "output_tokens": 36,
+      "total_tokens": 364
+     }
+    },
+    {
+     "got": {
+      "company": "현대자동차",
+      "year": 2025,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1027.1529000019655,
+     "usage": {
+      "input_tokens": 328,
+      "output_tokens": 36,
+      "total_tokens": 364
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "d04",
+   "question": "2022년 삼성전자 매출액이랑 영업이익 보여줘",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2022,
+    "task": "실적 조회"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2022,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1432.9005999898072,
+     "usage": {
+      "input_tokens": 327,
+      "output_tokens": 24,
+      "total_tokens": 351
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2022,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1022.8555999929085,
+     "usage": {
+      "input_tokens": 327,
+      "output_tokens": 33,
+      "total_tokens": 360
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2022,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 973.9262000075541,
+     "usage": {
+      "input_tokens": 327,
+      "output_tokens": 33,
+      "total_tokens": 360
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "d05",
+   "question": "카카오 2024 사업연도 영업이익률",
+   "expected": {
+    "company": "카카오",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "카카오",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1175.2954999974463,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 27,
+      "total_tokens": 353
+     }
+    },
+    {
+     "got": {
+      "company": "카카오",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1127.0396999898367,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 27,
+      "total_tokens": 353
+     }
+    },
+    {
+     "got": {
+      "company": "카카오",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1015.5344000086188,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 36,
+      "total_tokens": 362
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "d06",
+   "question": "NAVER 2023년에 매출이 전년 대비 얼마나 늘었어?",
+   "expected": {
+    "company": "NAVER",
+    "year": 2023,
+    "task": "매출 성장률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "NAVER",
+      "year": 2023,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1248.6806999950204,
+     "usage": {
+      "input_tokens": 330,
+      "output_tokens": 35,
+      "total_tokens": 365
+     }
+    },
+    {
+     "got": {
+      "company": "NAVER",
+      "year": 2023,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 925.6787000049371,
+     "usage": {
+      "input_tokens": 330,
+      "output_tokens": 26,
+      "total_tokens": 356
+     }
+    },
+    {
+     "got": {
+      "company": "NAVER",
+      "year": 2023,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1110.312199976761,
+     "usage": {
+      "input_tokens": 330,
+      "output_tokens": 26,
+      "total_tokens": 356
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "d07",
+   "question": "기아 2024년 영업이익 얼마였지?",
+   "expected": {
+    "company": "기아",
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "기아",
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1128.1622999813408,
+     "usage": {
+      "input_tokens": 327,
+      "output_tokens": 33,
+      "total_tokens": 360
+     }
+    },
+    {
+     "got": {
+      "company": "기아",
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1200.8005999960005,
+     "usage": {
+      "input_tokens": 327,
+      "output_tokens": 24,
+      "total_tokens": 351
+     }
+    },
+    {
+     "got": {
+      "company": "기아",
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1360.8228999946732,
+     "usage": {
+      "input_tokens": 327,
+      "output_tokens": 33,
+      "total_tokens": 360
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "d08",
+   "question": "삼성전자 영업이익률 알려줘",
+   "expected": {
+    "company": "삼성전자",
+    "year": null,
+    "task": "영업이익률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": null,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1432.9177000035997,
+     "usage": {
+      "input_tokens": 320,
+      "output_tokens": 23,
+      "total_tokens": 343
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": null,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1124.260200012941,
+     "usage": {
+      "input_tokens": 320,
+      "output_tokens": 32,
+      "total_tokens": 352
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": null,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 948.6391000100411,
+     "usage": {
+      "input_tokens": 320,
+      "output_tokens": 32,
+      "total_tokens": 352
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "d09",
+   "question": "2024년 영업이익률은?",
+   "expected": {
+    "company": null,
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": null,
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1408.9734999870416,
+     "usage": {
+      "input_tokens": 323,
+      "output_tokens": 34,
+      "total_tokens": 357
+     }
+    },
+    {
+     "got": {
+      "company": null,
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1068.3149000105914,
+     "usage": {
+      "input_tokens": 323,
+      "output_tokens": 25,
+      "total_tokens": 348
+     }
+    },
+    {
+     "got": {
+      "company": null,
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1281.446800014237,
+     "usage": {
+      "input_tokens": 323,
+      "output_tokens": 34,
+      "total_tokens": 357
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "d10",
+   "question": "삼성전자 2024년 주가 예측해줘",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": null
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1000.2144000027329,
+     "usage": {
+      "input_tokens": 325,
+      "output_tokens": 29,
+      "total_tokens": 354
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 958.3642999932636,
+     "usage": {
+      "input_tokens": 325,
+      "output_tokens": 29,
+      "total_tokens": 354
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1096.9186000002082,
+     "usage": {
+      "input_tokens": 325,
+      "output_tokens": 21,
+      "total_tokens": 346
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "d11",
+   "question": "삼성전자랑 SK하이닉스 2024년 영업이익률 비교해줘",
+   "expected": {
+    "company": null,
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": null,
+      "year": 2024,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": false
+     },
+     "all_ok": false,
+     "ms": 971.0216000094078,
+     "usage": {
+      "input_tokens": 332,
+      "output_tokens": 19,
+      "total_tokens": 351
+     }
+    },
+    {
+     "got": {
+      "company": null,
+      "year": 2024,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": false
+     },
+     "all_ok": false,
+     "ms": 905.5348999972921,
+     "usage": {
+      "input_tokens": 332,
+      "output_tokens": 19,
+      "total_tokens": 351
+     }
+    },
+    {
+     "got": {
+      "company": null,
+      "year": 2024,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": false
+     },
+     "all_ok": false,
+     "ms": 858.4965999762062,
+     "usage": {
+      "input_tokens": 332,
+      "output_tokens": 19,
+      "total_tokens": 351
+     }
+    }
+   ],
+   "always_ok": false,
+   "consistent": true
+  },
+  {
+   "id": "d12",
+   "question": "삼전 2024년 매출 성장률",
+   "expected": {
+    "company": "삼전",
+    "year": 2024,
+    "task": "매출 성장률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "삼전",
+      "year": 2024,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 894.2803000099957,
+     "usage": {
+      "input_tokens": 323,
+      "output_tokens": 26,
+      "total_tokens": 349
+     }
+    },
+    {
+     "got": {
+      "company": "삼전",
+      "year": 2024,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1305.5806999909692,
+     "usage": {
+      "input_tokens": 323,
+      "output_tokens": 26,
+      "total_tokens": 349
+     }
+    },
+    {
+     "got": {
+      "company": "삼전",
+      "year": 2024,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1079.0603999921586,
+     "usage": {
+      "input_tokens": 323,
+      "output_tokens": 26,
+      "total_tokens": 349
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "d13",
+   "question": "삼성전자 작년 실적",
+   "expected": {
+    "company": "삼성전자",
+    "year": null,
+    "task": "실적 조회"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": null,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 994.164899981115,
+     "usage": {
+      "input_tokens": 318,
+      "output_tokens": 20,
+      "total_tokens": 338
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": null,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1021.5463999775238,
+     "usage": {
+      "input_tokens": 318,
+      "output_tokens": 29,
+      "total_tokens": 347
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": null,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1311.6647999850102,
+     "usage": {
+      "input_tokens": 318,
+      "output_tokens": 20,
+      "total_tokens": 338
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "d14",
+   "question": "삼성전자 2024년 영업이익이 매출에서 차지하는 비율",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 916.6662000061478,
+     "usage": {
+      "input_tokens": 329,
+      "output_tokens": 36,
+      "total_tokens": 365
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1234.7841000009794,
+     "usage": {
+      "input_tokens": 329,
+      "output_tokens": 36,
+      "total_tokens": 365
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1254.8755999887362,
+     "usage": {
+      "input_tokens": 329,
+      "output_tokens": 27,
+      "total_tokens": 356
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "f01",
+   "question": "LG에너지솔루션 2024년 실적 조회",
+   "expected": {
+    "company": "LG에너지솔루션",
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "LG에너지솔루션",
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 993.1499999947846,
+     "usage": {
+      "input_tokens": 327,
+      "output_tokens": 28,
+      "total_tokens": 355
+     }
+    },
+    {
+     "got": {
+      "company": "LG에너지솔루션",
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1315.539400005946,
+     "usage": {
+      "input_tokens": 327,
+      "output_tokens": 37,
+      "total_tokens": 364
+     }
+    },
+    {
+     "got": {
+      "company": "LG에너지솔루션",
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 960.0034000177402,
+     "usage": {
+      "input_tokens": 327,
+      "output_tokens": 37,
+      "total_tokens": 364
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "f02",
+   "question": "셀트리온 2023년 영업이익률 계산해 줘",
+   "expected": {
+    "company": "셀트리온",
+    "year": 2023,
+    "task": "영업이익률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "셀트리온",
+      "year": 2023,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1043.2620999927167,
+     "usage": {
+      "input_tokens": 330,
+      "output_tokens": 29,
+      "total_tokens": 359
+     }
+    },
+    {
+     "got": {
+      "company": "셀트리온",
+      "year": 2023,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 948.3500999922398,
+     "usage": {
+      "input_tokens": 330,
+      "output_tokens": 38,
+      "total_tokens": 368
+     }
+    },
+    {
+     "got": {
+      "company": "셀트리온",
+      "year": 2023,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1269.1842000058386,
+     "usage": {
+      "input_tokens": 330,
+      "output_tokens": 38,
+      "total_tokens": 368
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "f03",
+   "question": "POSCO홀딩스의 2025년 매출 증가율",
+   "expected": {
+    "company": "POSCO홀딩스",
+    "year": 2025,
+    "task": "매출 성장률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "POSCO홀딩스",
+      "year": 2025,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1023.7371000112034,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 29,
+      "total_tokens": 355
+     }
+    },
+    {
+     "got": {
+      "company": "POSCO홀딩스",
+      "year": 2025,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1019.0291999897454,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 38,
+      "total_tokens": 364
+     }
+    },
+    {
+     "got": {
+      "company": "POSCO홀딩스",
+      "year": 2025,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 941.1351000017021,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 29,
+      "total_tokens": 355
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "f04",
+   "question": "현대자동차 2022년 영업이익이랑 매출",
+   "expected": {
+    "company": "현대자동차",
+    "year": 2022,
+    "task": "실적 조회"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "현대자동차",
+      "year": 2022,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1107.5093999970704,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 25,
+      "total_tokens": 351
+     }
+    },
+    {
+     "got": {
+      "company": "현대자동차",
+      "year": 2022,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 834.5061999862082,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 34,
+      "total_tokens": 360
+     }
+    },
+    {
+     "got": {
+      "company": "현대자동차",
+      "year": 2022,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1238.2702000031713,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 25,
+      "total_tokens": 351
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "f05",
+   "question": "하이닉스 2024년 영업이익률",
+   "expected": {
+    "company": "하이닉스",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "하이닉스",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 945.8540999912657,
+     "usage": {
+      "input_tokens": 325,
+      "output_tokens": 28,
+      "total_tokens": 353
+     }
+    },
+    {
+     "got": {
+      "company": "하이닉스",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1279.8631000041496,
+     "usage": {
+      "input_tokens": 325,
+      "output_tokens": 37,
+      "total_tokens": 362
+     }
+    },
+    {
+     "got": {
+      "company": "하이닉스",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 953.5332999948878,
+     "usage": {
+      "input_tokens": 325,
+      "output_tokens": 28,
+      "total_tokens": 353
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "f06",
+   "question": "SK하이닉스 매출 성장률",
+   "expected": {
+    "company": "SK하이닉스",
+    "year": null,
+    "task": "매출 성장률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "SK하이닉스",
+      "year": null,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 994.7463999851607,
+     "usage": {
+      "input_tokens": 319,
+      "output_tokens": 24,
+      "total_tokens": 343
+     }
+    },
+    {
+     "got": {
+      "company": "SK하이닉스",
+      "year": null,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 874.5997999794781,
+     "usage": {
+      "input_tokens": 319,
+      "output_tokens": 24,
+      "total_tokens": 343
+     }
+    },
+    {
+     "got": {
+      "company": "SK하이닉스",
+      "year": null,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 901.730800018413,
+     "usage": {
+      "input_tokens": 319,
+      "output_tokens": 33,
+      "total_tokens": 352
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "f07",
+   "question": "올해 영업이익률 알려줘",
+   "expected": {
+    "company": null,
+    "year": null,
+    "task": "영업이익률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": null,
+      "year": null,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 838.170800008811,
+     "usage": {
+      "input_tokens": 320,
+      "output_tokens": 21,
+      "total_tokens": 341
+     }
+    },
+    {
+     "got": {
+      "company": null,
+      "year": null,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 890.3691000014078,
+     "usage": {
+      "input_tokens": 320,
+      "output_tokens": 21,
+      "total_tokens": 341
+     }
+    },
+    {
+     "got": {
+      "company": null,
+      "year": null,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1183.7670000095386,
+     "usage": {
+      "input_tokens": 320,
+      "output_tokens": 21,
+      "total_tokens": 341
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "f08",
+   "question": "삼성전자 투자해도 될까?",
+   "expected": {
+    "company": "삼성전자",
+    "year": null,
+    "task": null
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": null,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1283.810299995821,
+     "usage": {
+      "input_tokens": 319,
+      "output_tokens": 25,
+      "total_tokens": 344
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": null,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1294.7046000044793,
+     "usage": {
+      "input_tokens": 319,
+      "output_tokens": 17,
+      "total_tokens": 336
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": null,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1026.05620000395,
+     "usage": {
+      "input_tokens": 319,
+      "output_tokens": 25,
+      "total_tokens": 344
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "f09",
+   "question": "카카오 2025년 실적",
+   "expected": {
+    "company": "카카오",
+    "year": 2025,
+    "task": "실적 조회"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "카카오",
+      "year": 2025,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 904.0158999850973,
+     "usage": {
+      "input_tokens": 322,
+      "output_tokens": 33,
+      "total_tokens": 355
+     }
+    },
+    {
+     "got": {
+      "company": "카카오",
+      "year": 2025,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1039.5953000115696,
+     "usage": {
+      "input_tokens": 322,
+      "output_tokens": 33,
+      "total_tokens": 355
+     }
+    },
+    {
+     "got": {
+      "company": "카카오",
+      "year": 2025,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 939.8944999848027,
+     "usage": {
+      "input_tokens": 322,
+      "output_tokens": 24,
+      "total_tokens": 346
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "f10",
+   "question": "삼성전자 2023년 대비 2024년 매출이 몇 퍼센트 증가했는지",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": "매출 성장률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 985.9323999844491,
+     "usage": {
+      "input_tokens": 336,
+      "output_tokens": 26,
+      "total_tokens": 362
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1185.127199976705,
+     "usage": {
+      "input_tokens": 336,
+      "output_tokens": 35,
+      "total_tokens": 371
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 884.0105000126641,
+     "usage": {
+      "input_tokens": 336,
+      "output_tokens": 26,
+      "total_tokens": 362
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "f11",
+   "question": "네이버 2024년 영업이익률",
+   "expected": {
+    "company": "네이버",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "네이버",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 861.0264000017196,
+     "usage": {
+      "input_tokens": 324,
+      "output_tokens": 27,
+      "total_tokens": 351
+     }
+    },
+    {
+     "got": {
+      "company": "네이버",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 817.4476000131108,
+     "usage": {
+      "input_tokens": 324,
+      "output_tokens": 36,
+      "total_tokens": 360
+     }
+    },
+    {
+     "got": {
+      "company": "네이버",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 832.4176000023726,
+     "usage": {
+      "input_tokens": 324,
+      "output_tokens": 27,
+      "total_tokens": 351
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "h01",
+   "question": "삼성전자 24년 영업이익률",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 971.0090000007767,
+     "usage": {
+      "input_tokens": 322,
+      "output_tokens": 36,
+      "total_tokens": 358
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1023.486000020057,
+     "usage": {
+      "input_tokens": 322,
+      "output_tokens": 36,
+      "total_tokens": 358
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1126.665200019488,
+     "usage": {
+      "input_tokens": 322,
+      "output_tokens": 27,
+      "total_tokens": 349
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "h02",
+   "question": "삼성전자 2024년 영업이익율 알려줘",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 998.120399977779,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 27,
+      "total_tokens": 353
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1353.567899990594,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 27,
+      "total_tokens": 353
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1024.1076999809593,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 27,
+      "total_tokens": 353
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "h03",
+   "question": "하이닉스 작년 말고 2023년 실적 줘",
+   "expected": {
+    "company": "하이닉스",
+    "year": 2023,
+    "task": "실적 조회"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "하이닉스",
+      "year": 2023,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 872.348900011275,
+     "usage": {
+      "input_tokens": 328,
+      "output_tokens": 25,
+      "total_tokens": 353
+     }
+    },
+    {
+     "got": {
+      "company": "하이닉스",
+      "year": 2023,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 952.846000000136,
+     "usage": {
+      "input_tokens": 328,
+      "output_tokens": 34,
+      "total_tokens": 362
+     }
+    },
+    {
+     "got": {
+      "company": "하이닉스",
+      "year": 2023,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 936.0697999945842,
+     "usage": {
+      "input_tokens": 328,
+      "output_tokens": 34,
+      "total_tokens": 362
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "h04",
+   "question": "카카오 2024년 매출 얼마 늘었냐",
+   "expected": {
+    "company": "카카오",
+    "year": 2024,
+    "task": "매출 성장률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "카카오",
+      "year": 2024,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1236.8013000232168,
+     "usage": {
+      "input_tokens": 325,
+      "output_tokens": 26,
+      "total_tokens": 351
+     }
+    },
+    {
+     "got": {
+      "company": "카카오",
+      "year": 2024,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1204.1196000063792,
+     "usage": {
+      "input_tokens": 325,
+      "output_tokens": 35,
+      "total_tokens": 360
+     }
+    },
+    {
+     "got": {
+      "company": "카카오",
+      "year": 2024,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1066.588399989996,
+     "usage": {
+      "input_tokens": 325,
+      "output_tokens": 26,
+      "total_tokens": 351
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "h05",
+   "question": "삼성전자 2024년 영업이익률이랑 매출 성장률 둘 다 알려줘",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": null
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1000.2738000184763,
+     "usage": {
+      "input_tokens": 332,
+      "output_tokens": 21,
+      "total_tokens": 353
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1230.6609000079334,
+     "usage": {
+      "input_tokens": 332,
+      "output_tokens": 29,
+      "total_tokens": 361
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 935.8418999763671,
+     "usage": {
+      "input_tokens": 332,
+      "output_tokens": 21,
+      "total_tokens": 353
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "h06",
+   "question": "기아 2023년 매출이 전년보다 올랐어?",
+   "expected": {
+    "company": "기아",
+    "year": 2023,
+    "task": "매출 성장률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "기아",
+      "year": 2023,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1015.4593999905046,
+     "usage": {
+      "input_tokens": 329,
+      "output_tokens": 35,
+      "total_tokens": 364
+     }
+    },
+    {
+     "got": {
+      "company": "기아",
+      "year": 2023,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1119.2894999985583,
+     "usage": {
+      "input_tokens": 329,
+      "output_tokens": 26,
+      "total_tokens": 355
+     }
+    },
+    {
+     "got": {
+      "company": "기아",
+      "year": 2023,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1001.4128000184428,
+     "usage": {
+      "input_tokens": 329,
+      "output_tokens": 26,
+      "total_tokens": 355
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "h07",
+   "question": "naver 2024 operating margin",
+   "expected": {
+    "company": "naver",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "naver",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1299.9552999972366,
+     "usage": {
+      "input_tokens": 320,
+      "output_tokens": 35,
+      "total_tokens": 355
+     }
+    },
+    {
+     "got": {
+      "company": "naver",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 904.868899990106,
+     "usage": {
+      "input_tokens": 320,
+      "output_tokens": 35,
+      "total_tokens": 355
+     }
+    },
+    {
+     "got": {
+      "company": "naver",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 909.9550999817438,
+     "usage": {
+      "input_tokens": 320,
+      "output_tokens": 35,
+      "total_tokens": 355
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "h08",
+   "question": "현대차 2024년 실적",
+   "expected": {
+    "company": "현대차",
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "현대차",
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 972.0896999933757,
+     "usage": {
+      "input_tokens": 323,
+      "output_tokens": 34,
+      "total_tokens": 357
+     }
+    },
+    {
+     "got": {
+      "company": "현대차",
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1159.0555000002496,
+     "usage": {
+      "input_tokens": 323,
+      "output_tokens": 34,
+      "total_tokens": 357
+     }
+    },
+    {
+     "got": {
+      "company": "현대차",
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1228.5083000024315,
+     "usage": {
+      "input_tokens": 323,
+      "output_tokens": 25,
+      "total_tokens": 348
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "h09",
+   "question": "삼성전자 2025년이랑 2024년 중에 영업이익 어디가 높아?",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2025,
+    "task": null
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2025,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1067.3994999960996,
+     "usage": {
+      "input_tokens": 335,
+      "output_tokens": 21,
+      "total_tokens": 356
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2025,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 965.5008999980055,
+     "usage": {
+      "input_tokens": 335,
+      "output_tokens": 29,
+      "total_tokens": 364
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2025,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1243.6084999935701,
+     "usage": {
+      "input_tokens": 335,
+      "output_tokens": 21,
+      "total_tokens": 356
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "h10",
+   "question": "2024년 삼성전자 SK하이닉스 현대자동차 매출액",
+   "expected": {
+    "company": null,
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": null,
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1128.4342000144534,
+     "usage": {
+      "input_tokens": 327,
+      "output_tokens": 31,
+      "total_tokens": 358
+     }
+    },
+    {
+     "got": {
+      "company": null,
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1333.642499987036,
+     "usage": {
+      "input_tokens": 327,
+      "output_tokens": 31,
+      "total_tokens": 358
+     }
+    },
+    {
+     "got": {
+      "company": null,
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1021.5487999957986,
+     "usage": {
+      "input_tokens": 327,
+      "output_tokens": 22,
+      "total_tokens": 349
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "g01",
+   "question": "셀트리온 23년 매출 성장률",
+   "expected": {
+    "company": "셀트리온",
+    "year": 2023,
+    "task": "매출 성장률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "셀트리온",
+      "year": 2023,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1128.561300021829,
+     "usage": {
+      "input_tokens": 323,
+      "output_tokens": 37,
+      "total_tokens": 360
+     }
+    },
+    {
+     "got": {
+      "company": "셀트리온",
+      "year": 2023,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1371.193900005892,
+     "usage": {
+      "input_tokens": 323,
+      "output_tokens": 37,
+      "total_tokens": 360
+     }
+    },
+    {
+     "got": {
+      "company": "셀트리온",
+      "year": 2023,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1491.5490999992471,
+     "usage": {
+      "input_tokens": 323,
+      "output_tokens": 28,
+      "total_tokens": 351
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "g02",
+   "question": "기아 2024년 영업이익율 알려줘",
+   "expected": {
+    "company": "기아",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "기아",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1027.2086999902967,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 36,
+      "total_tokens": 362
+     }
+    },
+    {
+     "got": {
+      "company": "기아",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1331.2092999985907,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 27,
+      "total_tokens": 353
+     }
+    },
+    {
+     "got": {
+      "company": "기아",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1024.2157000175212,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 36,
+      "total_tokens": 362
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "g03",
+   "question": "카카오 2025년 영업이익 얼마냐?",
+   "expected": {
+    "company": "카카오",
+    "year": 2025,
+    "task": "실적 조회"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "카카오",
+      "year": 2025,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1979.2295999941416,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 33,
+      "total_tokens": 359
+     }
+    },
+    {
+     "got": {
+      "company": "카카오",
+      "year": 2025,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 870.6676999863703,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 33,
+      "total_tokens": 359
+     }
+    },
+    {
+     "got": {
+      "company": "카카오",
+      "year": 2025,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 849.8942000151146,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 24,
+      "total_tokens": 350
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "g04",
+   "question": "SK하이닉스 2024년 영업이익률이랑 실적 같이 보여줘",
+   "expected": {
+    "company": "SK하이닉스",
+    "year": 2024,
+    "task": null
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "SK하이닉스",
+      "year": 2024,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1317.2961999953259,
+     "usage": {
+      "input_tokens": 332,
+      "output_tokens": 23,
+      "total_tokens": 355
+     }
+    },
+    {
+     "got": {
+      "company": "SK하이닉스",
+      "year": 2024,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1126.5790999750607,
+     "usage": {
+      "input_tokens": 332,
+      "output_tokens": 23,
+      "total_tokens": 355
+     }
+    },
+    {
+     "got": {
+      "company": "SK하이닉스",
+      "year": 2024,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1126.3586999848485,
+     "usage": {
+      "input_tokens": 332,
+      "output_tokens": 23,
+      "total_tokens": 355
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "g05",
+   "question": "삼성 2024년 실적",
+   "expected": {
+    "company": "삼성",
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "삼성",
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 875.8303999784403,
+     "usage": {
+      "input_tokens": 321,
+      "output_tokens": 23,
+      "total_tokens": 344
+     }
+    },
+    {
+     "got": {
+      "company": "삼성",
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1015.4598999943119,
+     "usage": {
+      "input_tokens": 321,
+      "output_tokens": 32,
+      "total_tokens": 353
+     }
+    },
+    {
+     "got": {
+      "company": "삼성",
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 909.3730000022333,
+     "usage": {
+      "input_tokens": 321,
+      "output_tokens": 32,
+      "total_tokens": 353
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "g06",
+   "question": "NAVER 2024 영업이익률 vs 카카오",
+   "expected": {
+    "company": null,
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": null,
+      "year": 2024,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": false
+     },
+     "all_ok": false,
+     "ms": 932.779800001299,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 19,
+      "total_tokens": 345
+     }
+    },
+    {
+     "got": {
+      "company": null,
+      "year": 2024,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": false
+     },
+     "all_ok": false,
+     "ms": 906.0427999938838,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 19,
+      "total_tokens": 345
+     }
+    },
+    {
+     "got": {
+      "company": null,
+      "year": 2024,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": false
+     },
+     "all_ok": false,
+     "ms": 1095.4763000190724,
+     "usage": {
+      "input_tokens": 326,
+      "output_tokens": 19,
+      "total_tokens": 345
+     }
+    }
+   ],
+   "always_ok": false,
+   "consistent": true
+  },
+  {
+   "id": "g07",
+   "question": "현대자동차 2024년 매출이 반토막 났어?",
+   "expected": {
+    "company": "현대자동차",
+    "year": 2024,
+    "task": "매출 성장률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "현대자동차",
+      "year": 2024,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 896.5234000061173,
+     "usage": {
+      "input_tokens": 330,
+      "output_tokens": 27,
+      "total_tokens": 357
+     }
+    },
+    {
+     "got": {
+      "company": "현대자동차",
+      "year": 2024,
+      "task": "매출 성장률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1353.9479000028223,
+     "usage": {
+      "input_tokens": 330,
+      "output_tokens": 36,
+      "total_tokens": 366
+     }
+    },
+    {
+     "got": {
+      "company": "현대자동차",
+      "year": 2024,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": false
+     },
+     "all_ok": false,
+     "ms": 1237.256000022171,
+     "usage": {
+      "input_tokens": 330,
+      "output_tokens": 25,
+      "total_tokens": 355
+     }
+    }
+   ],
+   "always_ok": false,
+   "consistent": false
+  },
+  {
+   "id": "g08",
+   "question": "삼성전자 2023",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2023,
+    "task": null
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2023,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": false
+     },
+     "all_ok": false,
+     "ms": 1321.8504000105895,
+     "usage": {
+      "input_tokens": 319,
+      "output_tokens": 24,
+      "total_tokens": 343
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2023,
+      "task": "실적 조회"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": false
+     },
+     "all_ok": false,
+     "ms": 1331.8928999942727,
+     "usage": {
+      "input_tokens": 319,
+      "output_tokens": 33,
+      "total_tokens": 352
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2023,
+      "task": null
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1296.8743999954313,
+     "usage": {
+      "input_tokens": 319,
+      "output_tokens": 29,
+      "total_tokens": 348
+     }
+    }
+   ],
+   "always_ok": false,
+   "consistent": false
+  },
+  {
+   "id": "g09",
+   "question": "ㅋㅋ 카카오 2024년 영업이익률 궁금함",
+   "expected": {
+    "company": "카카오",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "카카오",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1250.0015000114217,
+     "usage": {
+      "input_tokens": 327,
+      "output_tokens": 27,
+      "total_tokens": 354
+     }
+    },
+    {
+     "got": {
+      "company": "카카오",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 943.7556999910157,
+     "usage": {
+      "input_tokens": 327,
+      "output_tokens": 36,
+      "total_tokens": 363
+     }
+    },
+    {
+     "got": {
+      "company": "카카오",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1018.1939999747556,
+     "usage": {
+      "input_tokens": 327,
+      "output_tokens": 36,
+      "total_tokens": 363
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "g10",
+   "question": "삼성전자 FY2024 영업이익률",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "runs": [
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1023.5968000197317,
+     "usage": {
+      "input_tokens": 323,
+      "output_tokens": 27,
+      "total_tokens": 350
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 1329.4071999844164,
+     "usage": {
+      "input_tokens": 323,
+      "output_tokens": 27,
+      "total_tokens": 350
+     }
+    },
+    {
+     "got": {
+      "company": "삼성전자",
+      "year": 2024,
+      "task": "영업이익률 계산"
+     },
+     "error": null,
+     "field_ok": {
+      "company": true,
+      "year": true,
+      "task": true
+     },
+     "all_ok": true,
+     "ms": 822.1414999861736,
+     "usage": {
+      "input_tokens": 323,
+      "output_tokens": 36,
+      "total_tokens": 359
+     }
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  }
+ ]
+}

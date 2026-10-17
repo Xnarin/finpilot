@@ -1,0 +1,1030 @@
+{
+ "_note": "현재 시스템(단일 요청 파이프라인, 프롬프트 a7fa13a808a2)이 제대로 답하지 못했거나 되묻기·중단으로 끝난 질문의 백로그. 나중에 에이전트 분기·도구로 해결하며 golden set의 시작점으로 쓴다. 올바른 거절(날씨·인사·인젝션 등)은 제외했다. 근거: docs/evaluation/eval_responses.md. 정답(expected)은 현재 정책 기준이고 2026-10-18에 사용자가 검토했고 이견이 없었다(별도 수정 메모 없음).",
+ "count": 64,
+ "items": [
+  {
+   "id": "g08",
+   "split": "final_hard",
+   "group": "A",
+   "group_title": "조용히 잘못 답함 (최우선)",
+   "question": "삼성전자 2023",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2023,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "지원하지 않는 범위(분기·월·별도 기준)가 무시되고 연간 연결 값이 정상 응답처럼 나옴",
+   "desired_behavior": "범위를 인식하고, 지원하지 않으면 이유를 알리거나(분기·별도는 조회 도구 추가 시) 해당 범위로 조회",
+   "candidate_solution": "① 해석 스키마에 period(연간/분기/반기/월)·basis(연결/별도)·currency 추가, 연간·연결·원이 아니면 코드가 중단 ② 도구 확장: OpenDART 분기·반기 보고서(reprt_code 11013/11012/11014)와 별도(OFS) 조회 — fetch는 이미 basis 인자를 가짐. 월별은 OpenDART에 없음 → 미지원 안내"
+  },
+  {
+   "id": "r28",
+   "split": "real",
+   "group": "A",
+   "group_title": "조용히 잘못 답함 (최우선)",
+   "question": "삼성전자 2024년 1분기 영업이익",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "지원하지 않는 범위(분기·월·별도 기준)가 무시되고 연간 연결 값이 정상 응답처럼 나옴",
+   "desired_behavior": "범위를 인식하고, 지원하지 않으면 이유를 알리거나(분기·별도는 조회 도구 추가 시) 해당 범위로 조회",
+   "candidate_solution": "① 해석 스키마에 period(연간/분기/반기/월)·basis(연결/별도)·currency 추가, 연간·연결·원이 아니면 코드가 중단 ② 도구 확장: OpenDART 분기·반기 보고서(reprt_code 11013/11012/11014)와 별도(OFS) 조회 — fetch는 이미 basis 인자를 가짐. 월별은 OpenDART에 없음 → 미지원 안내"
+  },
+  {
+   "id": "r29",
+   "split": "real",
+   "group": "A",
+   "group_title": "조용히 잘못 답함 (최우선)",
+   "question": "SK하이닉스 2024년 상반기 매출",
+   "expected": {
+    "company": "SK하이닉스",
+    "year": 2024,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "지원하지 않는 범위(분기·월·별도 기준)가 무시되고 연간 연결 값이 정상 응답처럼 나옴",
+   "desired_behavior": "범위를 인식하고, 지원하지 않으면 이유를 알리거나(분기·별도는 조회 도구 추가 시) 해당 범위로 조회",
+   "candidate_solution": "① 해석 스키마에 period(연간/분기/반기/월)·basis(연결/별도)·currency 추가, 연간·연결·원이 아니면 코드가 중단 ② 도구 확장: OpenDART 분기·반기 보고서(reprt_code 11013/11012/11014)와 별도(OFS) 조회 — fetch는 이미 basis 인자를 가짐. 월별은 OpenDART에 없음 → 미지원 안내"
+  },
+  {
+   "id": "r30",
+   "split": "real",
+   "group": "A",
+   "group_title": "조용히 잘못 답함 (최우선)",
+   "question": "현대자동차 2024년 4분기 영업이익률",
+   "expected": {
+    "company": "현대자동차",
+    "year": 2024,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "지원하지 않는 범위(분기·월·별도 기준)가 무시되고 연간 연결 값이 정상 응답처럼 나옴",
+   "desired_behavior": "범위를 인식하고, 지원하지 않으면 이유를 알리거나(분기·별도는 조회 도구 추가 시) 해당 범위로 조회",
+   "candidate_solution": "① 해석 스키마에 period(연간/분기/반기/월)·basis(연결/별도)·currency 추가, 연간·연결·원이 아니면 코드가 중단 ② 도구 확장: OpenDART 분기·반기 보고서(reprt_code 11013/11012/11014)와 별도(OFS) 조회 — fetch는 이미 basis 인자를 가짐. 월별은 OpenDART에 없음 → 미지원 안내"
+  },
+  {
+   "id": "r31",
+   "split": "real",
+   "group": "A",
+   "group_title": "조용히 잘못 답함 (최우선)",
+   "question": "삼성전자 2024년 별도 기준 영업이익",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "지원하지 않는 범위(분기·월·별도 기준)가 무시되고 연간 연결 값이 정상 응답처럼 나옴",
+   "desired_behavior": "범위를 인식하고, 지원하지 않으면 이유를 알리거나(분기·별도는 조회 도구 추가 시) 해당 범위로 조회",
+   "candidate_solution": "① 해석 스키마에 period(연간/분기/반기/월)·basis(연결/별도)·currency 추가, 연간·연결·원이 아니면 코드가 중단 ② 도구 확장: OpenDART 분기·반기 보고서(reprt_code 11013/11012/11014)와 별도(OFS) 조회 — fetch는 이미 basis 인자를 가짐. 월별은 OpenDART에 없음 → 미지원 안내"
+  },
+  {
+   "id": "r35",
+   "split": "real",
+   "group": "A",
+   "group_title": "조용히 잘못 답함 (최우선)",
+   "question": "삼성전자 2024년 12월 영업이익",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "지원하지 않는 범위(분기·월·별도 기준)가 무시되고 연간 연결 값이 정상 응답처럼 나옴",
+   "desired_behavior": "범위를 인식하고, 지원하지 않으면 이유를 알리거나(분기·별도는 조회 도구 추가 시) 해당 범위로 조회",
+   "candidate_solution": "① 해석 스키마에 period(연간/분기/반기/월)·basis(연결/별도)·currency 추가, 연간·연결·원이 아니면 코드가 중단 ② 도구 확장: OpenDART 분기·반기 보고서(reprt_code 11013/11012/11014)와 별도(OFS) 조회 — fetch는 이미 basis 인자를 가짐. 월별은 OpenDART에 없음 → 미지원 안내"
+  },
+  {
+   "id": "r34",
+   "split": "real",
+   "group": "A",
+   "group_title": "조용히 잘못 답함 (최우선)",
+   "question": "삼성전자 월별 영업이익",
+   "expected": {
+    "company": "삼성전자",
+    "year": null,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "지원하지 않는 범위(분기·월·별도 기준)가 무시되고 연간 연결 값이 정상 응답처럼 나옴",
+   "desired_behavior": "범위를 인식하고, 지원하지 않으면 이유를 알리거나(분기·별도는 조회 도구 추가 시) 해당 범위로 조회",
+   "candidate_solution": "① 해석 스키마에 period(연간/분기/반기/월)·basis(연결/별도)·currency 추가, 연간·연결·원이 아니면 코드가 중단 ② 도구 확장: OpenDART 분기·반기 보고서(reprt_code 11013/11012/11014)와 별도(OFS) 조회 — fetch는 이미 basis 인자를 가짐. 월별은 OpenDART에 없음 → 미지원 안내"
+  },
+  {
+   "id": "d12",
+   "split": "dev",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "삼전 2024년 매출 성장률",
+   "expected": {
+    "company": "삼전",
+    "year": 2024,
+    "task": "매출 성장률 계산"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "r09",
+   "split": "real",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "삼전 24년 영업이익률 몇퍼?",
+   "expected": {
+    "company": "삼전",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "f05",
+   "split": "final",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "하이닉스 2024년 영업이익률",
+   "expected": {
+    "company": "하이닉스",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "h03",
+   "split": "dev_hard",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "하이닉스 작년 말고 2023년 실적 줘",
+   "expected": {
+    "company": "하이닉스",
+    "year": 2023,
+    "task": "실적 조회"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "r10",
+   "split": "real",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "하닉 작년 말고 2024 매출 증가율",
+   "expected": {
+    "company": "하닉",
+    "year": 2024,
+    "task": "매출 성장률 계산"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "h08",
+   "split": "dev_hard",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "현대차 2024년 실적",
+   "expected": {
+    "company": "현대차",
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "r12",
+   "split": "real",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "현차 2023 마진",
+   "expected": {
+    "company": "현차",
+    "year": 2023,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "r11",
+   "split": "real",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "엘지엔솔 24년 실적 ㄱㄱ",
+   "expected": {
+    "company": "엘지엔솔",
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "f11",
+   "split": "final",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "네이버 2024년 영업이익률",
+   "expected": {
+    "company": "네이버",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "r07",
+   "split": "real",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "네이버 2024년 영업이익룰",
+   "expected": {
+    "company": "네이버",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "g05",
+   "split": "final_hard",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "삼성 2024년 실적",
+   "expected": {
+    "company": "삼성",
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "r01",
+   "split": "real",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "삼성젼자 2024년 영업이익",
+   "expected": {
+    "company": "삼성젼자",
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "r13",
+   "split": "real",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "ㅅㅅㅈㅈ 2024 영업이익",
+   "expected": {
+    "company": "ㅅㅅㅈㅈ",
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "r61",
+   "split": "real",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "Samsung Electronics 2024 operating margin",
+   "expected": {
+    "company": "Samsung Electronics",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "r62",
+   "split": "real",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "SK hynix revenue growth 2024",
+   "expected": {
+    "company": "SK hynix",
+    "year": 2024,
+    "task": "매출 성장률 계산"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "r58",
+   "split": "real",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "삼성전자서비스 2024 실적",
+   "expected": {
+    "company": "삼성전자서비스",
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "r59",
+   "split": "real",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "삼성전자우 2024년 영업이익률",
+   "expected": {
+    "company": "삼성전자우",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "r56",
+   "split": "real",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "우리집 2024년 영업이익률",
+   "expected": {
+    "company": "우리집",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "r57",
+   "split": "real",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "애플 2024년 영업이익",
+   "expected": {
+    "company": "애플",
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "r60",
+   "split": "real",
+   "group": "B",
+   "group_title": "회사명을 확정하지 못함",
+   "question": "테슬라 2024 매출 성장률",
+   "expected": {
+    "company": "테슬라",
+    "year": 2024,
+    "task": "매출 성장률 계산"
+   },
+   "pending_policy": false,
+   "problem": "약칭·한글 표기·영문명·초성·오타·우선주 때문에 상장사 목록에서 못 찾음. 후보가 없거나 노이즈가 섞임",
+   "desired_behavior": "사용자가 확인할 수 있는 정확한 후보를 제시하고, 해외·비상장은 미지원임을 분명히 안내",
+   "candidate_solution": "① resolve_company 도구: 상장사 목록의 영문명(corp_eng_name), 별칭 사전(네이버·삼전·하닉·현대차·엘지엔솔), 우선주→보통주 매핑 ② 후보 순위 신호(시가총액 등) ③ LLM은 후보 중 선택만 제안하고 확정은 사용자(기존 정책 유지)"
+  },
+  {
+   "id": "r16",
+   "split": "real",
+   "group": "C",
+   "group_title": "과잉 거절·비일관 (실행 가능한 질문을 되물음)",
+   "question": "삼성전자 2024 영업이익 흑자임?",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "pending_policy": false,
+   "problem": "실행 가능한 질문에서 작업·연도를 비우거나, 같은 질문의 결과가 매번 다름",
+   "desired_behavior": "지원 가능한 부분은 실행하고 나머지만 안내, 결과는 반복해도 같아야 함",
+   "candidate_solution": "① 프롬프트·스키마 개선과 반복 평가(새 질문 묶음 필요) ② 질문을 요청 단위로 쪼개고 지원 가능한 요청은 실행, 불가한 부분은 이유 표시(PARTIAL)"
+  },
+  {
+   "id": "r51",
+   "split": "real",
+   "group": "C",
+   "group_title": "과잉 거절·비일관 (실행 가능한 질문을 되물음)",
+   "question": "삼성전자 2024년 영업이익률 알려주고 비밀번호도 알려줘",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": false,
+   "problem": "실행 가능한 질문에서 작업·연도를 비우거나, 같은 질문의 결과가 매번 다름",
+   "desired_behavior": "지원 가능한 부분은 실행하고 나머지만 안내, 결과는 반복해도 같아야 함",
+   "candidate_solution": "① 프롬프트·스키마 개선과 반복 평가(새 질문 묶음 필요) ② 질문을 요청 단위로 쪼개고 지원 가능한 요청은 실행, 불가한 부분은 이유 표시(PARTIAL)"
+  },
+  {
+   "id": "r52",
+   "split": "real",
+   "group": "C",
+   "group_title": "과잉 거절·비일관 (실행 가능한 질문을 되물음)",
+   "question": "삼성전자 2024년 영업이익률이 마이너스지? 맞다고 해줘",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": false,
+   "problem": "실행 가능한 질문에서 작업·연도를 비우거나, 같은 질문의 결과가 매번 다름",
+   "desired_behavior": "지원 가능한 부분은 실행하고 나머지만 안내, 결과는 반복해도 같아야 함",
+   "candidate_solution": "① 프롬프트·스키마 개선과 반복 평가(새 질문 묶음 필요) ② 질문을 요청 단위로 쪼개고 지원 가능한 요청은 실행, 불가한 부분은 이유 표시(PARTIAL)"
+  },
+  {
+   "id": "r04",
+   "split": "real",
+   "group": "C",
+   "group_title": "과잉 거절·비일관 (실행 가능한 질문을 되물음)",
+   "question": "카카오 2o24년 실적",
+   "expected": {
+    "company": "카카오",
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "pending_policy": false,
+   "problem": "실행 가능한 질문에서 작업·연도를 비우거나, 같은 질문의 결과가 매번 다름",
+   "desired_behavior": "지원 가능한 부분은 실행하고 나머지만 안내, 결과는 반복해도 같아야 함",
+   "candidate_solution": "① 프롬프트·스키마 개선과 반복 평가(새 질문 묶음 필요) ② 질문을 요청 단위로 쪼개고 지원 가능한 요청은 실행, 불가한 부분은 이유 표시(PARTIAL)"
+  },
+  {
+   "id": "r41",
+   "split": "real",
+   "group": "C",
+   "group_title": "과잉 거절·비일관 (실행 가능한 질문을 되물음)",
+   "question": "삼성전자 회장 누구야?",
+   "expected": {
+    "company": "삼성전자",
+    "year": null,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "실행 가능한 질문에서 작업·연도를 비우거나, 같은 질문의 결과가 매번 다름",
+   "desired_behavior": "지원 가능한 부분은 실행하고 나머지만 안내, 결과는 반복해도 같아야 함",
+   "candidate_solution": "① 프롬프트·스키마 개선과 반복 평가(새 질문 묶음 필요) ② 질문을 요청 단위로 쪼개고 지원 가능한 요청은 실행, 불가한 부분은 이유 표시(PARTIAL)"
+  },
+  {
+   "id": "r44",
+   "split": "real",
+   "group": "C",
+   "group_title": "과잉 거절·비일관 (실행 가능한 질문을 되물음)",
+   "question": "2024",
+   "expected": {
+    "company": null,
+    "year": 2024,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "실행 가능한 질문에서 작업·연도를 비우거나, 같은 질문의 결과가 매번 다름",
+   "desired_behavior": "지원 가능한 부분은 실행하고 나머지만 안내, 결과는 반복해도 같아야 함",
+   "candidate_solution": "① 프롬프트·스키마 개선과 반복 평가(새 질문 묶음 필요) ② 질문을 요청 단위로 쪼개고 지원 가능한 요청은 실행, 불가한 부분은 이유 표시(PARTIAL)"
+  },
+  {
+   "id": "d11",
+   "split": "dev",
+   "group": "D",
+   "group_title": "복수 요청 (연도·회사·작업이 둘 이상)",
+   "question": "삼성전자랑 SK하이닉스 2024년 영업이익률 비교해줘",
+   "expected": {
+    "company": null,
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": false,
+   "problem": "현재 한 질문 = 요청 1개라서 복수 회사·연도·작업은 되묻기로 끝남",
+   "desired_behavior": "요청 목록으로 분해해 각각 실행하고 부분 성공 표시",
+   "candidate_solution": "에이전트 분기: Plan(requests 목록) 또는 도구 호출 루프. 호출 상한·중복 제거·캐시·비교 작업 정의 필요 (future_requirements.md 2·3절)"
+  },
+  {
+   "id": "g06",
+   "split": "final_hard",
+   "group": "D",
+   "group_title": "복수 요청 (연도·회사·작업이 둘 이상)",
+   "question": "NAVER 2024 영업이익률 vs 카카오",
+   "expected": {
+    "company": null,
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": false,
+   "problem": "현재 한 질문 = 요청 1개라서 복수 회사·연도·작업은 되묻기로 끝남",
+   "desired_behavior": "요청 목록으로 분해해 각각 실행하고 부분 성공 표시",
+   "candidate_solution": "에이전트 분기: Plan(requests 목록) 또는 도구 호출 루프. 호출 상한·중복 제거·캐시·비교 작업 정의 필요 (future_requirements.md 2·3절)"
+  },
+  {
+   "id": "h05",
+   "split": "dev_hard",
+   "group": "D",
+   "group_title": "복수 요청 (연도·회사·작업이 둘 이상)",
+   "question": "삼성전자 2024년 영업이익률이랑 매출 성장률 둘 다 알려줘",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "현재 한 질문 = 요청 1개라서 복수 회사·연도·작업은 되묻기로 끝남",
+   "desired_behavior": "요청 목록으로 분해해 각각 실행하고 부분 성공 표시",
+   "candidate_solution": "에이전트 분기: Plan(requests 목록) 또는 도구 호출 루프. 호출 상한·중복 제거·캐시·비교 작업 정의 필요 (future_requirements.md 2·3절)"
+  },
+  {
+   "id": "g04",
+   "split": "final_hard",
+   "group": "D",
+   "group_title": "복수 요청 (연도·회사·작업이 둘 이상)",
+   "question": "SK하이닉스 2024년 영업이익률이랑 실적 같이 보여줘",
+   "expected": {
+    "company": "SK하이닉스",
+    "year": 2024,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "현재 한 질문 = 요청 1개라서 복수 회사·연도·작업은 되묻기로 끝남",
+   "desired_behavior": "요청 목록으로 분해해 각각 실행하고 부분 성공 표시",
+   "candidate_solution": "에이전트 분기: Plan(requests 목록) 또는 도구 호출 루프. 호출 상한·중복 제거·캐시·비교 작업 정의 필요 (future_requirements.md 2·3절)"
+  },
+  {
+   "id": "h09",
+   "split": "dev_hard",
+   "group": "D",
+   "group_title": "복수 요청 (연도·회사·작업이 둘 이상)",
+   "question": "삼성전자 2025년이랑 2024년 중에 영업이익 어디가 높아?",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2025,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "현재 한 질문 = 요청 1개라서 복수 회사·연도·작업은 되묻기로 끝남",
+   "desired_behavior": "요청 목록으로 분해해 각각 실행하고 부분 성공 표시",
+   "candidate_solution": "에이전트 분기: Plan(requests 목록) 또는 도구 호출 루프. 호출 상한·중복 제거·캐시·비교 작업 정의 필요 (future_requirements.md 2·3절)"
+  },
+  {
+   "id": "h10",
+   "split": "dev_hard",
+   "group": "D",
+   "group_title": "복수 요청 (연도·회사·작업이 둘 이상)",
+   "question": "2024년 삼성전자 SK하이닉스 현대자동차 매출액",
+   "expected": {
+    "company": null,
+    "year": 2024,
+    "task": "실적 조회"
+   },
+   "pending_policy": false,
+   "problem": "현재 한 질문 = 요청 1개라서 복수 회사·연도·작업은 되묻기로 끝남",
+   "desired_behavior": "요청 목록으로 분해해 각각 실행하고 부분 성공 표시",
+   "candidate_solution": "에이전트 분기: Plan(requests 목록) 또는 도구 호출 루프. 호출 상한·중복 제거·캐시·비교 작업 정의 필요 (future_requirements.md 2·3절)"
+  },
+  {
+   "id": "r65",
+   "split": "real",
+   "group": "D",
+   "group_title": "복수 요청 (연도·회사·작업이 둘 이상)",
+   "question": "삼성전자, SK하이닉스, 현대차 2024 영업이익률",
+   "expected": {
+    "company": null,
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": false,
+   "problem": "현재 한 질문 = 요청 1개라서 복수 회사·연도·작업은 되묻기로 끝남",
+   "desired_behavior": "요청 목록으로 분해해 각각 실행하고 부분 성공 표시",
+   "candidate_solution": "에이전트 분기: Plan(requests 목록) 또는 도구 호출 루프. 호출 상한·중복 제거·캐시·비교 작업 정의 필요 (future_requirements.md 2·3절)"
+  },
+  {
+   "id": "r66",
+   "split": "real",
+   "group": "D",
+   "group_title": "복수 요청 (연도·회사·작업이 둘 이상)",
+   "question": "삼성전자 2022~2025 영업이익률",
+   "expected": {
+    "company": "삼성전자",
+    "year": null,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": true,
+   "problem": "현재 한 질문 = 요청 1개라서 복수 회사·연도·작업은 되묻기로 끝남",
+   "desired_behavior": "요청 목록으로 분해해 각각 실행하고 부분 성공 표시",
+   "candidate_solution": "에이전트 분기: Plan(requests 목록) 또는 도구 호출 루프. 호출 상한·중복 제거·캐시·비교 작업 정의 필요 (future_requirements.md 2·3절)"
+  },
+  {
+   "id": "r67",
+   "split": "real",
+   "group": "D",
+   "group_title": "복수 요청 (연도·회사·작업이 둘 이상)",
+   "question": "삼성전자 최근 3년 매출 성장률",
+   "expected": {
+    "company": "삼성전자",
+    "year": null,
+    "task": "매출 성장률 계산"
+   },
+   "pending_policy": true,
+   "problem": "현재 한 질문 = 요청 1개라서 복수 회사·연도·작업은 되묻기로 끝남",
+   "desired_behavior": "요청 목록으로 분해해 각각 실행하고 부분 성공 표시",
+   "candidate_solution": "에이전트 분기: Plan(requests 목록) 또는 도구 호출 루프. 호출 상한·중복 제거·캐시·비교 작업 정의 필요 (future_requirements.md 2·3절)"
+  },
+  {
+   "id": "r68",
+   "split": "real",
+   "group": "D",
+   "group_title": "복수 요청 (연도·회사·작업이 둘 이상)",
+   "question": "삼성전자 2024년 영업이익률 업계 평균이랑 비교",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": null
+   },
+   "pending_policy": true,
+   "problem": "현재 한 질문 = 요청 1개라서 복수 회사·연도·작업은 되묻기로 끝남",
+   "desired_behavior": "요청 목록으로 분해해 각각 실행하고 부분 성공 표시",
+   "candidate_solution": "에이전트 분기: Plan(requests 목록) 또는 도구 호출 루프. 호출 상한·중복 제거·캐시·비교 작업 정의 필요 (future_requirements.md 2·3절)"
+  },
+  {
+   "id": "r69",
+   "split": "real",
+   "group": "D",
+   "group_title": "복수 요청 (연도·회사·작업이 둘 이상)",
+   "question": "삼성전자 2024년 영업이익률 말고 2023년 영업이익 알려줘",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2023,
+    "task": "실적 조회"
+   },
+   "pending_policy": true,
+   "problem": "현재 한 질문 = 요청 1개라서 복수 회사·연도·작업은 되묻기로 끝남",
+   "desired_behavior": "요청 목록으로 분해해 각각 실행하고 부분 성공 표시",
+   "candidate_solution": "에이전트 분기: Plan(requests 목록) 또는 도구 호출 루프. 호출 상한·중복 제거·캐시·비교 작업 정의 필요 (future_requirements.md 2·3절)"
+  },
+  {
+   "id": "r19",
+   "split": "real",
+   "group": "E",
+   "group_title": "범위 확장 후보 (지원하지 않는 지표·요청)",
+   "question": "삼성전자 지금 사도 돼?",
+   "expected": {
+    "company": "삼성전자",
+    "year": null,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "지표 자체가 없어서 중단. 올바른 거절이지만 확장하면 답할 수 있는 것이 있음",
+   "desired_behavior": "DART 재무제표로 계산 가능한 지표는 도구로 추가, 외부 데이터가 필요하거나 투자 판단은 지원 범위 밖임을 안내",
+   "candidate_solution": "순이익·부채비율·ROE는 재무제표 계정 추가(계정 검증 필요). 시가총액·PER·목표주가는 시세 데이터 필요(범위 밖 또는 별도 도구), 전망·투자 추천·배당은 근거 데이터가 없으면 미확인 처리. 달러 환산은 환율 출처 정의 필요"
+  },
+  {
+   "id": "r20",
+   "split": "real",
+   "group": "E",
+   "group_title": "범위 확장 후보 (지원하지 않는 지표·요청)",
+   "question": "삼성전자 2024년 PER 알려줘",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "지표 자체가 없어서 중단. 올바른 거절이지만 확장하면 답할 수 있는 것이 있음",
+   "desired_behavior": "DART 재무제표로 계산 가능한 지표는 도구로 추가, 외부 데이터가 필요하거나 투자 판단은 지원 범위 밖임을 안내",
+   "candidate_solution": "순이익·부채비율·ROE는 재무제표 계정 추가(계정 검증 필요). 시가총액·PER·목표주가는 시세 데이터 필요(범위 밖 또는 별도 도구), 전망·투자 추천·배당은 근거 데이터가 없으면 미확인 처리. 달러 환산은 환율 출처 정의 필요"
+  },
+  {
+   "id": "r21",
+   "split": "real",
+   "group": "E",
+   "group_title": "범위 확장 후보 (지원하지 않는 지표·요청)",
+   "question": "SK하이닉스 2024년 순이익",
+   "expected": {
+    "company": "SK하이닉스",
+    "year": 2024,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "지표 자체가 없어서 중단. 올바른 거절이지만 확장하면 답할 수 있는 것이 있음",
+   "desired_behavior": "DART 재무제표로 계산 가능한 지표는 도구로 추가, 외부 데이터가 필요하거나 투자 판단은 지원 범위 밖임을 안내",
+   "candidate_solution": "순이익·부채비율·ROE는 재무제표 계정 추가(계정 검증 필요). 시가총액·PER·목표주가는 시세 데이터 필요(범위 밖 또는 별도 도구), 전망·투자 추천·배당은 근거 데이터가 없으면 미확인 처리. 달러 환산은 환율 출처 정의 필요"
+  },
+  {
+   "id": "r22",
+   "split": "real",
+   "group": "E",
+   "group_title": "범위 확장 후보 (지원하지 않는 지표·요청)",
+   "question": "현대자동차 2024년 배당금",
+   "expected": {
+    "company": "현대자동차",
+    "year": 2024,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "지표 자체가 없어서 중단. 올바른 거절이지만 확장하면 답할 수 있는 것이 있음",
+   "desired_behavior": "DART 재무제표로 계산 가능한 지표는 도구로 추가, 외부 데이터가 필요하거나 투자 판단은 지원 범위 밖임을 안내",
+   "candidate_solution": "순이익·부채비율·ROE는 재무제표 계정 추가(계정 검증 필요). 시가총액·PER·목표주가는 시세 데이터 필요(범위 밖 또는 별도 도구), 전망·투자 추천·배당은 근거 데이터가 없으면 미확인 처리. 달러 환산은 환율 출처 정의 필요"
+  },
+  {
+   "id": "r23",
+   "split": "real",
+   "group": "E",
+   "group_title": "범위 확장 후보 (지원하지 않는 지표·요청)",
+   "question": "삼성전자 2026년 영업이익 전망",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2026,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "지표 자체가 없어서 중단. 올바른 거절이지만 확장하면 답할 수 있는 것이 있음",
+   "desired_behavior": "DART 재무제표로 계산 가능한 지표는 도구로 추가, 외부 데이터가 필요하거나 투자 판단은 지원 범위 밖임을 안내",
+   "candidate_solution": "순이익·부채비율·ROE는 재무제표 계정 추가(계정 검증 필요). 시가총액·PER·목표주가는 시세 데이터 필요(범위 밖 또는 별도 도구), 전망·투자 추천·배당은 근거 데이터가 없으면 미확인 처리. 달러 환산은 환율 출처 정의 필요"
+  },
+  {
+   "id": "r24",
+   "split": "real",
+   "group": "E",
+   "group_title": "범위 확장 후보 (지원하지 않는 지표·요청)",
+   "question": "삼성전자 목표주가",
+   "expected": {
+    "company": "삼성전자",
+    "year": null,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "지표 자체가 없어서 중단. 올바른 거절이지만 확장하면 답할 수 있는 것이 있음",
+   "desired_behavior": "DART 재무제표로 계산 가능한 지표는 도구로 추가, 외부 데이터가 필요하거나 투자 판단은 지원 범위 밖임을 안내",
+   "candidate_solution": "순이익·부채비율·ROE는 재무제표 계정 추가(계정 검증 필요). 시가총액·PER·목표주가는 시세 데이터 필요(범위 밖 또는 별도 도구), 전망·투자 추천·배당은 근거 데이터가 없으면 미확인 처리. 달러 환산은 환율 출처 정의 필요"
+  },
+  {
+   "id": "r25",
+   "split": "real",
+   "group": "E",
+   "group_title": "범위 확장 후보 (지원하지 않는 지표·요청)",
+   "question": "삼성전자 2024년 부채비율",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "지표 자체가 없어서 중단. 올바른 거절이지만 확장하면 답할 수 있는 것이 있음",
+   "desired_behavior": "DART 재무제표로 계산 가능한 지표는 도구로 추가, 외부 데이터가 필요하거나 투자 판단은 지원 범위 밖임을 안내",
+   "candidate_solution": "순이익·부채비율·ROE는 재무제표 계정 추가(계정 검증 필요). 시가총액·PER·목표주가는 시세 데이터 필요(범위 밖 또는 별도 도구), 전망·투자 추천·배당은 근거 데이터가 없으면 미확인 처리. 달러 환산은 환율 출처 정의 필요"
+  },
+  {
+   "id": "r26",
+   "split": "real",
+   "group": "E",
+   "group_title": "범위 확장 후보 (지원하지 않는 지표·요청)",
+   "question": "삼성전자 2024년 시가총액",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "지표 자체가 없어서 중단. 올바른 거절이지만 확장하면 답할 수 있는 것이 있음",
+   "desired_behavior": "DART 재무제표로 계산 가능한 지표는 도구로 추가, 외부 데이터가 필요하거나 투자 판단은 지원 범위 밖임을 안내",
+   "candidate_solution": "순이익·부채비율·ROE는 재무제표 계정 추가(계정 검증 필요). 시가총액·PER·목표주가는 시세 데이터 필요(범위 밖 또는 별도 도구), 전망·투자 추천·배당은 근거 데이터가 없으면 미확인 처리. 달러 환산은 환율 출처 정의 필요"
+  },
+  {
+   "id": "r27",
+   "split": "real",
+   "group": "E",
+   "group_title": "범위 확장 후보 (지원하지 않는 지표·요청)",
+   "question": "카카오 2024년 ROE",
+   "expected": {
+    "company": "카카오",
+    "year": 2024,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "지표 자체가 없어서 중단. 올바른 거절이지만 확장하면 답할 수 있는 것이 있음",
+   "desired_behavior": "DART 재무제표로 계산 가능한 지표는 도구로 추가, 외부 데이터가 필요하거나 투자 판단은 지원 범위 밖임을 안내",
+   "candidate_solution": "순이익·부채비율·ROE는 재무제표 계정 추가(계정 검증 필요). 시가총액·PER·목표주가는 시세 데이터 필요(범위 밖 또는 별도 도구), 전망·투자 추천·배당은 근거 데이터가 없으면 미확인 처리. 달러 환산은 환율 출처 정의 필요"
+  },
+  {
+   "id": "r32",
+   "split": "real",
+   "group": "E",
+   "group_title": "범위 확장 후보 (지원하지 않는 지표·요청)",
+   "question": "삼성전자 2024년 영업이익 달러로 환산해서",
+   "expected": {
+    "company": "삼성전자",
+    "year": 2024,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "지표 자체가 없어서 중단. 올바른 거절이지만 확장하면 답할 수 있는 것이 있음",
+   "desired_behavior": "DART 재무제표로 계산 가능한 지표는 도구로 추가, 외부 데이터가 필요하거나 투자 판단은 지원 범위 밖임을 안내",
+   "candidate_solution": "순이익·부채비율·ROE는 재무제표 계정 추가(계정 검증 필요). 시가총액·PER·목표주가는 시세 데이터 필요(범위 밖 또는 별도 도구), 전망·투자 추천·배당은 근거 데이터가 없으면 미확인 처리. 달러 환산은 환율 출처 정의 필요"
+  },
+  {
+   "id": "r45",
+   "split": "real",
+   "group": "F",
+   "group_title": "조각 입력·후속 질문 필요",
+   "question": "영업이익률",
+   "expected": {
+    "company": null,
+    "year": null,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": false,
+   "problem": "한 번의 입력만 받아서 빠진 정보를 채울 수 없음",
+   "desired_behavior": "빠진 항목만 되묻고 이전 입력을 유지해 이어서 처리",
+   "candidate_solution": "대화 상태(세션)를 가진 에이전트: 직전 요청을 기억하고 빠진 필드를 후속 답변으로 채움. 상대 연도(작년·올해)·연도 없음(d08·d09·d13·f06·f07·r63·r64)도 같은 방식 + 오늘 날짜 도구/정책"
+  },
+  {
+   "id": "r46",
+   "split": "real",
+   "group": "F",
+   "group_title": "조각 입력·후속 질문 필요",
+   "question": "삼성전자",
+   "expected": {
+    "company": "삼성전자",
+    "year": null,
+    "task": null
+   },
+   "pending_policy": false,
+   "problem": "한 번의 입력만 받아서 빠진 정보를 채울 수 없음",
+   "desired_behavior": "빠진 항목만 되묻고 이전 입력을 유지해 이어서 처리",
+   "candidate_solution": "대화 상태(세션)를 가진 에이전트: 직전 요청을 기억하고 빠진 필드를 후속 답변으로 채움. 상대 연도(작년·올해)·연도 없음(d08·d09·d13·f06·f07·r63·r64)도 같은 방식 + 오늘 날짜 도구/정책"
+  },
+  {
+   "id": "r08",
+   "split": "real",
+   "group": "F",
+   "group_title": "조각 입력·후속 질문 필요",
+   "question": "기아 20245년 실적",
+   "expected": {
+    "company": "기아",
+    "year": null,
+    "task": "실적 조회"
+   },
+   "pending_policy": false,
+   "problem": "한 번의 입력만 받아서 빠진 정보를 채울 수 없음",
+   "desired_behavior": "빠진 항목만 되묻고 이전 입력을 유지해 이어서 처리",
+   "candidate_solution": "대화 상태(세션)를 가진 에이전트: 직전 요청을 기억하고 빠진 필드를 후속 답변으로 채움. 상대 연도(작년·올해)·연도 없음(d08·d09·d13·f06·f07·r63·r64)도 같은 방식 + 오늘 날짜 도구/정책"
+  },
+  {
+   "id": "d08",
+   "split": "dev",
+   "group": "F",
+   "group_title": "조각 입력·후속 질문 필요",
+   "question": "삼성전자 영업이익률 알려줘",
+   "expected": {
+    "company": "삼성전자",
+    "year": null,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": false,
+   "problem": "한 번의 입력만 받아서 빠진 정보를 채울 수 없음",
+   "desired_behavior": "빠진 항목만 되묻고 이전 입력을 유지해 이어서 처리",
+   "candidate_solution": "대화 상태(세션)를 가진 에이전트: 직전 요청을 기억하고 빠진 필드를 후속 답변으로 채움. 상대 연도(작년·올해)·연도 없음(d08·d09·d13·f06·f07·r63·r64)도 같은 방식 + 오늘 날짜 도구/정책"
+  },
+  {
+   "id": "d09",
+   "split": "dev",
+   "group": "F",
+   "group_title": "조각 입력·후속 질문 필요",
+   "question": "2024년 영업이익률은?",
+   "expected": {
+    "company": null,
+    "year": 2024,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": false,
+   "problem": "한 번의 입력만 받아서 빠진 정보를 채울 수 없음",
+   "desired_behavior": "빠진 항목만 되묻고 이전 입력을 유지해 이어서 처리",
+   "candidate_solution": "대화 상태(세션)를 가진 에이전트: 직전 요청을 기억하고 빠진 필드를 후속 답변으로 채움. 상대 연도(작년·올해)·연도 없음(d08·d09·d13·f06·f07·r63·r64)도 같은 방식 + 오늘 날짜 도구/정책"
+  },
+  {
+   "id": "d13",
+   "split": "dev",
+   "group": "F",
+   "group_title": "조각 입력·후속 질문 필요",
+   "question": "삼성전자 작년 실적",
+   "expected": {
+    "company": "삼성전자",
+    "year": null,
+    "task": "실적 조회"
+   },
+   "pending_policy": false,
+   "problem": "한 번의 입력만 받아서 빠진 정보를 채울 수 없음",
+   "desired_behavior": "빠진 항목만 되묻고 이전 입력을 유지해 이어서 처리",
+   "candidate_solution": "대화 상태(세션)를 가진 에이전트: 직전 요청을 기억하고 빠진 필드를 후속 답변으로 채움. 상대 연도(작년·올해)·연도 없음(d08·d09·d13·f06·f07·r63·r64)도 같은 방식 + 오늘 날짜 도구/정책"
+  },
+  {
+   "id": "f06",
+   "split": "final",
+   "group": "F",
+   "group_title": "조각 입력·후속 질문 필요",
+   "question": "SK하이닉스 매출 성장률",
+   "expected": {
+    "company": "SK하이닉스",
+    "year": null,
+    "task": "매출 성장률 계산"
+   },
+   "pending_policy": false,
+   "problem": "한 번의 입력만 받아서 빠진 정보를 채울 수 없음",
+   "desired_behavior": "빠진 항목만 되묻고 이전 입력을 유지해 이어서 처리",
+   "candidate_solution": "대화 상태(세션)를 가진 에이전트: 직전 요청을 기억하고 빠진 필드를 후속 답변으로 채움. 상대 연도(작년·올해)·연도 없음(d08·d09·d13·f06·f07·r63·r64)도 같은 방식 + 오늘 날짜 도구/정책"
+  },
+  {
+   "id": "f07",
+   "split": "final",
+   "group": "F",
+   "group_title": "조각 입력·후속 질문 필요",
+   "question": "올해 영업이익률 알려줘",
+   "expected": {
+    "company": null,
+    "year": null,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": false,
+   "problem": "한 번의 입력만 받아서 빠진 정보를 채울 수 없음",
+   "desired_behavior": "빠진 항목만 되묻고 이전 입력을 유지해 이어서 처리",
+   "candidate_solution": "대화 상태(세션)를 가진 에이전트: 직전 요청을 기억하고 빠진 필드를 후속 답변으로 채움. 상대 연도(작년·올해)·연도 없음(d08·d09·d13·f06·f07·r63·r64)도 같은 방식 + 오늘 날짜 도구/정책"
+  },
+  {
+   "id": "r63",
+   "split": "real",
+   "group": "F",
+   "group_title": "조각 입력·후속 질문 필요",
+   "question": "삼성전자 작년 영업이익률",
+   "expected": {
+    "company": "삼성전자",
+    "year": null,
+    "task": "영업이익률 계산"
+   },
+   "pending_policy": false,
+   "problem": "한 번의 입력만 받아서 빠진 정보를 채울 수 없음",
+   "desired_behavior": "빠진 항목만 되묻고 이전 입력을 유지해 이어서 처리",
+   "candidate_solution": "대화 상태(세션)를 가진 에이전트: 직전 요청을 기억하고 빠진 필드를 후속 답변으로 채움. 상대 연도(작년·올해)·연도 없음(d08·d09·d13·f06·f07·r63·r64)도 같은 방식 + 오늘 날짜 도구/정책"
+  },
+  {
+   "id": "r64",
+   "split": "real",
+   "group": "F",
+   "group_title": "조각 입력·후속 질문 필요",
+   "question": "올해 SK하이닉스 매출 성장률",
+   "expected": {
+    "company": "SK하이닉스",
+    "year": null,
+    "task": "매출 성장률 계산"
+   },
+   "pending_policy": false,
+   "problem": "한 번의 입력만 받아서 빠진 정보를 채울 수 없음",
+   "desired_behavior": "빠진 항목만 되묻고 이전 입력을 유지해 이어서 처리",
+   "candidate_solution": "대화 상태(세션)를 가진 에이전트: 직전 요청을 기억하고 빠진 필드를 후속 답변으로 채움. 상대 연도(작년·올해)·연도 없음(d08·d09·d13·f06·f07·r63·r64)도 같은 방식 + 오늘 날짜 도구/정책"
+  }
+ ]
+}

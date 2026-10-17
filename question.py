@@ -40,20 +40,22 @@ def call_gemini(text):
             model=MODEL, contents=text,
             config=types.GenerateContentConfig(system_instruction=PROMPT, temperature=0, response_mime_type="application/json",
                                                response_json_schema=Parsed.model_json_schema()))
-        return resp.text
+        u = resp.usage_metadata
+        return resp.text, {"input_tokens": u.prompt_token_count, "output_tokens": u.candidates_token_count, "total_tokens": u.total_token_count}
     except KeyError:
         raise FinError("NO_API_KEY", "GEMINI_API_KEY가 설정되지 않았습니다.") from None
     except Exception as e:  # 예외 문자열에 요청 정보가 섞일 수 있어 종류만 보고한다
         raise FinError("LLM_ERROR", f"질문 해석 호출에 실패했습니다 ({type(e).__name__}).") from None
 
 
-@traceable(name="parse_question", run_type="llm", metadata={"model": MODEL})
+@traceable(name="parse_question", run_type="llm", metadata={"model": MODEL}, process_inputs=lambda i: {"text": i["text"]})
 def parse_question(text, _llm=call_gemini):
     """{"parsed": {company, year, task}, "model", "ms"} 반환. 빠진 필드는 None(판단은 호출자)."""
     t0 = time.perf_counter()
-    raw = _llm(text)
+    out = _llm(text)
+    raw, usage = out if isinstance(out, tuple) else (out, None)  # 테스트용 가짜 LLM은 문자열만 돌려줘도 된다
     try:
         parsed = Parsed.model_validate_json(raw)
     except ValidationError:
         raise FinError("LLM_BAD_OUTPUT", "질문 해석 결과가 정해진 형식이 아닙니다.") from None
-    return {"parsed": parsed.model_dump(), "model": MODEL, "ms": (time.perf_counter() - t0) * 1000}
+    return {"parsed": parsed.model_dump(), "model": MODEL, "ms": (time.perf_counter() - t0) * 1000, "usage": usage}

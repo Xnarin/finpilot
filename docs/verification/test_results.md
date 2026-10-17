@@ -41,6 +41,13 @@
 
 원문 대조 방법: `https://dart.fss.or.kr/dsaf001/main.do?rcpNo=<접수번호>` → 연결 손익계산서의 당기 열, 백만원 단위 환산 후 비교.
 
+## 2-1. 실제 OpenDART 회귀 테스트 (`python -m pytest tests_live`, 키 필요) — 13개 통과 (2.4초)
+
+- 삼성전자·SK하이닉스·현대자동차 × 2022~2025, 12개 조합의 매출액·영업이익·접수번호가 저장된 값과 정확히 일치. 저장된 값은 사용자가 DART 원문과 대조해 일치를 확인한 수치다(`tests_live/test_verified_values.py`).
+- 실제 데이터로 계산한 SK하이닉스 2023 영업이익률 −23.59%(영업손실), 삼성전자 2025 매출 성장률 10.88%가 손계산과 일치.
+- 일반 `pytest`에는 포함되지 않는다(`pytest.ini`의 `testpaths = tests`).
+- **관찰:** 현대자동차 2022 보고서의 접수번호가 `20240314001531`로, 접수일이 2023년이 아니라 2024년 3월이다. 정정된 사업보고서가 조회되고 있을 가능성이 있다(미확인). 정정공시 선택 기준은 아직 정하지 않았다.
+
 ## 3. 오류 상황 확인
 
 | 상황 | 기대 결과 | 확인 방법 · 확인자 |
@@ -67,6 +74,12 @@
 
 - LangSmith trace가 `finpilot-dev`, `finpilot-eval` 프로젝트에 도착함을 API 조회로 확인(`ask`, `parse_question`, `run`, `fetch_financials`).
 - 전송 실패 여부는 SDK가 백그라운드로 처리해 화면에서 확인하지 못한다. 화면은 tracing 켜짐/꺼짐만 표시한다.
+
+## 4-1. LangSmith trace 비밀값 점검 (2026-10-17, Claude)
+
+- 두 프로젝트(`finpilot-dev`, `finpilot-eval`)의 최근 run 각 100개씩 총 200개의 입력·출력·extra·오류를 검사: DART·Gemini·LangSmith 키 값과 키 형태 패턴(`AIza…`, `lsv2_…`, `crtfc_key=`) **발견 0건**.
+- 각 run이 보내는 입력: `ask`(text), `parse_question`(text), `run`(company, task, year), `fetch_financials`(company, year, basis). 점검 중 `parse_question`이 `_llm` 함수 객체도 보내는 것을 발견해 입력을 text만 보내도록 수정함(비밀값은 아님).
+- 한계: 최근 200개만 검사했고 전체 이력은 아니다.
 
 ## 5. 확인하지 못했거나 남은 위험
 
