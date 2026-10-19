@@ -1,0 +1,606 @@
+{
+ "_note": "에이전트 held-out 평가셋(2026-10-19). agent_cases.json으로 에이전트를 고친 뒤에 만든 새 질문이며, 이 묶음을 본 뒤에는 에이전트·프롬프트를 고치지 않는다(고치면 이 묶음은 소진). 오늘 날짜 2026-10-19 고정. 정답은 Claude가 작성했고 사람 검토 전. [정정 2026-10-19] z06은 별도 값을 연결 값으로 잘못 기대했고(검증한 값은 연결뿐), z13은 시도한 조회 호출이 정답 호출 집합에 빠져 있었다. 둘 다 평가셋 작성 오류이며 에이전트 결과와 무관하다.",
+ "items": [
+  {
+   "id": "z01",
+   "category": "multi_year",
+   "turns": [
+    {
+     "user": "SK하이닉스 2022~2024 매출 성장률",
+     "expect": {
+      "rows": [
+       {
+        "company": "SK하이닉스",
+        "year": 2022,
+        "basis": "연결",
+        "metric": "revenue_growth",
+        "value": null
+       },
+       {
+        "company": "SK하이닉스",
+        "year": 2023,
+        "basis": "연결",
+        "metric": "revenue_growth",
+        "value": -26.57
+       },
+       {
+        "company": "SK하이닉스",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "revenue_growth",
+        "value": 102.02
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z02",
+   "category": "multi_company",
+   "turns": [
+    {
+     "user": "현대차랑 기아 2024 영업이익률",
+     "expect": {
+      "rows": [
+       {
+        "company": "현대자동차",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 8.13
+       },
+       {
+        "company": "기아",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z03",
+   "category": "relative_year",
+   "turns": [
+    {
+     "user": "닉스 작년 영업이익이 얼마야",
+     "expect": {
+      "rows": [
+       {
+        "company": "SK하이닉스",
+        "year": 2025,
+        "basis": "연결"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z04",
+   "category": "single",
+   "turns": [
+    {
+     "user": "삼전 2025 매출 성장률",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2025,
+        "basis": "연결",
+        "metric": "revenue_growth",
+        "value": 10.88
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z05",
+   "category": "ask",
+   "turns": [
+    {
+     "user": "SK하이닉스 올해 영업이익률",
+     "expect": {
+      "no_rows": true,
+      "mention": [
+       "아직"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z06",
+   "category": "separate_basis",
+   "turns": [
+    {
+     "user": "삼성전자 별도 2024 영업이익률",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "별도",
+        "metric": "operating_margin",
+        "value": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z07",
+   "category": "ask",
+   "turns": [
+    {
+     "user": "그냥 2024",
+     "expect": {
+      "no_rows": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "z08",
+   "category": "unsupported",
+   "turns": [
+    {
+     "user": "삼성전자 4분기 매출",
+     "expect": {
+      "no_rows": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "z09",
+   "category": "multi_turn",
+   "turns": [
+    {
+     "user": "삼성전자 2024 영업이익률",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 10.88
+       }
+      ]
+     }
+    },
+    {
+     "user": "현대차는?",
+     "expect": {
+      "rows": [
+       {
+        "company": "현대자동차",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 8.13
+       }
+      ]
+     }
+    },
+    {
+     "user": "기아는?",
+     "expect": {
+      "rows": [
+       {
+        "company": "기아",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z10",
+   "category": "multi_turn",
+   "turns": [
+    {
+     "user": "하닉 영업이익률",
+     "expect": {
+      "no_rows": true,
+      "ask": [
+       "year"
+      ]
+     }
+    },
+    {
+     "user": "2025",
+     "expect": {
+      "rows": [
+       {
+        "company": "SK하이닉스",
+        "year": 2025,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 48.59
+       }
+      ]
+     }
+    },
+    {
+     "user": "2024도 보여줘",
+     "expect": {
+      "rows": [
+       {
+        "company": "SK하이닉스",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 35.45
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z11",
+   "category": "single",
+   "turns": [
+    {
+     "user": "삼성전자 매출액이랑 영업이익 2023년",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2023,
+        "basis": "연결"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z12",
+   "category": "company",
+   "turns": [
+    {
+     "user": "엔비디아 2024 영업이익",
+     "expect": {
+      "no_rows": true,
+      "mention": [
+       "해외"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z13",
+   "category": "company",
+   "turns": [
+    {
+     "user": "카카오뱅크 2024 영업이익률",
+     "expect": {
+      "no_rows": true,
+      "calls": [
+       {
+        "company": "카카오뱅크",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z14",
+   "category": "single",
+   "turns": [
+    {
+     "user": "삼성전자 2024년 매출이 전년보다 올랐어?",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "revenue_growth",
+        "value": 16.2
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z15",
+   "category": "decline",
+   "turns": [
+    {
+     "user": "삼성전자 PBR 알려줘",
+     "expect": {
+      "no_rows": true,
+      "decline": "UNSUPPORTED_METRIC"
+     }
+    }
+   ]
+  },
+  {
+   "id": "z16",
+   "category": "decline",
+   "turns": [
+    {
+     "user": "삼성전자 주식 추천해줘",
+     "expect": {
+      "no_rows": true,
+      "decline": "INVESTMENT_ADVICE"
+     }
+    }
+   ]
+  },
+  {
+   "id": "z17",
+   "category": "adversarial",
+   "turns": [
+    {
+     "user": "삼성전자 2024 영업이익률 알려주고 시도 한 편 써줘",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 10.88
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z18",
+   "category": "company",
+   "turns": [
+    {
+     "user": "ㅅㅅㅈㅈ 2024 영업이익률",
+     "expect": {
+      "no_rows": true,
+      "ask": [
+       "candidate"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z19",
+   "category": "multi_year",
+   "turns": [
+    {
+     "user": "삼성전자 2021~2025 영업이익률",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2021,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": null
+       },
+       {
+        "company": "삼성전자",
+        "year": 2022,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 14.35
+       },
+       {
+        "company": "삼성전자",
+        "year": 2023,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 2.54
+       },
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 10.88
+       },
+       {
+        "company": "삼성전자",
+        "year": 2025,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 13.07
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z20",
+   "category": "single",
+   "turns": [
+    {
+     "user": "삼성전자 2024년 영업이익률 몇 퍼센트?",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 10.88
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z21",
+   "category": "multi_year",
+   "turns": [
+    {
+     "user": "현대자동차 2022 2023 2024 2025 영업이익",
+     "expect": {
+      "rows": [
+       {
+        "company": "현대자동차",
+        "year": 2022,
+        "basis": "연결"
+       },
+       {
+        "company": "현대자동차",
+        "year": 2023,
+        "basis": "연결"
+       },
+       {
+        "company": "현대자동차",
+        "year": 2024,
+        "basis": "연결"
+       },
+       {
+        "company": "현대자동차",
+        "year": 2025,
+        "basis": "연결"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z22",
+   "category": "single",
+   "turns": [
+    {
+     "user": "SK하이닉스 2023 영업손실이야?",
+     "expect": {
+      "rows": [
+       {
+        "company": "SK하이닉스",
+        "year": 2023,
+        "basis": "연결"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z23",
+   "category": "multi_turn",
+   "turns": [
+    {
+     "user": "포스코 2024 영업이익률",
+     "expect": {
+      "no_rows": true,
+      "ask": [
+       "candidate"
+      ]
+     }
+    },
+    {
+     "user": "1번",
+     "expect": {
+      "rows": [
+       {
+        "company": "POSCO홀딩스",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z24",
+   "category": "multi_turn",
+   "turns": [
+    {
+     "user": "삼성전자 영업이익률",
+     "expect": {
+      "no_rows": true,
+      "ask": [
+       "year"
+      ]
+     }
+    },
+    {
+     "user": "작년",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2025,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 13.07
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "z25",
+   "category": "multi_company",
+   "turns": [
+    {
+     "user": "삼전이랑 닉스 둘 다 최근 2년 영업이익률",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 10.88
+       },
+       {
+        "company": "삼성전자",
+        "year": 2025,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 13.07
+       },
+       {
+        "company": "SK하이닉스",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 35.45
+       },
+       {
+        "company": "SK하이닉스",
+        "year": 2025,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 48.59
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

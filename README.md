@@ -25,8 +25,11 @@ LANGSMITH_PROJECT=finpilot-dev
 ## 실행
 
 ```bash
-streamlit run app.py
+streamlit run chat_app.py     # 챗봇형(에이전트, LangGraph)
+streamlit run app.py          # 입력 폼형(단일 요청 파이프라인, 기준선)
 ```
+
+챗봇은 여러 회사·연도를 한 번에 묻고, 빠진 정보는 모아서 되묻고, 이전 대화의 조건을 이어받습니다. 숫자·표·되묻기·거절 문구는 코드가 만들고 LLM은 도구 선택과 짧은 설명 문장만 맡습니다. 설계는 `docs/backlog/agent_design.md`입니다.
 
 ## 테스트
 
@@ -69,6 +72,7 @@ python -m pytest tests_live   # 실제 OpenDART 호출(키 필요), 사용자가
 | 2026-10-19 | 해외·비상장 기업 소음 제거(AI 분류) 평가: 입력 75개 3회 + 단위 테스트 5개 추가 | 해외 14개 42/42 안내, 비상장 4개 12/12, 한국 상장사 오분류 0건, 사전 외 한글 별칭 46/48. 프롬프트 1안은 후보 이름이 나빠져 2안으로 수정. `docs/evaluation/eval_results.md` 6차 |
 | 2026-10-19 | 도구 함수 정의(`tools.py`) + 단위 테스트 62개(전체 110개) + 변이 점검 5건 + 실제 호출 테스트 9개(전체 22개) | 통과. 정정공시 확인: 조회는 최신 기재정정본을 주고 접수번호·접수일·정정 여부를 표시. 동명 회사(삼성물산)는 현재 상장 법인으로 확정. `docs/backlog/policies.md` |
 | 2026-10-19 | 유명 별칭·초성 즉시 확정: 단위 테스트 28개 추가(전체 138개), 실제 목록 점검(오프라인 30개), 평가 91개 입력 3회 | 바로 확정 20개 중 오확정 0, 모호한 그룹명 10개 확정 0. 초성 ㅅㅅㅈㅈ·ㄴㅇㅂ는 다른 회사와 겹쳐 후보로만. `docs/evaluation/eval_results.md` 7차 |
+| 2026-10-19 | 에이전트(LangGraph, 챗봇형) 구현 + 가짜 LLM 테스트 59개(전체 197개) + 변이 점검 10건 + 평가: dev 3회 120→123→126/126, held-out 65/75(평가셋 오류 정정 시 71/75), 정답에 없는 행 0건(기준선 18건) | `docs/evaluation/eval_results.md` 8차, `docs/backlog/agent_design.md` 10절. dev는 같은 질문으로 고쳤으므로 일반화는 held-out을 본다 |
 
 원문 대조 방법: `https://dart.fss.or.kr/dsaf001/main.do?rcpNo=<접수번호>` → 연결 손익계산서의 당기 열, 단위(백만원) 환산 후 비교. 새 회사나 계정 규칙을 추가할 때마다 같은 방법으로 대조하고 이 표에 추가한다.
 
@@ -86,6 +90,6 @@ python -m pytest tests_live   # 실제 OpenDART 호출(키 필요), 사용자가
 
 ## 구조
 
-`app.py` 화면 · `tools.py` 에이전트용 도구(연도 해석·회사 확정·재무 조회·비율 계산) · `finance.py` 계산·실행 기록·`ask` · `dart.py` OpenDART 조회 · `question.py` 질문 해석 · `eval/` 평가셋과 실행기 · `tests/test_finance.py`
+`chat_app.py` 챗봇 화면 · `agent_core.py` 에이전트(LangGraph 상태·도구 실행·검증·답변 조립) · `app.py` 입력 폼 화면 · `tools.py` 에이전트용 도구(연도 해석·회사 확정·재무 조회·비율 계산) · `finance.py` 계산·실행 기록·`ask` · `dart.py` OpenDART 조회 · `question.py` 질문 해석 · `eval/` 평가셋과 실행기 · `tests/test_finance.py`
 
 실행 기록(실행 ID, 시각, 단계 상태, 오류 코드)은 현재 화면에서만 확인하며 저장하지 않습니다. 표시 시간은 이번 실행의 조회·계산 시간이며 성능 평가가 아닙니다.

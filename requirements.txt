@@ -3,3 +3,6 @@ pytest
 google-genai
 langsmith
 pydantic
+langgraph
+langchain-google-genai
+pandas

@@ -13,7 +13,7 @@ docs/
 │   ├─ eval_questions.md
 │   └─ eval_responses.md
 └─ backlog/                  앞으로 할 일과 설계 메모
-    ├─ agent_design.md
+    ├─ agent_design.md        (에이전트 설계와 구현 현황)
     ├─ policies.md
     ├─ unresolved_cases.md
     └─ future_requirements.md
@@ -34,9 +34,9 @@ tests/, tests_live/          자동 테스트
 
 | 문서 | 내용 | 읽을 때 |
 |---|---|---|
-| [verification/test_results.md](verification/test_results.md) | 자동 테스트 138개 목록, 실제 OpenDART 회귀 테스트 13개, DART 원문 대조, 오류 상황 확인, LangSmith trace 비밀값 점검 | 조회·계산이 맞는지 확인할 때 |
+| [verification/test_results.md](verification/test_results.md) | 자동 테스트 197개 목록, 실제 OpenDART 회귀 테스트 13개, DART 원문 대조, 오류 상황 확인, LangSmith trace 비밀값 점검 | 조회·계산이 맞는지 확인할 때 |
 
-관련 코드: [../tests/test_finance.py](../tests/test_finance.py), [../tests/test_candidates.py](../tests/test_candidates.py), [../tests/test_tools.py](../tests/test_tools.py), [../tests/test_famous.py](../tests/test_famous.py)(오프라인), [../tests_live/test_verified_values.py](../tests_live/test_verified_values.py)(사용자가 원문과 대조한 12개 조합의 수치), [../tests_live/test_tools_live.py](../tests_live/test_tools_live.py)(도구의 실제 호출)
+관련 코드: [../tests/test_finance.py](../tests/test_finance.py), [../tests/test_candidates.py](../tests/test_candidates.py), [../tests/test_tools.py](../tests/test_tools.py), [../tests/test_famous.py](../tests/test_famous.py), [../tests/test_agent.py](../tests/test_agent.py)(오프라인, 에이전트는 가짜 LLM), [../tests_live/test_verified_values.py](../tests_live/test_verified_values.py)(사용자가 원문과 대조한 12개 조합의 수치), [../tests_live/test_tools_live.py](../tests_live/test_tools_live.py)(도구의 실제 호출)
 
 ## 파트 3. 평가 — 질문 해석이 맞는가 (`docs/evaluation/`)
 
@@ -51,6 +51,8 @@ tests/, tests_live/          자동 테스트
 | 파일 | 내용 |
 |---|---|
 | [../eval/questions.json](../eval/questions.json) | 질문 114개와 정답 원본. 묶음(split): `dev` 14, `final` 11, `dev_hard` 10, `final_hard` 10, `real` 69 |
+| [../eval/agent_cases.json](../eval/agent_cases.json) | 에이전트 평가 dev 묶음: 42개 케이스·47턴(고치면서 쓴 묶음) |
+| [../eval/agent_cases_heldout.json](../eval/agent_cases_heldout.json) | 에이전트 평가 held-out 묶음: 25개 케이스·28턴(결과를 본 뒤 에이전트를 고쳤으므로 소진됨) |
 | [../eval/alias_cases.json](../eval/alias_cases.json) | 회사명 입력 91개와 정식명 정답(회사 후보 평가용, 그룹: dict·not_in_dict_kr·english·preferred·typo·none·foreign·unlisted) |
 
 묶음별 용도: `dev`, `dev_hard`는 프롬프트 개선에 쓴 묶음이다. `final`, `final_hard`, `real`은 최종 확인용이며 **이미 한 번 이상 사용됐다**. 구조나 프롬프트를 바꾼 뒤의 확인에는 새 묶음이 필요하다.
@@ -80,14 +82,20 @@ tests/, tests_live/          자동 테스트
 | [20261019-102436-alias-x3.json](../eval/results/20261019-102436-alias-x3.json) | 10-19 10:24 | alias 75 | 3 | 해당 없음 | 사전 외 한글 별칭 46/48, 해외 42/42 | 제안 프롬프트 2안, 해외·비상장 안내 |
 | [20261019-113942-alias-x3.json](../eval/results/20261019-113942-alias-x3.json) | 10-19 11:39 | alias 91(모호한 그룹명·초성 16 추가) | 3 | 해당 없음 | 바로 확정 20개 중 오확정 0 | **현재 회사 후보**: 유명 별칭·초성 즉시 확정 점검 |
 
-- 비교 기준으로는 `x3` 결과 세 개를 쓴다(질문 해석 두 개, 회사 후보 한 개). 앞의 11개는 반복 1회라 같은 질문의 비일관성을 알 수 없고 형식도 이전 방식이다.
+| [20261019-142630-agent-x1.json](../eval/results/20261019-142630-agent-x1.json) | 10-19 14:26 | agent dev 42 | 1 | 에이전트 | 37/42 | 에이전트 첫 시험 |
+| [20261019-143427-agent-x3.json](../eval/results/20261019-143427-agent-x3.json) | 10-19 14:34 | agent dev 42 | 3 | 에이전트 1차 | 120/126 | 첫 구현(근거 인용이 약함) |
+| [20261019-144342-agent-x3.json](../eval/results/20261019-144342-agent-x3.json) | 10-19 14:43 | agent dev 42 | 3 | 에이전트 2차 | 123/126 | 인용·지표 검사 강화 |
+| [20261019-145038-agent-x3.json](../eval/results/20261019-145038-agent-x3.json) | 10-19 14:50 | agent dev 42 | 3 | 에이전트 3차 | 126/126 | 후보 자동 되묻기 |
+| [20261019-145646-agent-x3.json](../eval/results/20261019-145646-agent-x3.json) | 10-19 14:56 | agent held-out 25 | 3 | 에이전트 3차 | 65/75 (평가셋 오류 정정 시 71/75) | **에이전트 일반화 점수**, 정답에 없는 행 0 |
+
+- 비교 기준으로는 `x3` 결과들을 쓴다(질문 해석 두 개, 회사 후보 한 개, 에이전트 held-out 한 개). 에이전트 dev는 고치면서 쓴 묶음이라 일반화 점수가 아니다. 앞의 11개는 반복 1회라 같은 질문의 비일관성을 알 수 없고 형식도 이전 방식이다.
 
 ## 파트 4. 백로그와 설계 — 앞으로 무엇을 할까 (`docs/backlog/`)
 
 | 문서 | 내용 | 읽을 때 |
 |---|---|---|
 | [backlog/unresolved_cases.md](backlog/unresolved_cases.md) | 현재 시스템이 답하지 못한 64문항을 원인별 6유형(A~F)으로 묶고 해결 후보(도구·에이전트)를 적음 | 다음에 무엇을 고칠지 정할 때 |
-| [backlog/agent_design.md](backlog/agent_design.md) | 에이전트(LangGraph, 챗봇형) 설계: 사용자 결정 13개, 구조·상태·안전 규칙·화면·평가, 구현 전 확인할 것 | 에이전트를 만들 때 |
+| [backlog/agent_design.md](backlog/agent_design.md) | 에이전트(LangGraph, 챗봇형) 설계: 사용자 결정 13개, 구조·상태·안전 규칙·화면·평가, 공식 문서·스파이크 확인 결과와 설계 수정안 | 에이전트를 만들 때 |
 | [backlog/policies.md](backlog/policies.md) | MVP 정책 결정(상대 연도, 되묻기, 별도·분기, 정정본)과 구현 위치, 정정공시·동명 회사 확인 결과 | 정책을 확인할 때 |
 | [backlog/future_requirements.md](backlog/future_requirements.md) | 복수 연도·회사 등 앞으로의 요구, 예외 상황 카탈로그, 에이전트 구조 메모, 정책 결정 항목 | 에이전트를 설계할 때 |
 
@@ -100,5 +108,7 @@ tests/, tests_live/          자동 테스트
 | 오프라인 단위 테스트 | `python -m pytest` | 화면 출력 |
 | 실제 OpenDART 회귀 테스트(키 필요) | `python -m pytest tests_live` | 화면 출력 |
 | 질문 해석 평가(Gemini 호출) | `python -m eval.run_eval <묶음> [반복횟수]` | `eval/results/` |
+| 에이전트 평가(Gemini·OpenDART 호출) | `python -m eval.run_agent_eval [반복] [--baseline] [--cases=agent_cases_heldout.json]` | `eval/results/` |
+| 챗봇 화면 실행 | `streamlit run chat_app.py` | 화면 |
 | 회사명 후보 평가(Gemini 호출) | `python -m eval.run_alias_eval [반복횟수]` | `eval/results/` |
 | 질문별 응답 문서 생성(OpenDART 호출) | `python -m eval.export_responses <결과.json>…` | `docs/evaluation/eval_responses.md` |
