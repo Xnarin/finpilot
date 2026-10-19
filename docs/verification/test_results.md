@@ -2,7 +2,7 @@
 
 기준일 2026-10-17. 재현 방법은 명령, 확인자는 항목별로 구분했다. 자동 테스트 통과는 고정 응답 기준이며 실제 연동 성공을 뜻하지 않는다.
 
-## 1. 자동 테스트 (`python -m pytest`) — 32개 통과 (0.3초)
+## 1. 자동 테스트 (`python -m pytest`) — 48개 통과 (0.3초)
 
 네트워크·API 키 없이 실행. OpenDART 응답과 LLM 호출은 고정값·가짜 함수로 대체했다. 기대값은 테스트 안에 직접 적은 상수다.
 
@@ -30,6 +30,32 @@
 | 질문 해석 | `test_ask_incomplete_question_stops_without_guessing` ×3 | 기업·연도·작업 중 하나라도 비면 `QUESTION_INCOMPLETE`로 중단 |
 | | `test_ask_llm_failure_is_reported` | LLM 오류가 오류 코드로 표시 |
 | | `test_parse_question_rejects_bad_llm_output` | 허용되지 않은 작업값 → `LLM_BAD_OUTPUT`, 정상 JSON은 통과 |
+
+### 회사 후보 (`tests/test_candidates.py`, 2026-10-19 추가, 11개)
+
+| 테스트 | 확인 내용 |
+|---|---|
+| `test_alias_comes_first_with_source` | 별칭(네이버·삼전)이 후보 1번이고 출처가 표시됨 |
+| `test_alias_target_missing_from_list_is_not_suggested` | 별칭의 대상이 상장사 목록에 없으면 후보로 내지 않음 |
+| `test_preferred_stock_maps_to_common_stock_company_with_note` | 삼성전자우·삼성전자2우B → 삼성전자, 우선주라는 출처 표시 |
+| `test_english_name_candidates` | 영문명(Samsung Electronics, sk hynix) 후보, 해외 회사는 후보 없음 |
+| `test_formatting_only_difference_is_still_accepted_directly` | 공백·대소문자 차이만 있으면 바로 확정 |
+| `test_alias_is_never_auto_confirmed` | 별칭은 자동 확정하지 않고 후보로 되묻기 |
+| `test_all_alias_keys_are_normalized_form` | 별칭 사전의 키 형식 |
+| `test_ai_suggestions_are_verified_against_official_list` | AI가 제안한 이름 중 목록에 정확히 있는 것만 남김 |
+| `test_ai_suggestion_failure_or_bad_output_is_harmless` | AI 호출 실패·형식 오류가 와도 조용히 넘어감 |
+| `test_candidates_for_order_alias_then_ai_then_rest_with_sources` | 후보 순서: 별칭·우선주 → AI → 나머지, 출처 표시 |
+| `test_run_adds_candidates_and_ai_step_but_never_picks_one` | 실행 기록에 AI 제안 단계가 남고 회사를 자동으로 고르지 않음 |
+
+### 해외·비상장 안내 (`tests/test_candidates.py`, 2026-10-19 추가, 5개)
+
+| 테스트 | 확인 내용 |
+|---|---|
+| `test_weak_candidates_exist_without_ai_classification` | AI 분류가 없으면 `애플`→`애니플러스`(약칭 추정)가 후보로 나오는 소음 원인을 재현 |
+| `test_foreign_classification_drops_weak_candidates` | AI가 해외·비상장으로 분류하면 약한 후보를 버림 |
+| `test_foreign_classification_keeps_strong_candidates` | 별칭·영문명 등 강한 후보는 AI가 해외라고 해도 유지 |
+| `test_run_reports_unsupported_company_with_reason_and_no_buttons` | `COMPANY_NOT_SUPPORTED`와 이유 문구, 후보 버튼 없음, 기록에 AI 분류 |
+| `test_run_keeps_not_found_with_candidates_when_ai_says_unclear` | AI가 모른다고 하면 기존 후보로 되묻기 |
 
 ## 2. 실제 OpenDART 조회 확인
 
@@ -60,7 +86,17 @@
 | 지원 밖 질문(`주가 예측`) | `QUESTION_INCOMPLETE`(작업) | 화면 로직 시뮬레이션 Claude |
 | 약칭(`삼전`) | `COMPANY_NOT_FOUND` + 후보 버튼, `삼성전자(으)로 조회` 클릭 시 정상 조회(영업이익률 10.88%) | 화면 로직 시뮬레이션 Claude |
 
-## 3-1. 회사 후보 되묻기 (실제 상장사 목록 기준, Claude)
+## 3-2. 후보 개선 후 화면 로직 시뮬레이션 (2026-10-19, Claude)
+
+| 입력 | 후보 버튼 | 결과 |
+|---|---|---|
+| 네이버 2024년 영업이익률 | `NAVER · 별칭 사전` | 클릭 시 NAVER 2024 영업이익률 18.43% (매출 10.74조 원, 영업이익 1.98조 원) |
+| 삼성전자우 2024년 실적 | `삼성전자 · 우선주 → 해당 회사 재무제표` | 후보 표시 확인 |
+| 엘지이노텍 2024년 실적 | `LG이노텍 · AI 제안 (상장사 목록에서 확인됨)` | 후보 표시 확인 |
+
+회사 후보 성능 평가는 [eval_results.md](../evaluation/eval_results.md)의 5차 항목을 본다. 브라우저에서 직접 눌러 보는 확인은 아직 하지 않았다.
+
+## 3-1. 회사 후보 되묻기 (실제 상장사 목록 기준, Claude, 2026-10-17 개선 전 기록)
 
 | 입력 | 후보 |
 |---|---|

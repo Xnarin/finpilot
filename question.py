@@ -59,3 +59,37 @@ def parse_question(text, _llm=call_gemini):
     except ValidationError:
         raise FinError("LLM_BAD_OUTPUT", "질문 해석 결과가 정해진 형식이 아닙니다.") from None
     return {"parsed": parsed.model_dump(), "model": MODEL, "ms": (time.perf_counter() - t0) * 1000, "usage": usage}
+
+
+SUGGEST_PROMPT = """한국 상장사의 별칭·약칭·영문명을 OpenDART에 등록된 정식 상장사명으로 바꾼 후보를 최대 3개 낸다(names). 해외·비상장 회사이거나 짐작할 수 없으면 빈 목록을 낸다. 지어내지 말고, 확실한 것만 적는다.
+입력 그대로 다시 적지 말고 정식 상장사명으로 바꾼다.
+추가로 입력이 가리키는 회사의 종류를 kind로 분류한다: korean_listed(한국 상장사), foreign(해외 기업), korean_unlisted(한국 비상장 기업), unclear(여러 회사가 가능하거나 모름). 한국에 상장된 회사가 아니라고 확신할 때만 foreign 또는 korean_unlisted로 한다."""
+
+
+class Suggestion(BaseModel):
+    names: list[str] = []
+    kind: Literal["korean_listed", "foreign", "korean_unlisted", "unclear"] = "unclear"
+
+
+def call_suggest(name):
+    from google import genai
+    from google.genai import types
+    try:
+        client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+        return client.models.generate_content(model=MODEL, contents=name, config=types.GenerateContentConfig(
+            system_instruction=SUGGEST_PROMPT, temperature=0, response_mime_type="application/json",
+            response_json_schema=Suggestion.model_json_schema())).text
+    except Exception as e:  # 실패해도 코드 후보만으로 되묻는다. 종류만 보고한다
+        raise FinError("LLM_ERROR", f"회사 후보 제안 호출에 실패했습니다 ({type(e).__name__}).") from None
+
+
+@traceable(name="suggest_companies", run_type="llm", metadata={"model": MODEL}, process_inputs=lambda i: {"name": i["name"]})
+def suggest_companies(name, corps, _llm=call_suggest):
+    """LLM이 낸 후보 중 상장사 목록에 정확히 있는 이름만 남긴다. 목록에 없는 제안은 버린다."""
+    try:
+        s = Suggestion.model_validate_json(_llm(name))
+        proposed, kind = s.names[:3], s.kind
+    except (FinError, ValidationError):
+        return {"proposed": [], "verified": [], "kind": "unclear", "error": True}
+    listed = {c[1] for c in corps}
+    return {"proposed": proposed, "verified": [p for p in dict.fromkeys(proposed) if p in listed], "kind": kind}

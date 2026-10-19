@@ -2,6 +2,7 @@ import streamlit as st
 from langsmith.utils import tracing_is_enabled
 
 from finance import DATA_KIND, TASKS, YEARS, ask, pick_company, run
+from question import suggest_companies
 
 st.set_page_config(page_title="FinPilot", layout="wide")
 st.title("FinPilot")
@@ -21,7 +22,7 @@ with st.form("input"):
     submitted = st.form_submit_button("실행")
 
 if submitted:
-    st.session_state["rec"] = run(task, year, company)
+    st.session_state["rec"] = run(task, year, company, suggest=suggest_companies)
 
 rec = st.session_state.get("rec")
 if not rec:
@@ -42,7 +43,7 @@ if rec["error_code"]:
     st.error(f"[{rec['error_code']}] {rec['error_message']}")
     for name in rec.get("candidates") or []:
         if rec["error_code"] == "COMPANY_NOT_FOUND":
-            st.button(f"{name}(으)로 조회", key=f"pick-{rec['run_id']}-{name}",
+            st.button(f"{name}(으)로 조회 · {rec.get('candidate_sources', {}).get(name, '')}", key=f"pick-{rec['run_id']}-{name}",
                       on_click=lambda n=name: st.session_state.update(rec=pick_company(rec, n)))
 else:
     r = rec["result"]

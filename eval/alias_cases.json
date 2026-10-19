@@ -1,0 +1,455 @@
+{
+ "_note": "회사명 입력 -> 되묻기 후보 평가. expected는 상장사 목록(OpenDART corpCode)의 정식명(사람이 확인), none은 해외·비상장·모호해서 후보가 없거나 여러 개여야 하는 입력. dict 그룹은 별칭 사전에 넣은 항목이라 일반화 성능을 보지 않는다. 엔씨소프트·케이티앤지·삼성SDS 별칭은 이 평가셋을 만들며 목록에서 이름이 다른 것을 발견한 뒤 사전에 추가했다. foreign(해외 기업 14)·unlisted(한국 비상장 4) 그룹은 2026-10-19에 후보 소음 개선(AI 분류) 후에 추가한 미튜닝 입력이다. 애플·테슬라·구글·토요타·우리집(none 그룹)은 개선 전에 확인한 입력이다.",
+ "items": [
+  {
+   "id": "a01",
+   "group": "dict",
+   "input": "네이버",
+   "expected": "NAVER"
+  },
+  {
+   "id": "a02",
+   "group": "dict",
+   "input": "삼전",
+   "expected": "삼성전자"
+  },
+  {
+   "id": "a03",
+   "group": "dict",
+   "input": "하닉",
+   "expected": "SK하이닉스"
+  },
+  {
+   "id": "a04",
+   "group": "dict",
+   "input": "현차",
+   "expected": "현대자동차"
+  },
+  {
+   "id": "a05",
+   "group": "dict",
+   "input": "현대차",
+   "expected": "현대자동차"
+  },
+  {
+   "id": "a06",
+   "group": "dict",
+   "input": "엘지엔솔",
+   "expected": "LG에너지솔루션"
+  },
+  {
+   "id": "a07",
+   "group": "dict",
+   "input": "카뱅",
+   "expected": "카카오뱅크"
+  },
+  {
+   "id": "a08",
+   "group": "dict",
+   "input": "포스코",
+   "expected": "POSCO홀딩스"
+  },
+  {
+   "id": "a09",
+   "group": "dict",
+   "input": "기아차",
+   "expected": "기아"
+  },
+  {
+   "id": "a10",
+   "group": "dict",
+   "input": "셀트",
+   "expected": "셀트리온"
+  },
+  {
+   "id": "a11",
+   "group": "dict",
+   "input": "엘지화학",
+   "expected": "LG화학"
+  },
+  {
+   "id": "a12",
+   "group": "dict",
+   "input": "삼바",
+   "expected": "삼성바이오로직스"
+  },
+  {
+   "id": "a13",
+   "group": "dict",
+   "input": "한전",
+   "expected": "한국전력공사"
+  },
+  {
+   "id": "a14",
+   "group": "dict",
+   "input": "두산에너빌",
+   "expected": "두산에너빌리티"
+  },
+  {
+   "id": "a15",
+   "group": "not_in_dict_kr",
+   "input": "에스케이스퀘어",
+   "expected": "SK스퀘어"
+  },
+  {
+   "id": "a16",
+   "group": "not_in_dict_kr",
+   "input": "엘지디스플레이",
+   "expected": "LG디스플레이"
+  },
+  {
+   "id": "a17",
+   "group": "not_in_dict_kr",
+   "input": "엘지이노텍",
+   "expected": "LG이노텍"
+  },
+  {
+   "id": "a18",
+   "group": "not_in_dict_kr",
+   "input": "에스케이이노베이션",
+   "expected": "SK이노베이션"
+  },
+  {
+   "id": "a19",
+   "group": "not_in_dict_kr",
+   "input": "에이치디현대중공업",
+   "expected": "HD현대중공업"
+  },
+  {
+   "id": "a20",
+   "group": "not_in_dict_kr",
+   "input": "기아자동차",
+   "expected": "기아"
+  },
+  {
+   "id": "a21",
+   "group": "not_in_dict_kr",
+   "input": "삼성바이오",
+   "expected": "삼성바이오로직스"
+  },
+  {
+   "id": "a22",
+   "group": "not_in_dict_kr",
+   "input": "한화에어로",
+   "expected": "한화에어로스페이스"
+  },
+  {
+   "id": "a23",
+   "group": "not_in_dict_kr",
+   "input": "신한",
+   "expected": "신한지주"
+  },
+  {
+   "id": "a24",
+   "group": "not_in_dict_kr",
+   "input": "우리금융",
+   "expected": "우리금융지주"
+  },
+  {
+   "id": "a25",
+   "group": "not_in_dict_kr",
+   "input": "카카오게임",
+   "expected": "카카오게임즈"
+  },
+  {
+   "id": "a26",
+   "group": "not_in_dict_kr",
+   "input": "하이닉스",
+   "expected": "SK하이닉스"
+  },
+  {
+   "id": "a27",
+   "group": "not_in_dict_kr",
+   "input": "엔씨소프트",
+   "expected": "NC"
+  },
+  {
+   "id": "a28",
+   "group": "not_in_dict_kr",
+   "input": "케이티앤지",
+   "expected": "케이티앤지"
+  },
+  {
+   "id": "a29",
+   "group": "not_in_dict_kr",
+   "input": "KT&G",
+   "expected": "케이티앤지"
+  },
+  {
+   "id": "a30",
+   "group": "not_in_dict_kr",
+   "input": "삼성SDS",
+   "expected": "삼성에스디에스"
+  },
+  {
+   "id": "a31",
+   "group": "english",
+   "input": "Samsung Electronics",
+   "expected": "삼성전자"
+  },
+  {
+   "id": "a32",
+   "group": "english",
+   "input": "SK hynix",
+   "expected": "SK하이닉스"
+  },
+  {
+   "id": "a33",
+   "group": "english",
+   "input": "Hyundai Motor",
+   "expected": "현대자동차"
+  },
+  {
+   "id": "a34",
+   "group": "english",
+   "input": "NAVER Corp",
+   "expected": "NAVER"
+  },
+  {
+   "id": "a35",
+   "group": "english",
+   "input": "LG Energy Solution",
+   "expected": "LG에너지솔루션"
+  },
+  {
+   "id": "a36",
+   "group": "english",
+   "input": "Celltrion",
+   "expected": "셀트리온"
+  },
+  {
+   "id": "a37",
+   "group": "english",
+   "input": "Kakao Bank",
+   "expected": "카카오뱅크"
+  },
+  {
+   "id": "a38",
+   "group": "english",
+   "input": "POSCO Holdings",
+   "expected": "POSCO홀딩스"
+  },
+  {
+   "id": "a39",
+   "group": "english",
+   "input": "Hanwha Aerospace",
+   "expected": "한화에어로스페이스"
+  },
+  {
+   "id": "a40",
+   "group": "english",
+   "input": "Krafton",
+   "expected": "크래프톤"
+  },
+  {
+   "id": "a41",
+   "group": "preferred",
+   "input": "삼성전자우",
+   "expected": "삼성전자"
+  },
+  {
+   "id": "a42",
+   "group": "preferred",
+   "input": "현대차우",
+   "expected": "현대자동차"
+  },
+  {
+   "id": "a43",
+   "group": "preferred",
+   "input": "현대차2우B",
+   "expected": "현대자동차"
+  },
+  {
+   "id": "a44",
+   "group": "preferred",
+   "input": "삼성전자우선주",
+   "expected": "삼성전자"
+  },
+  {
+   "id": "a45",
+   "group": "typo",
+   "input": "삼성젼자",
+   "expected": "삼성전자"
+  },
+  {
+   "id": "a46",
+   "group": "typo",
+   "input": "하이닉수",
+   "expected": "SK하이닉스"
+  },
+  {
+   "id": "a47",
+   "group": "typo",
+   "input": "카카오벵크",
+   "expected": "카카오뱅크"
+  },
+  {
+   "id": "a48",
+   "group": "typo",
+   "input": "샐트리온",
+   "expected": "셀트리온"
+  },
+  {
+   "id": "a49",
+   "group": "typo",
+   "input": "현대자돟차",
+   "expected": "현대자동차"
+  },
+  {
+   "id": "a50",
+   "group": "none",
+   "input": "애플",
+   "expected": null
+  },
+  {
+   "id": "a51",
+   "group": "none",
+   "input": "테슬라",
+   "expected": null
+  },
+  {
+   "id": "a52",
+   "group": "none",
+   "input": "구글",
+   "expected": null
+  },
+  {
+   "id": "a53",
+   "group": "none",
+   "input": "우리집",
+   "expected": null
+  },
+  {
+   "id": "a54",
+   "group": "none",
+   "input": "토요타",
+   "expected": null
+  },
+  {
+   "id": "a55",
+   "group": "none",
+   "input": "삼성",
+   "expected": null
+  },
+  {
+   "id": "a56",
+   "group": "none",
+   "input": "현대",
+   "expected": null
+  },
+  {
+   "id": "a57",
+   "group": "none",
+   "input": "엘지",
+   "expected": null
+  },
+  {
+   "id": "a58",
+   "group": "foreign",
+   "input": "마이크로소프트",
+   "expected": null
+  },
+  {
+   "id": "a59",
+   "group": "foreign",
+   "input": "엔비디아",
+   "expected": null
+  },
+  {
+   "id": "a60",
+   "group": "foreign",
+   "input": "아마존",
+   "expected": null
+  },
+  {
+   "id": "a61",
+   "group": "foreign",
+   "input": "메타",
+   "expected": null
+  },
+  {
+   "id": "a62",
+   "group": "foreign",
+   "input": "알리바바",
+   "expected": null
+  },
+  {
+   "id": "a63",
+   "group": "foreign",
+   "input": "텐센트",
+   "expected": null
+  },
+  {
+   "id": "a64",
+   "group": "foreign",
+   "input": "소니",
+   "expected": null
+  },
+  {
+   "id": "a65",
+   "group": "foreign",
+   "input": "닌텐도",
+   "expected": null
+  },
+  {
+   "id": "a66",
+   "group": "foreign",
+   "input": "Microsoft",
+   "expected": null
+  },
+  {
+   "id": "a67",
+   "group": "foreign",
+   "input": "Nvidia",
+   "expected": null
+  },
+  {
+   "id": "a68",
+   "group": "foreign",
+   "input": "Toyota",
+   "expected": null
+  },
+  {
+   "id": "a69",
+   "group": "foreign",
+   "input": "TSMC",
+   "expected": null
+  },
+  {
+   "id": "a70",
+   "group": "foreign",
+   "input": "인텔",
+   "expected": null
+  },
+  {
+   "id": "a71",
+   "group": "foreign",
+   "input": "넷플릭스",
+   "expected": null
+  },
+  {
+   "id": "a72",
+   "group": "unlisted",
+   "input": "쿠팡",
+   "expected": null
+  },
+  {
+   "id": "a73",
+   "group": "unlisted",
+   "input": "토스",
+   "expected": null
+  },
+  {
+   "id": "a74",
+   "group": "unlisted",
+   "input": "배달의민족",
+   "expected": null
+  },
+  {
+   "id": "a75",
+   "group": "unlisted",
+   "input": "당근마켓",
+   "expected": null
+  }
+ ]
+}

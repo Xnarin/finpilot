@@ -23,9 +23,9 @@ ACCOUNTS = {"revenue": "ifrs-full_Revenue", "operating_profit": "dart_OperatingI
 
 
 class FinError(Exception):
-    def __init__(self, code, message, candidates=None):
+    def __init__(self, code, message, candidates=None, sources=None):
         super().__init__(message)
-        self.code, self.message, self.candidates = code, message, candidates
+        self.code, self.message, self.candidates, self.sources = code, message, candidates, sources or {}
 
 
 def load_env():
@@ -58,24 +58,40 @@ def http_get(params):
 
 
 def load_corps():
-    """상장사 [고유번호, 회사명, 종목코드] 목록. 최초 1회 corpCode.xml을 내려받아 .cache에 저장한다."""
+    """상장사 [고유번호, 회사명, 종목코드, 영문명] 목록. 최초 1회 corpCode.xml을 내려받아 .cache에 저장한다."""
     # ponytail: 캐시 만료 없음. 신규 상장·사명 변경이 필요하면 .cache/corp_codes.json을 지운다.
     if CORP_CACHE.exists():
-        return json.loads(CORP_CACHE.read_text(encoding="utf-8"))
+        corps = json.loads(CORP_CACHE.read_text(encoding="utf-8"))
+        if corps and len(corps[0]) >= 4:  # 영문명 열이 없는 이전 캐시는 다시 받는다
+            return corps
     try:
         with urllib.request.urlopen(CORP_URL + "?" + urllib.parse.urlencode({"crtfc_key": _api_key()}), timeout=60) as resp:
             xml = zipfile.ZipFile(io.BytesIO(resp.read())).read("CORPCODE.xml")
     except (OSError, zipfile.BadZipFile, KeyError) as e:  # 잘못된 키는 zip 대신 오류 본문이 온다
         raise FinError("NETWORK_ERROR", f"회사 목록을 받지 못했습니다 ({type(e).__name__}). 키와 네트워크를 확인하세요.") from None
-    corps = [[c.findtext("corp_code"), c.findtext("corp_name"), c.findtext("stock_code").strip()]
+    corps = [[c.findtext("corp_code"), c.findtext("corp_name"), c.findtext("stock_code").strip(), (c.findtext("corp_eng_name") or "").strip()]
              for c in ET.fromstring(xml).iter("list") if (c.findtext("stock_code") or "").strip()]
     CORP_CACHE.parent.mkdir(exist_ok=True)
     CORP_CACHE.write_text(json.dumps(corps, ensure_ascii=False), encoding="utf-8")
     return corps
 
 
+# 자주 쓰는 별칭 -> 상장사 정식명. 대상이 상장사 목록에 있을 때만 후보로 쓴다. 확정은 항상 사용자가 한다.
+ALIASES = {"네이버": "NAVER", "삼전": "삼성전자", "하닉": "SK하이닉스", "에스케이하이닉스": "SK하이닉스", "현차": "현대자동차", "현대차": "현대자동차",
+           "엘지엔솔": "LG에너지솔루션", "엘엔솔": "LG에너지솔루션", "엘지에너지솔루션": "LG에너지솔루션", "카뱅": "카카오뱅크", "포스코": "POSCO홀딩스",
+           "기아차": "기아", "셀트": "셀트리온", "엘지화학": "LG화학", "엘지전자": "LG전자", "삼바": "삼성바이오로직스", "엔씨소프트": "NC", "엔씨": "NC", "kt&g": "케이티앤지", "삼성sds": "삼성에스디에스", "한전": "한국전력공사",
+           "두산에너빌": "두산에너빌리티", "에스케이텔레콤": "SK텔레콤", "케이비금융": "KB금융", "삼성에스디아이": "삼성SDI"}
+_PREFERRED = re.compile(r"(\d?우[A-C]?|우\(전환\))$")
+_ENG_SUFFIX = re.compile(r"(co|ltd|inc|corp|corporation|company|limited)+$")
+SRC_ALIAS, SRC_PREFERRED, SRC_ENGLISH = "별칭 사전", "우선주 → 해당 회사 재무제표", "영문명"
+
+
 def _norm(s):
     return re.sub(r"\s+", "", s).casefold()
+
+
+def _eng_norm(s):
+    return _ENG_SUFFIX.sub("", re.sub(r"[^a-z0-9]", "", s.casefold()))
 
 
 def _is_abbrev(short, full):
@@ -84,16 +100,35 @@ def _is_abbrev(short, full):
     return len(short) >= 2 and short[0] == full[0] and all(ch in it for ch in short)
 
 
-def company_candidates(name, corps):
-    """되묻기용 후보(최대 5개). 부분 일치 -> 약칭 -> 비슷한 철자 순. 자동 선택에는 쓰지 않는다."""
+def candidate_list(name, corps):
+    """되묻기용 후보 [(상장사명, 출처)] 최대 5개. 별칭 -> 우선주 -> 영문명 -> 이름 포함 -> 약칭 -> 비슷한 철자 순. 자동 확정에는 쓰지 않는다."""
     n = _norm(name)
-    names = {_norm(c[1]): c[1] for c in corps}
+    by_norm = {_norm(c[1]): c[1] for c in corps}
     out = []
-    for group in ([k for k in names if n and n in k], [k for k in names if _is_abbrev(n, k)]):
-        out += [names[k] for k in sorted(group, key=len) if names[k] not in out]
+
+    def add(names, source):
+        for x in names:
+            if x not in [o[0] for o in out]:
+                out.append((x, source))
+
+    if ALIASES.get(n) in by_norm.values():
+        add([ALIASES[n]], SRC_ALIAS)
+    base = _PREFERRED.sub("", n)
+    if base != n and base in by_norm:
+        add([by_norm[base]], SRC_PREFERRED)
+    e = _eng_norm(name)
+    if len(e) >= 5:
+        add([c[1] for c in corps if len(c) > 3 and c[3] and e in _eng_norm(c[3])][:3], SRC_ENGLISH)
+    add([by_norm[k] for k in sorted((k for k in by_norm if n and n in k), key=len)], "이름 일부 일치")
+    add([by_norm[k] for k in sorted((k for k in by_norm if len(k) >= 3 and k in n and k != n), key=len, reverse=True)], "입력에 포함된 회사명")
+    add([by_norm[k] for k in sorted((k for k in by_norm if _is_abbrev(n, k)), key=len)], "약칭 추정")
     if not out:  # 오타 후보는 다른 후보가 없을 때만(엉뚱한 제안을 줄이기 위해 기준을 높게 둔다)
-        out = [names[k] for k in difflib.get_close_matches(n, list(names), n=5, cutoff=0.75)]
+        add([by_norm[k] for k in difflib.get_close_matches(n, list(by_norm), n=5, cutoff=0.75)], "비슷한 철자")
     return out[:5]
+
+
+def company_candidates(name, corps):
+    return [c for c, _ in candidate_list(name, corps)]
 
 
 def find_company(name, corps):
@@ -104,8 +139,10 @@ def find_company(name, corps):
     if hits:
         raise FinError("COMPANY_AMBIGUOUS", f"'{name.strip()}'에 해당하는 상장사가 {len(hits)}곳입니다: " + ", ".join(f"{c[1]}({c[2]})" for c in hits[:5]),
                        [c[1] for c in hits[:5]])
-    cands = company_candidates(name, corps)
-    raise FinError("COMPANY_NOT_FOUND", f"상장사 '{name.strip()}'을(를) 찾지 못했습니다." + (f" 혹시 {', '.join(cands)} 중 하나인가요?" if cands else ""), cands)
+    cl = candidate_list(name, corps)
+    cands = [c for c, _ in cl]
+    raise FinError("COMPANY_NOT_FOUND", f"상장사 '{name.strip()}'을(를) 찾지 못했습니다." + (f" 혹시 {', '.join(cands)} 중 하나인가요?" if cands else ""),
+                   cands, dict(cl))
 
 
 def _amount(rows, account_id, year):

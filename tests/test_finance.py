@@ -192,7 +192,7 @@ def test_pick_company_reruns_with_chosen_name_and_records_choice():
         if company == "삼전":
             raise FinError("COMPANY_NOT_FOUND", "x", ["삼성전자"])
         return {**rec(year, company=company), "rcept_no": "R", "fetched_at": "t"}
-    r0 = run("영업이익률 계산", 2024, "삼전", fetch=f)
+    r0 = run("영업이익률 계산", 2024, "삼전", fetch=f, candidates_fn=None)
     assert r0["candidates"] == ["삼성전자"]
     r1 = pick_company(r0, "삼성전자", fetch=f)
     assert r1["error_code"] is None and r1["result"]["company"] == "삼성전자"

@@ -5,6 +5,7 @@
 ```
 docs/
 ├─ index.md                  이 목차
+├─ 회고.md                   고민과 해결 기록
 ├─ verification/             구현이 맞는지 확인한 기록
 │   └─ test_results.md
 ├─ evaluation/               질문 해석 평가 (질문, 결과, 응답)
@@ -23,6 +24,7 @@ tests/, tests_live/          자동 테스트
 | 문서 | 내용 | 읽을 때 |
 |---|---|---|
 | [../README.md](../README.md) | 설치·설정·실행·테스트 방법, 조회 기준, 검증 기록 요약 | 처음 볼 때 |
+| [회고.md](회고.md) | 사용자가 던진 고민, 결정, 해결, 남은 문제, 배운 점을 시간순·주제별로 정리 | 지금까지의 흐름을 볼 때 |
 | [../AGENT.md](../AGENT.md) | 개발 에이전트 지침과 단계별 로드맵 | 작업 원칙 확인 |
 | [../finpilot_project_plan.md](../finpilot_project_plan.md), [../finance_study_notes.md](../finance_study_notes.md) | 원본 기획서, 금융 개념 학습 기록(수정하지 않음) | 배경 확인 |
 
@@ -30,7 +32,7 @@ tests/, tests_live/          자동 테스트
 
 | 문서 | 내용 | 읽을 때 |
 |---|---|---|
-| [verification/test_results.md](verification/test_results.md) | 자동 테스트 32개 목록, 실제 OpenDART 회귀 테스트 13개, DART 원문 대조, 오류 상황 확인, LangSmith trace 비밀값 점검 | 조회·계산이 맞는지 확인할 때 |
+| [verification/test_results.md](verification/test_results.md) | 자동 테스트 48개 목록, 실제 OpenDART 회귀 테스트 13개, DART 원문 대조, 오류 상황 확인, LangSmith trace 비밀값 점검 | 조회·계산이 맞는지 확인할 때 |
 
 관련 코드: [../tests/test_finance.py](../tests/test_finance.py)(오프라인), [../tests_live/test_verified_values.py](../tests_live/test_verified_values.py)(사용자가 원문과 대조한 12개 조합의 수치)
 
@@ -47,6 +49,7 @@ tests/, tests_live/          자동 테스트
 | 파일 | 내용 |
 |---|---|
 | [../eval/questions.json](../eval/questions.json) | 질문 114개와 정답 원본. 묶음(split): `dev` 14, `final` 11, `dev_hard` 10, `final_hard` 10, `real` 69 |
+| [../eval/alias_cases.json](../eval/alias_cases.json) | 회사명 입력 75개와 정식명 정답(회사 후보 평가용, 그룹: dict·not_in_dict_kr·english·preferred·typo·none·foreign·unlisted) |
 
 묶음별 용도: `dev`, `dev_hard`는 프롬프트 개선에 쓴 묶음이다. `final`, `final_hard`, `real`은 최종 확인용이며 **이미 한 번 이상 사용됐다**. 구조나 프롬프트를 바꾼 뒤의 확인에는 새 묶음이 필요하다.
 
@@ -70,7 +73,11 @@ tests/, tests_live/          자동 테스트
 | [20261017-234045-all-x3.json](../eval/results/20261017-234045-all-x3.json) | 23:40 | 위 4개 묶음 45 | 3 | v4 | 호출 단위 93.3% | **기준선 1**: 반복 실행·토큰 포함 |
 | [20261017-235007-real-x3.json](../eval/results/20261017-235007-real-x3.json) | 23:50 | real 69(점수 대상 65) | 3 | v4 | 호출 단위 84.6% | **기준선 2**: 실사용자형 질문, 미튜닝 |
 
-- 비교 기준으로는 마지막 두 개(`x3`)를 쓴다. 앞의 11개는 반복 1회라 같은 질문의 비일관성을 알 수 없고 형식도 이전 방식이다.
+| [20261019-093314-alias-x3.json](../eval/results/20261019-093314-alias-x3.json) | 10-19 09:33 | alias 57(회사명 입력) | 3 | 해당 없음(회사 후보 단계) | AI 포함 hit@1 141/147(정답이 있는 49개 입력×3회) | **회사 후보 기준선**: 코드 후보만 vs AI 제안 포함, `python -m eval.run_alias_eval` |
+| [20261019-102053-alias-x3.json](../eval/results/20261019-102053-alias-x3.json) | 10-19 10:20 | alias 75(해외·비상장 18 추가) | 3 | 해당 없음 | 사전 외 한글 별칭 38/48 | 분류 추가 직후, 제안 프롬프트 1안(후보 이름이 나빠짐) |
+| [20261019-102436-alias-x3.json](../eval/results/20261019-102436-alias-x3.json) | 10-19 10:24 | alias 75 | 3 | 해당 없음 | 사전 외 한글 별칭 46/48, 해외 42/42 | **현재 회사 후보**: 제안 프롬프트 2안, 해외·비상장 안내 |
+
+- 비교 기준으로는 `x3` 결과 세 개를 쓴다(질문 해석 두 개, 회사 후보 한 개). 앞의 11개는 반복 1회라 같은 질문의 비일관성을 알 수 없고 형식도 이전 방식이다.
 
 ## 파트 4. 백로그와 설계 — 앞으로 무엇을 할까 (`docs/backlog/`)
 
@@ -88,4 +95,5 @@ tests/, tests_live/          자동 테스트
 | 오프라인 단위 테스트 | `python -m pytest` | 화면 출력 |
 | 실제 OpenDART 회귀 테스트(키 필요) | `python -m pytest tests_live` | 화면 출력 |
 | 질문 해석 평가(Gemini 호출) | `python -m eval.run_eval <묶음> [반복횟수]` | `eval/results/` |
+| 회사명 후보 평가(Gemini 호출) | `python -m eval.run_alias_eval [반복횟수]` | `eval/results/` |
 | 질문별 응답 문서 생성(OpenDART 호출) | `python -m eval.export_responses <결과.json>…` | `docs/evaluation/eval_responses.md` |
