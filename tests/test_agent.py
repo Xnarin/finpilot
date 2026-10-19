@@ -387,3 +387,34 @@ def test_loss_or_profit_wording_counts_as_stating_the_metric(user):
               ai(call("get_financials", corp_code="1", year=2023)), ai(text="조회했어요.")]
     (r,), _ = run(script, user)
     assert r["rows"] and r["rows"][0]["year"] == 2023
+
+
+@pytest.mark.parametrize("evidence", ["2024", "2024년", "2024년도"])
+def test_year_evidence_tolerates_year_suffix_the_llm_adds(evidence):
+    script = [ai(call("resolve_years", kind="explicit", values=[2024], evidence=evidence)), ai(text="됐어요.")]
+    (r,), _ = run(script, "삼전 2024 영업이익률")        # 사용자는 '2024'라고만 썼다
+    assert r["tool_log"][0]["status"] == "ok"
+
+
+def test_suffix_tolerance_does_not_accept_a_year_the_user_never_wrote():
+    script = [ai(call("resolve_years", kind="explicit", values=[2023], evidence="2023년")), ai(call("ask_user", missing=["year"]))]
+    (r,), _ = run(script, "삼전 2024 영업이익률")
+    assert r["tool_log"][0]["code"] == "GUARD_NO_EVIDENCE"
+
+
+def test_unresolved_year_error_tells_the_llm_which_years_are_allowed():
+    script = [ai(call("resolve_company", name="삼전", evidence="삼전"), call("resolve_years", kind="relative", expr="작년", evidence="작년")),
+              ai(call("compute_ratio", metric="operating_margin", corp_code="1", year=2023)), ai(call("ask_user", missing=["year"]))]
+    (r,), llm = run(script, "삼전 작년 영업이익률")
+    err = [e for e in r["tool_log"] if e["tool"] == "compute_ratio"][0]
+    assert err["code"] == "GUARD_YEAR_NOT_RESOLVED"
+    tool_msgs = [m.content for m in llm.seen[-1] if type(m).__name__ == "ToolMessage"]       # LLM이 실제로 받은 오류 문구
+    assert any("[2025]" in c for c in tool_msgs)
+
+
+def test_bad_evidence_hint_points_to_explicit_when_the_quote_has_a_year_number():
+    script = [ai(call("resolve_years", kind="relative", expr="올해", evidence="2024년")), ai(call("resolve_years", kind="explicit", values=[2024], evidence="2024년")), ai(text="됐어요.")]
+    (r,), llm = run(script, "삼전 2024 영업이익률")
+    assert r["tool_log"][0]["code"] == "GUARD_BAD_EVIDENCE" and r["tool_log"][1]["status"] == "ok"
+    msgs = [m.content for m in llm.seen[1] if type(m).__name__ == "ToolMessage"]
+    assert any("kind=explicit" in c and "2024" in c for c in msgs)

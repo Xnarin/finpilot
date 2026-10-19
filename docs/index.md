@@ -34,7 +34,7 @@ tests/, tests_live/          자동 테스트
 
 | 문서 | 내용 | 읽을 때 |
 |---|---|---|
-| [verification/test_results.md](verification/test_results.md) | 자동 테스트 197개 목록, 실제 OpenDART 회귀 테스트 13개, DART 원문 대조, 오류 상황 확인, LangSmith trace 비밀값 점검 | 조회·계산이 맞는지 확인할 때 |
+| [verification/test_results.md](verification/test_results.md) | 자동 테스트 203개 목록, 실제 OpenDART 회귀 테스트 13개, DART 원문 대조, 오류 상황 확인, LangSmith trace 비밀값 점검 | 조회·계산이 맞는지 확인할 때 |
 
 관련 코드: [../tests/test_finance.py](../tests/test_finance.py), [../tests/test_candidates.py](../tests/test_candidates.py), [../tests/test_tools.py](../tests/test_tools.py), [../tests/test_famous.py](../tests/test_famous.py), [../tests/test_agent.py](../tests/test_agent.py)(오프라인, 에이전트는 가짜 LLM), [../tests_live/test_verified_values.py](../tests_live/test_verified_values.py)(사용자가 원문과 대조한 12개 조합의 수치), [../tests_live/test_tools_live.py](../tests_live/test_tools_live.py)(도구의 실제 호출)
 

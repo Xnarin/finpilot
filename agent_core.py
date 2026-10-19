@@ -164,9 +164,15 @@ class Runner:
         self.log = []
 
     # -- 근거 인용 검사
-    def _evidence_ok(self, ev):
+    @staticmethod
+    def _variants(ev):
+        """인용에 붙기 쉬운 접미사('2024년', '2024년도')를 뗀 형태도 같은 인용으로 본다(사용자는 '2024'라고만 썼는데 LLM이 '년'을 붙이는 경우)."""
         e = _norm(ev or "")
-        return bool(e) and any(e in t for t in self.user_all), bool(e) and e in self.user_now
+        return {x for x in (e, e[:-2] if e.endswith("년도") else e, e[:-1] if e.endswith("년") else e) if x}
+
+    def _evidence_ok(self, ev):
+        vs = self._variants(ev)
+        return any(v in t for v in vs for t in self.user_all), any(v in self.user_now for v in vs)
 
     def _year_evidence_fits(self, a):
         """인용(evidence)이 말한 연도 표현과 실제로 맞는지: 연도 숫자, 상대 연도 단어, '최근'이 인용에 들어 있어야 한다."""
@@ -237,7 +243,9 @@ class Runner:
         if not any_ok:
             return _guard("NO_EVIDENCE", "evidence가 사용자 문장에 없습니다. 사용자가 말하지 않은 연도를 추측하지 말고 ask_user(year)로 물어보세요.")
         if not self._year_evidence_fits(a):
-            return _guard("BAD_EVIDENCE", "evidence가 연도 표현과 맞지 않습니다. 사용자 문장에서 연도를 말한 부분(예: '2024년', '작년', '최근 3년')을 그대로 인용하세요. 사용자가 연도를 말하지 않았다면 ask_user(year)를 호출하세요.")
+            years_in_ev = re.findall(r"(?:19|20)\d\d", str(a["evidence"]))
+            hint = f" evidence에 연도 숫자({', '.join(years_in_ev)})가 있으면 kind=explicit, values=[{', '.join(years_in_ev)}]로 호출하세요." if years_in_ev else ""
+            return _guard("BAD_EVIDENCE", "evidence가 연도 표현과 맞지 않습니다. 사용자 문장에서 연도를 말한 부분(예: '2024년', '작년', '최근 3년')을 그대로 인용하세요. 사용자가 연도를 말하지 않았다면 ask_user(year)를 호출하세요." + hint)
         expr = {"kind": a["kind"]}
         for k in ("values", "start", "end", "expr", "n"):
             if k in a:
@@ -267,7 +275,8 @@ class Runner:
         if a["corp_code"] not in self.resolved:
             return _guard("UNRESOLVED_COMPANY", "이 대화에서 resolve_company로 확정되지 않은 corp_code입니다. 먼저 회사를 확정하세요.")
         if a["year"] not in self.years_ok:
-            return _guard("YEAR_NOT_RESOLVED", "resolve_years가 돌려주지 않은 연도입니다. 먼저 resolve_years로 연도를 확정하세요(사용자가 말한 연도만).")
+            allowed = ", ".join(map(str, self.years_ok)) or "없음"
+            return _guard("YEAR_NOT_RESOLVED", f"resolve_years가 돌려주지 않은 연도입니다. 지금 쓸 수 있는 연도는 [{allowed}]뿐입니다. 사용자가 말한 연도를 resolve_years로 확정하거나, 아래 연도 중에서만 고르세요.")
         if a.get("basis") == "별도" and not self._said(("별도", "개별")):
             return _guard("BASIS_NOT_REQUESTED", "사용자가 별도 기준을 요청하지 않았습니다. 기본은 연결입니다.")
         if a.get("period", "연간") != "연간" and not self._said(("분기", "반기", "월", "Q", "q")):
