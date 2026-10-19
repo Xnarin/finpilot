@@ -13,6 +13,7 @@ docs/
 │   ├─ eval_questions.md
 │   └─ eval_responses.md
 └─ backlog/                  앞으로 할 일과 설계 메모
+    ├─ agent_design.md
     ├─ policies.md
     ├─ unresolved_cases.md
     └─ future_requirements.md
@@ -86,6 +87,7 @@ tests/, tests_live/          자동 테스트
 | 문서 | 내용 | 읽을 때 |
 |---|---|---|
 | [backlog/unresolved_cases.md](backlog/unresolved_cases.md) | 현재 시스템이 답하지 못한 64문항을 원인별 6유형(A~F)으로 묶고 해결 후보(도구·에이전트)를 적음 | 다음에 무엇을 고칠지 정할 때 |
+| [backlog/agent_design.md](backlog/agent_design.md) | 에이전트(LangGraph, 챗봇형) 설계: 사용자 결정 13개, 구조·상태·안전 규칙·화면·평가, 구현 전 확인할 것 | 에이전트를 만들 때 |
 | [backlog/policies.md](backlog/policies.md) | MVP 정책 결정(상대 연도, 되묻기, 별도·분기, 정정본)과 구현 위치, 정정공시·동명 회사 확인 결과 | 정책을 확인할 때 |
 | [backlog/future_requirements.md](backlog/future_requirements.md) | 복수 연도·회사 등 앞으로의 요구, 예외 상황 카탈로그, 에이전트 구조 메모, 정책 결정 항목 | 에이전트를 설계할 때 |
 
