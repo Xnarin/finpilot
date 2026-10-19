@@ -1,0 +1,6269 @@
+{
+ "meta": {
+  "run_at": "2026-10-19T11:39:42",
+  "repeats": 3,
+  "corps": 3999,
+  "alias_dict_size": 7
+ },
+ "summary": {
+  "ambiguous_group": {
+   "cases": 10,
+   "code_only_clean": 5,
+   "ai_clean_runs": 9,
+   "ai_flagged_runs": 0,
+   "runs_total": 30
+  },
+  "dict": {
+   "cases": 14,
+   "code_only_hit1": 14,
+   "code_only_hit5": 14,
+   "ai_hit1_runs": 42,
+   "ai_hit5_runs": 42,
+   "runs_total": 42
+  },
+  "english": {
+   "cases": 10,
+   "code_only_hit1": 8,
+   "code_only_hit5": 10,
+   "ai_hit1_runs": 30,
+   "ai_hit5_runs": 30,
+   "runs_total": 30
+  },
+  "foreign": {
+   "cases": 14,
+   "code_only_clean": 11,
+   "ai_clean_runs": 42,
+   "ai_flagged_runs": 42,
+   "runs_total": 42
+  },
+  "nickname_chosung": {
+   "cases": 6,
+   "code_only_hit1": 4,
+   "code_only_hit5": 5,
+   "ai_hit1_runs": 14,
+   "ai_hit5_runs": 17,
+   "runs_total": 18
+  },
+  "none": {
+   "cases": 8,
+   "code_only_clean": 4,
+   "ai_clean_runs": 15,
+   "ai_flagged_runs": 12,
+   "runs_total": 24
+  },
+  "not_in_dict_kr": {
+   "cases": 16,
+   "code_only_hit1": 9,
+   "code_only_hit5": 10,
+   "ai_hit1_runs": 45,
+   "ai_hit5_runs": 45,
+   "runs_total": 48
+  },
+  "preferred": {
+   "cases": 4,
+   "code_only_hit1": 2,
+   "code_only_hit5": 2,
+   "ai_hit1_runs": 12,
+   "ai_hit5_runs": 12,
+   "runs_total": 12
+  },
+  "typo": {
+   "cases": 5,
+   "code_only_hit1": 3,
+   "code_only_hit5": 3,
+   "ai_hit1_runs": 15,
+   "ai_hit5_runs": 15,
+   "runs_total": 15
+  },
+  "unlisted": {
+   "cases": 4,
+   "code_only_clean": 3,
+   "ai_clean_runs": 12,
+   "ai_flagged_runs": 12,
+   "runs_total": 12
+  },
+  "_ai": {
+   "proposed_total": 186,
+   "dropped_not_in_list": 28,
+   "ai_errors": 0,
+   "auto_confirmed_inputs": 20,
+   "auto_confirmed_wrong": 0,
+   "auto_confirmed_wrong_examples": [],
+   "false_foreign_runs": 0,
+   "false_foreign_examples": [],
+   "mean_ms_per_resolve": 730.6371630059006
+  }
+ },
+ "rows": [
+  {
+   "id": "a01",
+   "group": "dict",
+   "input": "네이버",
+   "expected": "NAVER",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "NAVER"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "NAVER"
+     ],
+     "sources": {
+      "NAVER": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "NAVER"
+     ],
+     "sources": {
+      "NAVER": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "NAVER"
+     ],
+     "sources": {
+      "NAVER": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a02",
+   "group": "dict",
+   "input": "삼전",
+   "expected": "삼성전자",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "삼성전자"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "삼성전자"
+     ],
+     "sources": {
+      "삼성전자": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "삼성전자"
+     ],
+     "sources": {
+      "삼성전자": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "삼성전자"
+     ],
+     "sources": {
+      "삼성전자": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a03",
+   "group": "dict",
+   "input": "하닉",
+   "expected": "SK하이닉스",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "SK하이닉스"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "SK하이닉스"
+     ],
+     "sources": {
+      "SK하이닉스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "SK하이닉스"
+     ],
+     "sources": {
+      "SK하이닉스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "SK하이닉스"
+     ],
+     "sources": {
+      "SK하이닉스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a04",
+   "group": "dict",
+   "input": "현차",
+   "expected": "현대자동차",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "현대자동차"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "현대자동차"
+     ],
+     "sources": {
+      "현대자동차": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "현대자동차"
+     ],
+     "sources": {
+      "현대자동차": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "현대자동차"
+     ],
+     "sources": {
+      "현대자동차": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a05",
+   "group": "dict",
+   "input": "현대차",
+   "expected": "현대자동차",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "현대자동차"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "현대자동차"
+     ],
+     "sources": {
+      "현대자동차": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "현대자동차"
+     ],
+     "sources": {
+      "현대자동차": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "현대자동차"
+     ],
+     "sources": {
+      "현대자동차": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a06",
+   "group": "dict",
+   "input": "엘지엔솔",
+   "expected": "LG에너지솔루션",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "LG에너지솔루션"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "LG에너지솔루션"
+     ],
+     "sources": {
+      "LG에너지솔루션": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "LG에너지솔루션"
+     ],
+     "sources": {
+      "LG에너지솔루션": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "LG에너지솔루션"
+     ],
+     "sources": {
+      "LG에너지솔루션": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a07",
+   "group": "dict",
+   "input": "카뱅",
+   "expected": "카카오뱅크",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "카카오뱅크"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "카카오뱅크"
+     ],
+     "sources": {
+      "카카오뱅크": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "카카오뱅크"
+     ],
+     "sources": {
+      "카카오뱅크": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "카카오뱅크"
+     ],
+     "sources": {
+      "카카오뱅크": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a08",
+   "group": "dict",
+   "input": "포스코",
+   "expected": "POSCO홀딩스",
+   "code_only": {
+    "names": [
+     "POSCO홀딩스",
+     "포스코엠텍",
+     "포스코DX",
+     "포스코티엠씨",
+     "포스코퓨처엠"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "POSCO홀딩스",
+      "포스코엠텍",
+      "포스코DX",
+      "포스코티엠씨",
+      "포스코퓨처엠"
+     ],
+     "sources": {
+      "POSCO홀딩스": "별칭 사전",
+      "포스코엠텍": "이름 일부 일치",
+      "포스코DX": "이름 일부 일치",
+      "포스코티엠씨": "이름 일부 일치",
+      "포스코퓨처엠": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "POSCO홀딩스"
+     ],
+     "ai_verified": [
+      "POSCO홀딩스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1601.0173000395298,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "POSCO홀딩스",
+      "포스코엠텍",
+      "포스코DX",
+      "포스코티엠씨",
+      "포스코퓨처엠"
+     ],
+     "sources": {
+      "POSCO홀딩스": "별칭 사전",
+      "포스코엠텍": "이름 일부 일치",
+      "포스코DX": "이름 일부 일치",
+      "포스코티엠씨": "이름 일부 일치",
+      "포스코퓨처엠": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "POSCO홀딩스"
+     ],
+     "ai_verified": [
+      "POSCO홀딩스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 906.5451999776997,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "POSCO홀딩스",
+      "포스코엠텍",
+      "포스코DX",
+      "포스코티엠씨",
+      "포스코퓨처엠"
+     ],
+     "sources": {
+      "POSCO홀딩스": "별칭 사전",
+      "포스코엠텍": "이름 일부 일치",
+      "포스코DX": "이름 일부 일치",
+      "포스코티엠씨": "이름 일부 일치",
+      "포스코퓨처엠": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "POSCO홀딩스"
+     ],
+     "ai_verified": [
+      "POSCO홀딩스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 897.8673999663442,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a09",
+   "group": "dict",
+   "input": "기아차",
+   "expected": "기아",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "기아"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "기아"
+     ],
+     "sources": {
+      "기아": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "기아"
+     ],
+     "sources": {
+      "기아": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "기아"
+     ],
+     "sources": {
+      "기아": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a10",
+   "group": "dict",
+   "input": "셀트",
+   "expected": "셀트리온",
+   "code_only": {
+    "names": [
+     "셀트리온",
+     "셀트리온제약",
+     "셀트리온헬스케어",
+     "셀레스트라"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "셀트리온",
+      "셀트리온제약",
+      "셀트리온헬스케어",
+      "셀레스트라"
+     ],
+     "sources": {
+      "셀트리온": "별칭 사전",
+      "셀트리온제약": "AI 제안 (상장사 목록에서 확인됨)",
+      "셀트리온헬스케어": "이름 일부 일치",
+      "셀레스트라": "약칭 추정"
+     },
+     "ai_proposed": [
+      "셀트리온",
+      "셀트리온제약"
+     ],
+     "ai_verified": [
+      "셀트리온",
+      "셀트리온제약"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 910.6550000142306,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "셀트리온",
+      "셀트리온제약",
+      "셀트리온헬스케어",
+      "셀레스트라"
+     ],
+     "sources": {
+      "셀트리온": "별칭 사전",
+      "셀트리온제약": "AI 제안 (상장사 목록에서 확인됨)",
+      "셀트리온헬스케어": "이름 일부 일치",
+      "셀레스트라": "약칭 추정"
+     },
+     "ai_proposed": [
+      "셀트리온",
+      "셀트리온제약"
+     ],
+     "ai_verified": [
+      "셀트리온",
+      "셀트리온제약"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 963.3118999772705,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "셀트리온",
+      "셀트리온제약",
+      "셀트리온헬스케어",
+      "셀레스트라"
+     ],
+     "sources": {
+      "셀트리온": "별칭 사전",
+      "셀트리온제약": "AI 제안 (상장사 목록에서 확인됨)",
+      "셀트리온헬스케어": "이름 일부 일치",
+      "셀레스트라": "약칭 추정"
+     },
+     "ai_proposed": [
+      "셀트리온",
+      "셀트리온제약"
+     ],
+     "ai_verified": [
+      "셀트리온",
+      "셀트리온제약"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1229.1043000295758,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a11",
+   "group": "dict",
+   "input": "엘지화학",
+   "expected": "LG화학",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "LG화학"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "LG화학"
+     ],
+     "sources": {
+      "LG화학": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "LG화학"
+     ],
+     "sources": {
+      "LG화학": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "LG화학"
+     ],
+     "sources": {
+      "LG화학": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a12",
+   "group": "dict",
+   "input": "삼바",
+   "expected": "삼성바이오로직스",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "삼성바이오로직스"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "삼성바이오로직스"
+     ],
+     "sources": {
+      "삼성바이오로직스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "삼성바이오로직스"
+     ],
+     "sources": {
+      "삼성바이오로직스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "삼성바이오로직스"
+     ],
+     "sources": {
+      "삼성바이오로직스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a13",
+   "group": "dict",
+   "input": "한전",
+   "expected": "한국전력공사",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "한국전력공사"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "한국전력공사"
+     ],
+     "sources": {
+      "한국전력공사": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "한국전력공사"
+     ],
+     "sources": {
+      "한국전력공사": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "한국전력공사"
+     ],
+     "sources": {
+      "한국전력공사": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a14",
+   "group": "dict",
+   "input": "두산에너빌",
+   "expected": "두산에너빌리티",
+   "code_only": {
+    "names": [
+     "두산에너빌리티"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "두산에너빌리티"
+     ],
+     "sources": {
+      "두산에너빌리티": "별칭 사전"
+     },
+     "ai_proposed": [
+      "두산에너빌리티"
+     ],
+     "ai_verified": [
+      "두산에너빌리티"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1176.8628000281751,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "두산에너빌리티"
+     ],
+     "sources": {
+      "두산에너빌리티": "별칭 사전"
+     },
+     "ai_proposed": [
+      "두산에너빌리티"
+     ],
+     "ai_verified": [
+      "두산에너빌리티"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1121.9038999988697,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "두산에너빌리티"
+     ],
+     "sources": {
+      "두산에너빌리티": "별칭 사전"
+     },
+     "ai_proposed": [
+      "두산에너빌리티"
+     ],
+     "ai_verified": [
+      "두산에너빌리티"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 845.9891999955289,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a15",
+   "group": "not_in_dict_kr",
+   "input": "에스케이스퀘어",
+   "expected": "SK스퀘어",
+   "code_only": {
+    "names": [],
+    "hit1": false,
+    "hit5": false
+   },
+   "runs": [
+    {
+     "names": [
+      "SK스퀘어"
+     ],
+     "sources": {
+      "SK스퀘어": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "SK스퀘어"
+     ],
+     "ai_verified": [
+      "SK스퀘어"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 820.3690000227652,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "SK스퀘어"
+     ],
+     "sources": {
+      "SK스퀘어": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "에스케이텔레콤",
+      "SK스퀘어"
+     ],
+     "ai_verified": [
+      "SK스퀘어"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 877.6682000025176,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "SK스퀘어"
+     ],
+     "sources": {
+      "SK스퀘어": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "SK스퀘어"
+     ],
+     "ai_verified": [
+      "SK스퀘어"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 934.4675000174902,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a16",
+   "group": "not_in_dict_kr",
+   "input": "엘지디스플레이",
+   "expected": "LG디스플레이",
+   "code_only": {
+    "names": [
+     "인지디스플레"
+    ],
+    "hit1": false,
+    "hit5": false
+   },
+   "runs": [
+    {
+     "names": [
+      "LG디스플레이",
+      "인지디스플레"
+     ],
+     "sources": {
+      "LG디스플레이": "AI 제안 (상장사 목록에서 확인됨)",
+      "인지디스플레": "비슷한 철자"
+     },
+     "ai_proposed": [
+      "LG디스플레이"
+     ],
+     "ai_verified": [
+      "LG디스플레이"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 932.2031000046991,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "인지디스플레"
+     ],
+     "sources": {
+      "인지디스플레": "비슷한 철자"
+     },
+     "ai_proposed": [
+      "엘지디스플레이"
+     ],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 993.4180999989621,
+     "hit1": false,
+     "hit5": false
+    },
+    {
+     "names": [
+      "인지디스플레"
+     ],
+     "sources": {
+      "인지디스플레": "비슷한 철자"
+     },
+     "ai_proposed": [
+      "엘디에스"
+     ],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 948.429100040812,
+     "hit1": false,
+     "hit5": false
+    }
+   ]
+  },
+  {
+   "id": "a17",
+   "group": "not_in_dict_kr",
+   "input": "엘지이노텍",
+   "expected": "LG이노텍",
+   "code_only": {
+    "names": [],
+    "hit1": false,
+    "hit5": false
+   },
+   "runs": [
+    {
+     "names": [
+      "LG이노텍"
+     ],
+     "sources": {
+      "LG이노텍": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "LG이노텍"
+     ],
+     "ai_verified": [
+      "LG이노텍"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 916.0408999887295,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "LG이노텍"
+     ],
+     "sources": {
+      "LG이노텍": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "LG이노텍"
+     ],
+     "ai_verified": [
+      "LG이노텍"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1001.1895000352524,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "LG이노텍"
+     ],
+     "sources": {
+      "LG이노텍": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "LG이노텍"
+     ],
+     "ai_verified": [
+      "LG이노텍"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 869.4184999912977,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a18",
+   "group": "not_in_dict_kr",
+   "input": "에스케이이노베이션",
+   "expected": "SK이노베이션",
+   "code_only": {
+    "names": [
+     "에스와이이노베이션"
+    ],
+    "hit1": false,
+    "hit5": false
+   },
+   "runs": [
+    {
+     "names": [
+      "SK이노베이션",
+      "에스와이이노베이션"
+     ],
+     "sources": {
+      "SK이노베이션": "AI 제안 (상장사 목록에서 확인됨)",
+      "에스와이이노베이션": "비슷한 철자"
+     },
+     "ai_proposed": [
+      "SK이노베이션"
+     ],
+     "ai_verified": [
+      "SK이노베이션"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 926.8445000052452,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "SK이노베이션",
+      "에스와이이노베이션"
+     ],
+     "sources": {
+      "SK이노베이션": "AI 제안 (상장사 목록에서 확인됨)",
+      "에스와이이노베이션": "비슷한 철자"
+     },
+     "ai_proposed": [
+      "SK이노베이션"
+     ],
+     "ai_verified": [
+      "SK이노베이션"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 951.661100029014,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "에스와이이노베이션"
+     ],
+     "sources": {
+      "에스와이이노베이션": "비슷한 철자"
+     },
+     "ai_proposed": [
+      "에스케이이노베이션"
+     ],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 837.7821000176482,
+     "hit1": false,
+     "hit5": false
+    }
+   ]
+  },
+  {
+   "id": "a19",
+   "group": "not_in_dict_kr",
+   "input": "에이치디현대중공업",
+   "expected": "HD현대중공업",
+   "code_only": {
+    "names": [],
+    "hit1": false,
+    "hit5": false
+   },
+   "runs": [
+    {
+     "names": [
+      "HD현대중공업"
+     ],
+     "sources": {
+      "HD현대중공업": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "HD현대중공업"
+     ],
+     "ai_verified": [
+      "HD현대중공업"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 994.397200003732,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "HD현대중공업"
+     ],
+     "sources": {
+      "HD현대중공업": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "HD현대중공업"
+     ],
+     "ai_verified": [
+      "HD현대중공업"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 993.4336000005715,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "HD현대중공업"
+     ],
+     "sources": {
+      "HD현대중공업": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "HD현대중공업"
+     ],
+     "ai_verified": [
+      "HD현대중공업"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1076.5103999874555,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a20",
+   "group": "not_in_dict_kr",
+   "input": "기아자동차",
+   "expected": "기아",
+   "code_only": {
+    "names": [],
+    "hit1": false,
+    "hit5": false
+   },
+   "runs": [
+    {
+     "names": [
+      "기아"
+     ],
+     "sources": {
+      "기아": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "기아"
+     ],
+     "ai_verified": [
+      "기아"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 837.543600006029,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "기아"
+     ],
+     "sources": {
+      "기아": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "기아"
+     ],
+     "ai_verified": [
+      "기아"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1001.581399992574,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "기아"
+     ],
+     "sources": {
+      "기아": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "기아"
+     ],
+     "ai_verified": [
+      "기아"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1231.6680999938399,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a21",
+   "group": "not_in_dict_kr",
+   "input": "삼성바이오",
+   "expected": "삼성바이오로직스",
+   "code_only": {
+    "names": [
+     "삼성바이오로직스"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "삼성바이오로직스"
+     ],
+     "sources": {
+      "삼성바이오로직스": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "삼성바이오로직스"
+     ],
+     "ai_verified": [
+      "삼성바이오로직스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1060.458300053142,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "삼성바이오로직스"
+     ],
+     "sources": {
+      "삼성바이오로직스": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "삼성바이오로직스"
+     ],
+     "ai_verified": [
+      "삼성바이오로직스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 866.7565999785438,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "삼성바이오로직스"
+     ],
+     "sources": {
+      "삼성바이오로직스": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "삼성바이오로직스"
+     ],
+     "ai_verified": [
+      "삼성바이오로직스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 913.6970000108704,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a22",
+   "group": "not_in_dict_kr",
+   "input": "한화에어로",
+   "expected": "한화에어로스페이스",
+   "code_only": {
+    "names": [
+     "한화에어로스페이스"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "한화에어로스페이스"
+     ],
+     "sources": {
+      "한화에어로스페이스": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "한화에어로스페이스"
+     ],
+     "ai_verified": [
+      "한화에어로스페이스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1166.8856000178494,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "한화에어로스페이스"
+     ],
+     "sources": {
+      "한화에어로스페이스": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "한화에어로스페이스"
+     ],
+     "ai_verified": [
+      "한화에어로스페이스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1014.3753999727778,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "한화에어로스페이스"
+     ],
+     "sources": {
+      "한화에어로스페이스": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "한화에어로스페이스"
+     ],
+     "ai_verified": [
+      "한화에어로스페이스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 827.1833999897353,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a23",
+   "group": "not_in_dict_kr",
+   "input": "신한",
+   "expected": "신한지주",
+   "code_only": {
+    "names": [
+     "신한",
+     "신한은행",
+     "신한카드",
+     "신한지주",
+     "신한SIT"
+    ],
+    "hit1": false,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "신한지주",
+      "신한",
+      "신한은행",
+      "신한카드",
+      "신한SIT"
+     ],
+     "sources": {
+      "신한지주": "AI 제안 (상장사 목록에서 확인됨)",
+      "신한": "이름 일부 일치",
+      "신한은행": "이름 일부 일치",
+      "신한카드": "이름 일부 일치",
+      "신한SIT": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "신한지주"
+     ],
+     "ai_verified": [
+      "신한지주"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 980.8221000130288,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "신한지주",
+      "신한",
+      "신한은행",
+      "신한카드",
+      "신한SIT"
+     ],
+     "sources": {
+      "신한지주": "AI 제안 (상장사 목록에서 확인됨)",
+      "신한": "이름 일부 일치",
+      "신한은행": "이름 일부 일치",
+      "신한카드": "이름 일부 일치",
+      "신한SIT": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "신한지주"
+     ],
+     "ai_verified": [
+      "신한지주"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 962.3113999841735,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "신한지주",
+      "신한",
+      "신한은행",
+      "신한카드",
+      "신한SIT"
+     ],
+     "sources": {
+      "신한지주": "AI 제안 (상장사 목록에서 확인됨)",
+      "신한": "이름 일부 일치",
+      "신한은행": "이름 일부 일치",
+      "신한카드": "이름 일부 일치",
+      "신한SIT": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "신한지주"
+     ],
+     "ai_verified": [
+      "신한지주"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 733.614300028421,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a24",
+   "group": "not_in_dict_kr",
+   "input": "우리금융",
+   "expected": "우리금융지주",
+   "code_only": {
+    "names": [
+     "우리금융지주",
+     "우리금융캐피탈",
+     "우리종합금융"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "우리금융지주",
+      "우리금융캐피탈",
+      "우리종합금융"
+     ],
+     "sources": {
+      "우리금융지주": "AI 제안 (상장사 목록에서 확인됨)",
+      "우리금융캐피탈": "이름 일부 일치",
+      "우리종합금융": "약칭 추정"
+     },
+     "ai_proposed": [
+      "우리금융지주"
+     ],
+     "ai_verified": [
+      "우리금융지주"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 785.2979000308551,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "우리금융지주",
+      "우리금융캐피탈",
+      "우리종합금융"
+     ],
+     "sources": {
+      "우리금융지주": "AI 제안 (상장사 목록에서 확인됨)",
+      "우리금융캐피탈": "이름 일부 일치",
+      "우리종합금융": "약칭 추정"
+     },
+     "ai_proposed": [
+      "우리금융지주"
+     ],
+     "ai_verified": [
+      "우리금융지주"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 771.9744000351056,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "우리금융지주",
+      "우리금융캐피탈",
+      "우리종합금융"
+     ],
+     "sources": {
+      "우리금융지주": "AI 제안 (상장사 목록에서 확인됨)",
+      "우리금융캐피탈": "이름 일부 일치",
+      "우리종합금융": "약칭 추정"
+     },
+     "ai_proposed": [
+      "우리금융지주"
+     ],
+     "ai_verified": [
+      "우리금융지주"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1342.3602000111714,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a25",
+   "group": "not_in_dict_kr",
+   "input": "카카오게임",
+   "expected": "카카오게임즈",
+   "code_only": {
+    "names": [
+     "카카오게임즈",
+     "카카오"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "카카오게임즈",
+      "카카오"
+     ],
+     "sources": {
+      "카카오게임즈": "AI 제안 (상장사 목록에서 확인됨)",
+      "카카오": "입력에 포함된 회사명"
+     },
+     "ai_proposed": [
+      "카카오게임즈"
+     ],
+     "ai_verified": [
+      "카카오게임즈"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1212.4239000258967,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "카카오게임즈",
+      "카카오"
+     ],
+     "sources": {
+      "카카오게임즈": "AI 제안 (상장사 목록에서 확인됨)",
+      "카카오": "입력에 포함된 회사명"
+     },
+     "ai_proposed": [
+      "카카오게임즈"
+     ],
+     "ai_verified": [
+      "카카오게임즈"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 762.9183999961242,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "카카오게임즈",
+      "카카오"
+     ],
+     "sources": {
+      "카카오게임즈": "AI 제안 (상장사 목록에서 확인됨)",
+      "카카오": "입력에 포함된 회사명"
+     },
+     "ai_proposed": [
+      "카카오게임즈"
+     ],
+     "ai_verified": [
+      "카카오게임즈"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1069.8543000034988,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a26",
+   "group": "not_in_dict_kr",
+   "input": "하이닉스",
+   "expected": "SK하이닉스",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "SK하이닉스"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "SK하이닉스"
+     ],
+     "sources": {
+      "SK하이닉스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "SK하이닉스"
+     ],
+     "sources": {
+      "SK하이닉스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "SK하이닉스"
+     ],
+     "sources": {
+      "SK하이닉스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a27",
+   "group": "not_in_dict_kr",
+   "input": "엔씨소프트",
+   "expected": "NC",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "NC"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "NC"
+     ],
+     "sources": {
+      "NC": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "NC"
+     ],
+     "sources": {
+      "NC": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "NC"
+     ],
+     "sources": {
+      "NC": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a28",
+   "group": "not_in_dict_kr",
+   "input": "케이티앤지",
+   "expected": "케이티앤지",
+   "code_only": {
+    "names": [
+     "케이티앤지",
+     "케이티"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "케이티앤지",
+      "케이티"
+     ],
+     "sources": {
+      "케이티앤지": "이름 일부 일치",
+      "케이티": "입력에 포함된 회사명"
+     },
+     "ai_proposed": [
+      "KT&G"
+     ],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 846.0721999872476,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "케이티앤지",
+      "케이티"
+     ],
+     "sources": {
+      "케이티앤지": "이름 일부 일치",
+      "케이티": "입력에 포함된 회사명"
+     },
+     "ai_proposed": [
+      "KT&G"
+     ],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 891.1241000168957,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "케이티앤지",
+      "케이티"
+     ],
+     "sources": {
+      "케이티앤지": "이름 일부 일치",
+      "케이티": "입력에 포함된 회사명"
+     },
+     "ai_proposed": [
+      "KT&G"
+     ],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 828.0748000252061,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a29",
+   "group": "not_in_dict_kr",
+   "input": "KT&G",
+   "expected": "케이티앤지",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "케이티앤지"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "케이티앤지"
+     ],
+     "sources": {
+      "케이티앤지": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "케이티앤지"
+     ],
+     "sources": {
+      "케이티앤지": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "케이티앤지"
+     ],
+     "sources": {
+      "케이티앤지": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a30",
+   "group": "not_in_dict_kr",
+   "input": "삼성SDS",
+   "expected": "삼성에스디에스",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "삼성에스디에스"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "삼성에스디에스"
+     ],
+     "sources": {
+      "삼성에스디에스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "삼성에스디에스"
+     ],
+     "sources": {
+      "삼성에스디에스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "삼성에스디에스"
+     ],
+     "sources": {
+      "삼성에스디에스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a31",
+   "group": "english",
+   "input": "Samsung Electronics",
+   "expected": "삼성전자",
+   "code_only": {
+    "names": [
+     "삼성전자"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "삼성전자"
+     ],
+     "sources": {
+      "삼성전자": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "삼성전자"
+     ],
+     "ai_verified": [
+      "삼성전자"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1119.311699992977,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "삼성전자"
+     ],
+     "sources": {
+      "삼성전자": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "삼성전자"
+     ],
+     "ai_verified": [
+      "삼성전자"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 823.746400012169,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "삼성전자"
+     ],
+     "sources": {
+      "삼성전자": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "삼성전자"
+     ],
+     "ai_verified": [
+      "삼성전자"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1022.9189000092447,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a32",
+   "group": "english",
+   "input": "SK hynix",
+   "expected": "SK하이닉스",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "SK하이닉스"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "SK하이닉스"
+     ],
+     "sources": {
+      "SK하이닉스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "SK하이닉스"
+     ],
+     "sources": {
+      "SK하이닉스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "SK하이닉스"
+     ],
+     "sources": {
+      "SK하이닉스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a33",
+   "group": "english",
+   "input": "Hyundai Motor",
+   "expected": "현대자동차",
+   "code_only": {
+    "names": [
+     "현대차증권",
+     "현대자동차"
+    ],
+    "hit1": false,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "현대자동차",
+      "현대차증권"
+     ],
+     "sources": {
+      "현대자동차": "AI 제안 (상장사 목록에서 확인됨)",
+      "현대차증권": "영문명"
+     },
+     "ai_proposed": [
+      "현대자동차"
+     ],
+     "ai_verified": [
+      "현대자동차"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 859.3013999634422,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "현대자동차",
+      "현대차증권"
+     ],
+     "sources": {
+      "현대자동차": "AI 제안 (상장사 목록에서 확인됨)",
+      "현대차증권": "영문명"
+     },
+     "ai_proposed": [
+      "현대자동차"
+     ],
+     "ai_verified": [
+      "현대자동차"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 750.09190000128,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "현대자동차",
+      "현대차증권"
+     ],
+     "sources": {
+      "현대자동차": "AI 제안 (상장사 목록에서 확인됨)",
+      "현대차증권": "영문명"
+     },
+     "ai_proposed": [
+      "현대자동차"
+     ],
+     "ai_verified": [
+      "현대자동차"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1259.5005000475794,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a34",
+   "group": "english",
+   "input": "NAVER Corp",
+   "expected": "NAVER",
+   "code_only": {
+    "names": [
+     "NAVER"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "NAVER"
+     ],
+     "sources": {
+      "NAVER": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "NAVER"
+     ],
+     "ai_verified": [
+      "NAVER"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 796.2329000001773,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "NAVER"
+     ],
+     "sources": {
+      "NAVER": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "NAVER"
+     ],
+     "ai_verified": [
+      "NAVER"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1125.0001000007614,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "NAVER"
+     ],
+     "sources": {
+      "NAVER": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "NAVER"
+     ],
+     "ai_verified": [
+      "NAVER"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 961.0765000106767,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a35",
+   "group": "english",
+   "input": "LG Energy Solution",
+   "expected": "LG에너지솔루션",
+   "code_only": {
+    "names": [
+     "LG에너지솔루션"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "LG에너지솔루션"
+     ],
+     "sources": {
+      "LG에너지솔루션": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "LG에너지솔루션"
+     ],
+     "ai_verified": [
+      "LG에너지솔루션"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1256.1518999864347,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "LG에너지솔루션"
+     ],
+     "sources": {
+      "LG에너지솔루션": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "LG에너지솔루션"
+     ],
+     "ai_verified": [
+      "LG에너지솔루션"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1232.4015999911353,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "LG에너지솔루션"
+     ],
+     "sources": {
+      "LG에너지솔루션": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "LG에너지솔루션"
+     ],
+     "ai_verified": [
+      "LG에너지솔루션"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 992.5660000299104,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a36",
+   "group": "english",
+   "input": "Celltrion",
+   "expected": "셀트리온",
+   "code_only": {
+    "names": [
+     "셀트리온헬스케어",
+     "셀트리온제약",
+     "셀트리온"
+    ],
+    "hit1": false,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "셀트리온",
+      "셀트리온헬스케어",
+      "셀트리온제약"
+     ],
+     "sources": {
+      "셀트리온": "AI 제안 (상장사 목록에서 확인됨)",
+      "셀트리온헬스케어": "영문명",
+      "셀트리온제약": "영문명"
+     },
+     "ai_proposed": [
+      "셀트리온"
+     ],
+     "ai_verified": [
+      "셀트리온"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1153.9188000024296,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "셀트리온",
+      "셀트리온헬스케어",
+      "셀트리온제약"
+     ],
+     "sources": {
+      "셀트리온": "AI 제안 (상장사 목록에서 확인됨)",
+      "셀트리온헬스케어": "영문명",
+      "셀트리온제약": "영문명"
+     },
+     "ai_proposed": [
+      "셀트리온"
+     ],
+     "ai_verified": [
+      "셀트리온"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 798.0683000059798,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "셀트리온",
+      "셀트리온헬스케어",
+      "셀트리온제약"
+     ],
+     "sources": {
+      "셀트리온": "AI 제안 (상장사 목록에서 확인됨)",
+      "셀트리온헬스케어": "영문명",
+      "셀트리온제약": "영문명"
+     },
+     "ai_proposed": [
+      "셀트리온"
+     ],
+     "ai_verified": [
+      "셀트리온"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 747.6240000105463,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a37",
+   "group": "english",
+   "input": "Kakao Bank",
+   "expected": "카카오뱅크",
+   "code_only": {
+    "names": [
+     "카카오뱅크"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "카카오뱅크"
+     ],
+     "sources": {
+      "카카오뱅크": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "카카오뱅크"
+     ],
+     "ai_verified": [
+      "카카오뱅크"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1210.8281999826431,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "카카오뱅크"
+     ],
+     "sources": {
+      "카카오뱅크": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "카카오뱅크"
+     ],
+     "ai_verified": [
+      "카카오뱅크"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1086.6871000034735,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "카카오뱅크"
+     ],
+     "sources": {
+      "카카오뱅크": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "카카오뱅크"
+     ],
+     "ai_verified": [
+      "카카오뱅크"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1215.2945999987423,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a38",
+   "group": "english",
+   "input": "POSCO Holdings",
+   "expected": "POSCO홀딩스",
+   "code_only": {
+    "names": [
+     "POSCO홀딩스"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "POSCO홀딩스"
+     ],
+     "sources": {
+      "POSCO홀딩스": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "POSCO홀딩스"
+     ],
+     "ai_verified": [
+      "POSCO홀딩스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 856.2778999912553,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "POSCO홀딩스"
+     ],
+     "sources": {
+      "POSCO홀딩스": "영문명"
+     },
+     "ai_proposed": [
+      "포스코홀딩스"
+     ],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1141.2010000203736,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "POSCO홀딩스"
+     ],
+     "sources": {
+      "POSCO홀딩스": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "POSCO홀딩스"
+     ],
+     "ai_verified": [
+      "POSCO홀딩스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 942.6749999984168,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a39",
+   "group": "english",
+   "input": "Hanwha Aerospace",
+   "expected": "한화에어로스페이스",
+   "code_only": {
+    "names": [
+     "한화에어로스페이스"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "한화에어로스페이스"
+     ],
+     "sources": {
+      "한화에어로스페이스": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "한화에어로스페이스"
+     ],
+     "ai_verified": [
+      "한화에어로스페이스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 962.1443999931216,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "한화에어로스페이스"
+     ],
+     "sources": {
+      "한화에어로스페이스": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "한화에어로스페이스"
+     ],
+     "ai_verified": [
+      "한화에어로스페이스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 832.6915999641642,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "한화에어로스페이스"
+     ],
+     "sources": {
+      "한화에어로스페이스": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "한화에어로스페이스"
+     ],
+     "ai_verified": [
+      "한화에어로스페이스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1147.7806000038981,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a40",
+   "group": "english",
+   "input": "Krafton",
+   "expected": "크래프톤",
+   "code_only": {
+    "names": [
+     "크래프톤"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "크래프톤"
+     ],
+     "sources": {
+      "크래프톤": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "크래프톤"
+     ],
+     "ai_verified": [
+      "크래프톤"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 845.2863999991678,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "크래프톤"
+     ],
+     "sources": {
+      "크래프톤": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "크래프톤"
+     ],
+     "ai_verified": [
+      "크래프톤"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 803.3311000326648,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "크래프톤"
+     ],
+     "sources": {
+      "크래프톤": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "크래프톤"
+     ],
+     "ai_verified": [
+      "크래프톤"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 696.8066999688745,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a41",
+   "group": "preferred",
+   "input": "삼성전자우",
+   "expected": "삼성전자",
+   "code_only": {
+    "names": [
+     "삼성전자"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "삼성전자"
+     ],
+     "sources": {
+      "삼성전자": "우선주 → 해당 회사 재무제표"
+     },
+     "ai_proposed": [
+      "삼성전자"
+     ],
+     "ai_verified": [
+      "삼성전자"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1303.1727999914438,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "삼성전자"
+     ],
+     "sources": {
+      "삼성전자": "우선주 → 해당 회사 재무제표"
+     },
+     "ai_proposed": [
+      "삼성전자"
+     ],
+     "ai_verified": [
+      "삼성전자"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 843.71960000135,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "삼성전자"
+     ],
+     "sources": {
+      "삼성전자": "우선주 → 해당 회사 재무제표"
+     },
+     "ai_proposed": [
+      "삼성전자"
+     ],
+     "ai_verified": [
+      "삼성전자"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 839.1983000328764,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a42",
+   "group": "preferred",
+   "input": "현대차우",
+   "expected": "현대자동차",
+   "code_only": {
+    "names": [],
+    "hit1": false,
+    "hit5": false
+   },
+   "runs": [
+    {
+     "names": [
+      "현대자동차"
+     ],
+     "sources": {
+      "현대자동차": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "현대자동차"
+     ],
+     "ai_verified": [
+      "현대자동차"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1339.8172999732196,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "현대자동차"
+     ],
+     "sources": {
+      "현대자동차": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "현대자동차"
+     ],
+     "ai_verified": [
+      "현대자동차"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 849.4980999967083,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "현대자동차"
+     ],
+     "sources": {
+      "현대자동차": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "현대자동차"
+     ],
+     "ai_verified": [
+      "현대자동차"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 922.1628000377677,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a43",
+   "group": "preferred",
+   "input": "현대차2우B",
+   "expected": "현대자동차",
+   "code_only": {
+    "names": [],
+    "hit1": false,
+    "hit5": false
+   },
+   "runs": [
+    {
+     "names": [
+      "현대자동차"
+     ],
+     "sources": {
+      "현대자동차": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "현대자동차"
+     ],
+     "ai_verified": [
+      "현대자동차"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 854.1746000410058,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "현대자동차"
+     ],
+     "sources": {
+      "현대자동차": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "현대자동차"
+     ],
+     "ai_verified": [
+      "현대자동차"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1110.6460000155494,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "현대자동차"
+     ],
+     "sources": {
+      "현대자동차": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "현대자동차"
+     ],
+     "ai_verified": [
+      "현대자동차"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 884.014000010211,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a44",
+   "group": "preferred",
+   "input": "삼성전자우선주",
+   "expected": "삼성전자",
+   "code_only": {
+    "names": [
+     "삼성전자"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "삼성전자"
+     ],
+     "sources": {
+      "삼성전자": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "삼성전자"
+     ],
+     "ai_verified": [
+      "삼성전자"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1091.1711999797262,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "삼성전자"
+     ],
+     "sources": {
+      "삼성전자": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "삼성전자"
+     ],
+     "ai_verified": [
+      "삼성전자"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 878.642099967692,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "삼성전자"
+     ],
+     "sources": {
+      "삼성전자": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "삼성전자"
+     ],
+     "ai_verified": [
+      "삼성전자"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 868.4413000009954,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a45",
+   "group": "typo",
+   "input": "삼성젼자",
+   "expected": "삼성전자",
+   "code_only": {
+    "names": [
+     "삼성전자"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "삼성전자"
+     ],
+     "sources": {
+      "삼성전자": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "삼성전자"
+     ],
+     "ai_verified": [
+      "삼성전자"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 794.1140999901108,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "삼성전자"
+     ],
+     "sources": {
+      "삼성전자": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "삼성전자"
+     ],
+     "ai_verified": [
+      "삼성전자"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 810.9324000542983,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "삼성전자"
+     ],
+     "sources": {
+      "삼성전자": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "삼성전자"
+     ],
+     "ai_verified": [
+      "삼성전자"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 779.1337000089698,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a46",
+   "group": "typo",
+   "input": "하이닉수",
+   "expected": "SK하이닉스",
+   "code_only": {
+    "names": [
+     "하이로닉"
+    ],
+    "hit1": false,
+    "hit5": false
+   },
+   "runs": [
+    {
+     "names": [
+      "SK하이닉스",
+      "하이로닉"
+     ],
+     "sources": {
+      "SK하이닉스": "AI 제안 (상장사 목록에서 확인됨)",
+      "하이로닉": "비슷한 철자"
+     },
+     "ai_proposed": [
+      "SK하이닉스"
+     ],
+     "ai_verified": [
+      "SK하이닉스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 878.7368000485003,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "SK하이닉스",
+      "하이로닉"
+     ],
+     "sources": {
+      "SK하이닉스": "AI 제안 (상장사 목록에서 확인됨)",
+      "하이로닉": "비슷한 철자"
+     },
+     "ai_proposed": [
+      "SK하이닉스"
+     ],
+     "ai_verified": [
+      "SK하이닉스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1033.5020999773405,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "SK하이닉스",
+      "하이로닉"
+     ],
+     "sources": {
+      "SK하이닉스": "AI 제안 (상장사 목록에서 확인됨)",
+      "하이로닉": "비슷한 철자"
+     },
+     "ai_proposed": [
+      "SK하이닉스"
+     ],
+     "ai_verified": [
+      "SK하이닉스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 889.0283000073396,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a47",
+   "group": "typo",
+   "input": "카카오벵크",
+   "expected": "카카오뱅크",
+   "code_only": {
+    "names": [
+     "카카오"
+    ],
+    "hit1": false,
+    "hit5": false
+   },
+   "runs": [
+    {
+     "names": [
+      "카카오뱅크",
+      "카카오"
+     ],
+     "sources": {
+      "카카오뱅크": "AI 제안 (상장사 목록에서 확인됨)",
+      "카카오": "입력에 포함된 회사명"
+     },
+     "ai_proposed": [
+      "카카오뱅크"
+     ],
+     "ai_verified": [
+      "카카오뱅크"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1147.4024999770336,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "카카오뱅크",
+      "카카오"
+     ],
+     "sources": {
+      "카카오뱅크": "AI 제안 (상장사 목록에서 확인됨)",
+      "카카오": "입력에 포함된 회사명"
+     },
+     "ai_proposed": [
+      "카카오뱅크"
+     ],
+     "ai_verified": [
+      "카카오뱅크"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 857.50470001949,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "카카오뱅크",
+      "카카오"
+     ],
+     "sources": {
+      "카카오뱅크": "AI 제안 (상장사 목록에서 확인됨)",
+      "카카오": "입력에 포함된 회사명"
+     },
+     "ai_proposed": [
+      "카카오뱅크"
+     ],
+     "ai_verified": [
+      "카카오뱅크"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 910.1610000361688,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a48",
+   "group": "typo",
+   "input": "샐트리온",
+   "expected": "셀트리온",
+   "code_only": {
+    "names": [
+     "셀트리온"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "셀트리온"
+     ],
+     "sources": {
+      "셀트리온": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "셀트리온"
+     ],
+     "ai_verified": [
+      "셀트리온"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 850.0208000186831,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "셀트리온"
+     ],
+     "sources": {
+      "셀트리온": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "셀트리온"
+     ],
+     "ai_verified": [
+      "셀트리온"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 828.9778000325896,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "셀트리온"
+     ],
+     "sources": {
+      "셀트리온": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "셀트리온"
+     ],
+     "ai_verified": [
+      "셀트리온"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 935.8097000513226,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a49",
+   "group": "typo",
+   "input": "현대자돟차",
+   "expected": "현대자동차",
+   "code_only": {
+    "names": [
+     "현대자동차"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "현대자동차"
+     ],
+     "sources": {
+      "현대자동차": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "현대자동차"
+     ],
+     "ai_verified": [
+      "현대자동차"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 819.3459000322036,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "현대자동차"
+     ],
+     "sources": {
+      "현대자동차": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "현대자동차"
+     ],
+     "ai_verified": [
+      "현대자동차"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 797.5032000103965,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "현대자동차"
+     ],
+     "sources": {
+      "현대자동차": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "현대자동차"
+     ],
+     "ai_verified": [
+      "현대자동차"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 865.6741000013426,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a50",
+   "group": "none",
+   "input": "애플",
+   "expected": null,
+   "code_only": {
+    "names": [
+     "애니플러스"
+    ],
+    "clean": false,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 734.1267000301741,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 1162.5031000003219,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 817.7080999594182,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a51",
+   "group": "none",
+   "input": "테슬라",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 1163.3929999661632,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 879.5232000411488,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 756.8007999798283,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a52",
+   "group": "none",
+   "input": "구글",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 1000.7303000311367,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 860.6136000016704,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 718.1068999925628,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a53",
+   "group": "none",
+   "input": "우리집",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 1181.75039999187,
+     "clean": true,
+     "flagged": false
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 721.2475999840535,
+     "clean": true,
+     "flagged": false
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 849.5929000200704,
+     "clean": true,
+     "flagged": false
+    }
+   ]
+  },
+  {
+   "id": "a54",
+   "group": "none",
+   "input": "토요타",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 798.3523000148125,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 999.6604999760166,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 925.9511000127532,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a55",
+   "group": "none",
+   "input": "삼성",
+   "expected": null,
+   "code_only": {
+    "names": [
+     "삼성수산",
+     "삼성물산",
+     "삼성전기",
+     "삼성공조",
+     "삼성카드"
+    ],
+    "clean": false,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [
+      "삼성전자",
+      "삼성물산",
+      "삼성수산",
+      "삼성전기",
+      "삼성공조"
+     ],
+     "sources": {
+      "삼성전자": "AI 제안 (상장사 목록에서 확인됨)",
+      "삼성물산": "AI 제안 (상장사 목록에서 확인됨)",
+      "삼성수산": "이름 일부 일치",
+      "삼성전기": "이름 일부 일치",
+      "삼성공조": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "삼성전자",
+      "삼성물산",
+      "삼성생명보험"
+     ],
+     "ai_verified": [
+      "삼성전자",
+      "삼성물산"
+     ],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 813.6294999858364,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "삼성전자",
+      "삼성물산",
+      "삼성수산",
+      "삼성전기",
+      "삼성공조"
+     ],
+     "sources": {
+      "삼성전자": "AI 제안 (상장사 목록에서 확인됨)",
+      "삼성물산": "AI 제안 (상장사 목록에서 확인됨)",
+      "삼성수산": "이름 일부 일치",
+      "삼성전기": "이름 일부 일치",
+      "삼성공조": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "삼성전자",
+      "삼성물산",
+      "삼성생명보험"
+     ],
+     "ai_verified": [
+      "삼성전자",
+      "삼성물산"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 816.6776000289246,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "삼성전자",
+      "삼성물산",
+      "삼성수산",
+      "삼성전기",
+      "삼성공조"
+     ],
+     "sources": {
+      "삼성전자": "AI 제안 (상장사 목록에서 확인됨)",
+      "삼성물산": "AI 제안 (상장사 목록에서 확인됨)",
+      "삼성수산": "이름 일부 일치",
+      "삼성전기": "이름 일부 일치",
+      "삼성공조": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "삼성전자",
+      "삼성물산",
+      "삼성생명보험"
+     ],
+     "ai_verified": [
+      "삼성전자",
+      "삼성물산"
+     ],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 855.8036999893375,
+     "clean": false,
+     "flagged": false
+    }
+   ]
+  },
+  {
+   "id": "a56",
+   "group": "none",
+   "input": "현대",
+   "expected": null,
+   "code_only": {
+    "names": [
+     "현대금속",
+     "현대공업",
+     "현대힘스",
+     "현대해상",
+     "현대약품"
+    ],
+    "clean": false,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [
+      "현대자동차",
+      "HD현대",
+      "현대모비스",
+      "현대금속",
+      "현대공업"
+     ],
+     "sources": {
+      "현대자동차": "AI 제안 (상장사 목록에서 확인됨)",
+      "HD현대": "AI 제안 (상장사 목록에서 확인됨)",
+      "현대모비스": "AI 제안 (상장사 목록에서 확인됨)",
+      "현대금속": "이름 일부 일치",
+      "현대공업": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "현대자동차",
+      "HD현대",
+      "현대모비스"
+     ],
+     "ai_verified": [
+      "현대자동차",
+      "HD현대",
+      "현대모비스"
+     ],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 894.9553000275046,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "현대자동차",
+      "HD현대",
+      "현대모비스",
+      "현대금속",
+      "현대공업"
+     ],
+     "sources": {
+      "현대자동차": "AI 제안 (상장사 목록에서 확인됨)",
+      "HD현대": "AI 제안 (상장사 목록에서 확인됨)",
+      "현대모비스": "AI 제안 (상장사 목록에서 확인됨)",
+      "현대금속": "이름 일부 일치",
+      "현대공업": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "현대자동차",
+      "HD현대",
+      "현대모비스"
+     ],
+     "ai_verified": [
+      "현대자동차",
+      "HD현대",
+      "현대모비스"
+     ],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 799.4762000162154,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "현대자동차",
+      "HD현대",
+      "현대모비스",
+      "현대금속",
+      "현대공업"
+     ],
+     "sources": {
+      "현대자동차": "AI 제안 (상장사 목록에서 확인됨)",
+      "HD현대": "AI 제안 (상장사 목록에서 확인됨)",
+      "현대모비스": "AI 제안 (상장사 목록에서 확인됨)",
+      "현대금속": "이름 일부 일치",
+      "현대공업": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "현대자동차",
+      "HD현대",
+      "현대모비스"
+     ],
+     "ai_verified": [
+      "현대자동차",
+      "HD현대",
+      "현대모비스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 918.7509999610484,
+     "clean": false,
+     "flagged": false
+    }
+   ]
+  },
+  {
+   "id": "a57",
+   "group": "none",
+   "input": "엘지",
+   "expected": null,
+   "code_only": {
+    "names": [
+     "엘지데이콤",
+     "에이치엘지노믹스"
+    ],
+    "clean": false,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [
+      "LG",
+      "LG에너지솔루션",
+      "LG화학",
+      "엘지데이콤",
+      "에이치엘지노믹스"
+     ],
+     "sources": {
+      "LG": "AI 제안 (상장사 목록에서 확인됨)",
+      "LG에너지솔루션": "AI 제안 (상장사 목록에서 확인됨)",
+      "LG화학": "AI 제안 (상장사 목록에서 확인됨)",
+      "엘지데이콤": "이름 일부 일치",
+      "에이치엘지노믹스": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "LG",
+      "LG에너지솔루션",
+      "LG화학"
+     ],
+     "ai_verified": [
+      "LG",
+      "LG에너지솔루션",
+      "LG화학"
+     ],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 838.6202999972738,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "LG",
+      "LG에너지솔루션",
+      "LG디스플레이",
+      "엘지데이콤",
+      "에이치엘지노믹스"
+     ],
+     "sources": {
+      "LG": "AI 제안 (상장사 목록에서 확인됨)",
+      "LG에너지솔루션": "AI 제안 (상장사 목록에서 확인됨)",
+      "LG디스플레이": "AI 제안 (상장사 목록에서 확인됨)",
+      "엘지데이콤": "이름 일부 일치",
+      "에이치엘지노믹스": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "LG",
+      "LG에너지솔루션",
+      "LG디스플레이"
+     ],
+     "ai_verified": [
+      "LG",
+      "LG에너지솔루션",
+      "LG디스플레이"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 890.686700004153,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "LG",
+      "LG에너지솔루션",
+      "LG이노텍",
+      "엘지데이콤",
+      "에이치엘지노믹스"
+     ],
+     "sources": {
+      "LG": "AI 제안 (상장사 목록에서 확인됨)",
+      "LG에너지솔루션": "AI 제안 (상장사 목록에서 확인됨)",
+      "LG이노텍": "AI 제안 (상장사 목록에서 확인됨)",
+      "엘지데이콤": "이름 일부 일치",
+      "에이치엘지노믹스": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "LG",
+      "LG에너지솔루션",
+      "LG이노텍"
+     ],
+     "ai_verified": [
+      "LG",
+      "LG에너지솔루션",
+      "LG이노텍"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1000.3746000002138,
+     "clean": false,
+     "flagged": false
+    }
+   ]
+  },
+  {
+   "id": "a58",
+   "group": "foreign",
+   "input": "마이크로소프트",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 831.1480000265874,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 1159.5583999878727,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 792.7772999973968,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a59",
+   "group": "foreign",
+   "input": "엔비디아",
+   "expected": null,
+   "code_only": {
+    "names": [
+     "비디아이"
+    ],
+    "clean": false,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 795.908700034488,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 871.673199988436,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 709.7388000111096,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a60",
+   "group": "foreign",
+   "input": "아마존",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 760.8756000408903,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 1071.060300047975,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 1125.5262999911793,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a61",
+   "group": "foreign",
+   "input": "메타",
+   "expected": null,
+   "code_only": {
+    "names": [
+     "메타케어",
+     "메타랩스",
+     "노브메타파마",
+     "메타바이오메드"
+    ],
+    "clean": false,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 730.9071999625303,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 1153.163000009954,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 805.7145999628119,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a62",
+   "group": "foreign",
+   "input": "알리바바",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 847.1989000099711,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 1016.2951999809593,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 772.6071000215597,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a63",
+   "group": "foreign",
+   "input": "텐센트",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 833.6793000344187,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 1162.0927000185475,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 1098.030099994503,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a64",
+   "group": "foreign",
+   "input": "소니",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 1169.2405000212602,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 911.8776000104845,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 815.525499987416,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a65",
+   "group": "foreign",
+   "input": "닌텐도",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 785.5436999816447,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 760.9507999732159,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 724.5090999640524,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a66",
+   "group": "foreign",
+   "input": "Microsoft",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 974.4195999810472,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 784.2584000318311,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 749.9930000049062,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a67",
+   "group": "foreign",
+   "input": "Nvidia",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 802.5171000044793,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 759.8646000260487,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 779.5434999861754,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a68",
+   "group": "foreign",
+   "input": "Toyota",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 1139.3328999984078,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 831.1379000078887,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 777.8305999818258,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a69",
+   "group": "foreign",
+   "input": "TSMC",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 822.2386999987066,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 769.974299997557,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 800.6629000301473,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a70",
+   "group": "foreign",
+   "input": "인텔",
+   "expected": null,
+   "code_only": {
+    "names": [
+     "인텔리안테크"
+    ],
+    "clean": false,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 713.9847999787889,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 749.6855999925174,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 782.8734000213444,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a71",
+   "group": "foreign",
+   "input": "넷플릭스",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 791.436999978032,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 904.3213999830186,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 828.1991999829188,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a72",
+   "group": "unlisted",
+   "input": "쿠팡",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 758.1482999958098,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 1062.3936000047252,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "foreign",
+     "ms": 861.0298000276089,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a73",
+   "group": "unlisted",
+   "input": "토스",
+   "expected": null,
+   "code_only": {
+    "names": [
+     "비스토스",
+     "미래오토스",
+     "와토스코리아",
+     "토비스",
+     "토자이홀딩스"
+    ],
+    "clean": false,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_unlisted",
+     "ms": 861.4961999701336,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_unlisted",
+     "ms": 855.4629999562167,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_unlisted",
+     "ms": 867.1029999968596,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a74",
+   "group": "unlisted",
+   "input": "배달의민족",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_unlisted",
+     "ms": 1114.2046000459231,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_unlisted",
+     "ms": 1220.7481999648735,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_unlisted",
+     "ms": 880.988500022795,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a75",
+   "group": "unlisted",
+   "input": "당근마켓",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_unlisted",
+     "ms": 1091.672899958212,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_unlisted",
+     "ms": 738.2331999833696,
+     "clean": true,
+     "flagged": true
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_unlisted",
+     "ms": 1143.1309999898076,
+     "clean": true,
+     "flagged": true
+    }
+   ]
+  },
+  {
+   "id": "a76",
+   "group": "ambiguous_group",
+   "input": "포스코",
+   "expected": null,
+   "code_only": {
+    "names": [
+     "POSCO홀딩스",
+     "포스코엠텍",
+     "포스코DX",
+     "포스코티엠씨",
+     "포스코퓨처엠"
+    ],
+    "clean": false,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [
+      "POSCO홀딩스",
+      "포스코엠텍",
+      "포스코DX",
+      "포스코티엠씨",
+      "포스코퓨처엠"
+     ],
+     "sources": {
+      "POSCO홀딩스": "별칭 사전",
+      "포스코엠텍": "이름 일부 일치",
+      "포스코DX": "이름 일부 일치",
+      "포스코티엠씨": "이름 일부 일치",
+      "포스코퓨처엠": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "POSCO홀딩스"
+     ],
+     "ai_verified": [
+      "POSCO홀딩스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1158.926700009033,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "POSCO홀딩스",
+      "포스코엠텍",
+      "포스코DX",
+      "포스코티엠씨",
+      "포스코퓨처엠"
+     ],
+     "sources": {
+      "POSCO홀딩스": "별칭 사전",
+      "포스코엠텍": "이름 일부 일치",
+      "포스코DX": "이름 일부 일치",
+      "포스코티엠씨": "이름 일부 일치",
+      "포스코퓨처엠": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "포스코홀딩스",
+      "POSCO"
+     ],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1182.8364999964833,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "POSCO홀딩스",
+      "포스코엠텍",
+      "포스코DX",
+      "포스코티엠씨",
+      "포스코퓨처엠"
+     ],
+     "sources": {
+      "POSCO홀딩스": "별칭 사전",
+      "포스코엠텍": "이름 일부 일치",
+      "포스코DX": "이름 일부 일치",
+      "포스코티엠씨": "이름 일부 일치",
+      "포스코퓨처엠": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "POSCO홀딩스"
+     ],
+     "ai_verified": [
+      "POSCO홀딩스"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 803.4612000337802,
+     "clean": false,
+     "flagged": false
+    }
+   ]
+  },
+  {
+   "id": "a77",
+   "group": "ambiguous_group",
+   "input": "삼성",
+   "expected": null,
+   "code_only": {
+    "names": [
+     "삼성수산",
+     "삼성물산",
+     "삼성전기",
+     "삼성공조",
+     "삼성카드"
+    ],
+    "clean": false,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [
+      "삼성전자",
+      "삼성물산",
+      "삼성수산",
+      "삼성전기",
+      "삼성공조"
+     ],
+     "sources": {
+      "삼성전자": "AI 제안 (상장사 목록에서 확인됨)",
+      "삼성물산": "AI 제안 (상장사 목록에서 확인됨)",
+      "삼성수산": "이름 일부 일치",
+      "삼성전기": "이름 일부 일치",
+      "삼성공조": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "삼성전자",
+      "삼성물산",
+      "삼성생명보험"
+     ],
+     "ai_verified": [
+      "삼성전자",
+      "삼성물산"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1083.321199985221,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "삼성전자",
+      "삼성물산",
+      "삼성수산",
+      "삼성전기",
+      "삼성공조"
+     ],
+     "sources": {
+      "삼성전자": "AI 제안 (상장사 목록에서 확인됨)",
+      "삼성물산": "AI 제안 (상장사 목록에서 확인됨)",
+      "삼성수산": "이름 일부 일치",
+      "삼성전기": "이름 일부 일치",
+      "삼성공조": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "삼성전자",
+      "삼성물산",
+      "삼성생명보험"
+     ],
+     "ai_verified": [
+      "삼성전자",
+      "삼성물산"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 977.1233000210486,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "삼성전자",
+      "삼성물산",
+      "삼성수산",
+      "삼성전기",
+      "삼성공조"
+     ],
+     "sources": {
+      "삼성전자": "AI 제안 (상장사 목록에서 확인됨)",
+      "삼성물산": "AI 제안 (상장사 목록에서 확인됨)",
+      "삼성수산": "이름 일부 일치",
+      "삼성전기": "이름 일부 일치",
+      "삼성공조": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "삼성전자",
+      "삼성물산",
+      "삼성생명보험"
+     ],
+     "ai_verified": [
+      "삼성전자",
+      "삼성물산"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 912.0083000161685,
+     "clean": false,
+     "flagged": false
+    }
+   ]
+  },
+  {
+   "id": "a78",
+   "group": "ambiguous_group",
+   "input": "현대",
+   "expected": null,
+   "code_only": {
+    "names": [
+     "현대금속",
+     "현대공업",
+     "현대힘스",
+     "현대해상",
+     "현대약품"
+    ],
+    "clean": false,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [
+      "현대모비스",
+      "HD현대",
+      "현대금속",
+      "현대공업",
+      "현대힘스"
+     ],
+     "sources": {
+      "현대모비스": "AI 제안 (상장사 목록에서 확인됨)",
+      "HD현대": "AI 제안 (상장사 목록에서 확인됨)",
+      "현대금속": "이름 일부 일치",
+      "현대공업": "이름 일부 일치",
+      "현대힘스": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "현대차",
+      "현대모비스",
+      "HD현대"
+     ],
+     "ai_verified": [
+      "현대모비스",
+      "HD현대"
+     ],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 1158.35609997157,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "현대모비스",
+      "HD현대",
+      "현대금속",
+      "현대공업",
+      "현대힘스"
+     ],
+     "sources": {
+      "현대모비스": "AI 제안 (상장사 목록에서 확인됨)",
+      "HD현대": "AI 제안 (상장사 목록에서 확인됨)",
+      "현대금속": "이름 일부 일치",
+      "현대공업": "이름 일부 일치",
+      "현대힘스": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "현대차",
+      "현대모비스",
+      "HD현대"
+     ],
+     "ai_verified": [
+      "현대모비스",
+      "HD현대"
+     ],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 955.8194999699481,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "현대모비스",
+      "현대건설",
+      "현대금속",
+      "현대공업",
+      "현대힘스"
+     ],
+     "sources": {
+      "현대모비스": "AI 제안 (상장사 목록에서 확인됨)",
+      "현대건설": "AI 제안 (상장사 목록에서 확인됨)",
+      "현대금속": "이름 일부 일치",
+      "현대공업": "이름 일부 일치",
+      "현대힘스": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "현대차",
+      "현대모비스",
+      "현대건설"
+     ],
+     "ai_verified": [
+      "현대모비스",
+      "현대건설"
+     ],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 875.3307000151835,
+     "clean": false,
+     "flagged": false
+    }
+   ]
+  },
+  {
+   "id": "a79",
+   "group": "ambiguous_group",
+   "input": "엘지",
+   "expected": null,
+   "code_only": {
+    "names": [
+     "엘지데이콤",
+     "에이치엘지노믹스"
+    ],
+    "clean": false,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [
+      "LG",
+      "LG에너지솔루션",
+      "LG이노텍",
+      "엘지데이콤",
+      "에이치엘지노믹스"
+     ],
+     "sources": {
+      "LG": "AI 제안 (상장사 목록에서 확인됨)",
+      "LG에너지솔루션": "AI 제안 (상장사 목록에서 확인됨)",
+      "LG이노텍": "AI 제안 (상장사 목록에서 확인됨)",
+      "엘지데이콤": "이름 일부 일치",
+      "에이치엘지노믹스": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "LG",
+      "LG에너지솔루션",
+      "LG이노텍"
+     ],
+     "ai_verified": [
+      "LG",
+      "LG에너지솔루션",
+      "LG이노텍"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 892.7688999683596,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "LG",
+      "LG에너지솔루션",
+      "LG이노텍",
+      "엘지데이콤",
+      "에이치엘지노믹스"
+     ],
+     "sources": {
+      "LG": "AI 제안 (상장사 목록에서 확인됨)",
+      "LG에너지솔루션": "AI 제안 (상장사 목록에서 확인됨)",
+      "LG이노텍": "AI 제안 (상장사 목록에서 확인됨)",
+      "엘지데이콤": "이름 일부 일치",
+      "에이치엘지노믹스": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "LG",
+      "LG에너지솔루션",
+      "LG이노텍"
+     ],
+     "ai_verified": [
+      "LG",
+      "LG에너지솔루션",
+      "LG이노텍"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 909.5256000291556,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "LG",
+      "LG에너지솔루션",
+      "엘지데이콤",
+      "에이치엘지노믹스"
+     ],
+     "sources": {
+      "LG": "AI 제안 (상장사 목록에서 확인됨)",
+      "LG에너지솔루션": "AI 제안 (상장사 목록에서 확인됨)",
+      "엘지데이콤": "이름 일부 일치",
+      "에이치엘지노믹스": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "LG",
+      "LG에너지솔루션"
+     ],
+     "ai_verified": [
+      "LG",
+      "LG에너지솔루션"
+     ],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 980.6835999479517,
+     "clean": false,
+     "flagged": false
+    }
+   ]
+  },
+  {
+   "id": "a80",
+   "group": "ambiguous_group",
+   "input": "롯데",
+   "expected": null,
+   "code_only": {
+    "names": [
+     "롯데리츠",
+     "롯데푸드",
+     "롯데지주",
+     "롯데쇼핑",
+     "롯데렌탈"
+    ],
+    "clean": false,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [
+      "롯데쇼핑",
+      "롯데지주",
+      "롯데리츠",
+      "롯데푸드",
+      "롯데렌탈"
+     ],
+     "sources": {
+      "롯데쇼핑": "AI 제안 (상장사 목록에서 확인됨)",
+      "롯데지주": "AI 제안 (상장사 목록에서 확인됨)",
+      "롯데리츠": "이름 일부 일치",
+      "롯데푸드": "이름 일부 일치",
+      "롯데렌탈": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "롯데쇼핑",
+      "롯데제과",
+      "롯데지주"
+     ],
+     "ai_verified": [
+      "롯데쇼핑",
+      "롯데지주"
+     ],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 793.828800029587,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "롯데쇼핑",
+      "롯데케미칼",
+      "롯데리츠",
+      "롯데푸드",
+      "롯데지주"
+     ],
+     "sources": {
+      "롯데쇼핑": "AI 제안 (상장사 목록에서 확인됨)",
+      "롯데케미칼": "AI 제안 (상장사 목록에서 확인됨)",
+      "롯데리츠": "이름 일부 일치",
+      "롯데푸드": "이름 일부 일치",
+      "롯데지주": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "롯데쇼핑",
+      "롯데제과",
+      "롯데케미칼"
+     ],
+     "ai_verified": [
+      "롯데쇼핑",
+      "롯데케미칼"
+     ],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 1094.763300032355,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "롯데지주",
+      "롯데쇼핑",
+      "롯데웰푸드",
+      "롯데리츠",
+      "롯데푸드"
+     ],
+     "sources": {
+      "롯데지주": "AI 제안 (상장사 목록에서 확인됨)",
+      "롯데쇼핑": "AI 제안 (상장사 목록에서 확인됨)",
+      "롯데웰푸드": "AI 제안 (상장사 목록에서 확인됨)",
+      "롯데리츠": "이름 일부 일치",
+      "롯데푸드": "이름 일부 일치"
+     },
+     "ai_proposed": [
+      "롯데지주",
+      "롯데쇼핑",
+      "롯데웰푸드"
+     ],
+     "ai_verified": [
+      "롯데지주",
+      "롯데쇼핑",
+      "롯데웰푸드"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1024.6405999641865,
+     "clean": false,
+     "flagged": false
+    }
+   ]
+  },
+  {
+   "id": "a81",
+   "group": "ambiguous_group",
+   "input": "한화그룹",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [
+      "한화"
+     ],
+     "sources": {
+      "한화": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "한화"
+     ],
+     "ai_verified": [
+      "한화"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 837.0064999908209,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "한화"
+     ],
+     "sources": {
+      "한화": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "한화"
+     ],
+     "ai_verified": [
+      "한화"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 676.0629999917,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "한화",
+      "한화에어로스페이스",
+      "한화오션"
+     ],
+     "sources": {
+      "한화": "AI 제안 (상장사 목록에서 확인됨)",
+      "한화에어로스페이스": "AI 제안 (상장사 목록에서 확인됨)",
+      "한화오션": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "한화",
+      "한화에어로스페이스",
+      "한화오션"
+     ],
+     "ai_verified": [
+      "한화",
+      "한화에어로스페이스",
+      "한화오션"
+     ],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 880.983599985484,
+     "clean": false,
+     "flagged": false
+    }
+   ]
+  },
+  {
+   "id": "a82",
+   "group": "ambiguous_group",
+   "input": "SK그룹",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 838.2434999803081,
+     "clean": true,
+     "flagged": false
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 1080.6123000220396,
+     "clean": true,
+     "flagged": false
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [
+      "에스케이에스",
+      "에스케이"
+     ],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 873.4467999893241,
+     "clean": true,
+     "flagged": false
+    }
+   ]
+  },
+  {
+   "id": "a83",
+   "group": "ambiguous_group",
+   "input": "LG그룹",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [
+      "LG"
+     ],
+     "sources": {
+      "LG": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "LG"
+     ],
+     "ai_verified": [
+      "LG"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 856.598699989263,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [
+      "LG"
+     ],
+     "sources": {
+      "LG": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "LG"
+     ],
+     "ai_verified": [
+      "LG"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 834.6954999724403,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 1200.9269000263885,
+     "clean": true,
+     "flagged": false
+    }
+   ]
+  },
+  {
+   "id": "a84",
+   "group": "ambiguous_group",
+   "input": "두산그룹",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [
+      "주식회사 두산"
+     ],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1172.2128999535926,
+     "clean": true,
+     "flagged": false
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [
+      "(주)두산"
+     ],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 901.4312999788672,
+     "clean": true,
+     "flagged": false
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [
+      "주식회사 두산"
+     ],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1220.7146000000648,
+     "clean": true,
+     "flagged": false
+    }
+   ]
+  },
+  {
+   "id": "a85",
+   "group": "ambiguous_group",
+   "input": "CJ그룹",
+   "expected": null,
+   "code_only": {
+    "names": [],
+    "clean": true,
+    "flagged": false
+   },
+   "runs": [
+    {
+     "names": [
+      "CJ"
+     ],
+     "sources": {
+      "CJ": "AI 제안 (상장사 목록에서 확인됨)"
+     },
+     "ai_proposed": [
+      "CJ"
+     ],
+     "ai_verified": [
+      "CJ"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1058.616400056053,
+     "clean": false,
+     "flagged": false
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [
+      "씨제이"
+     ],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 848.4449000097811,
+     "clean": true,
+     "flagged": false
+    },
+    {
+     "names": [],
+     "sources": {},
+     "ai_proposed": [
+      "씨제이"
+     ],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 854.4078000122681,
+     "clean": true,
+     "flagged": false
+    }
+   ]
+  },
+  {
+   "id": "a86",
+   "group": "nickname_chosung",
+   "input": "닉스",
+   "expected": "SK하이닉스",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "SK하이닉스"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "SK하이닉스"
+     ],
+     "sources": {
+      "SK하이닉스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "SK하이닉스"
+     ],
+     "sources": {
+      "SK하이닉스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "SK하이닉스"
+     ],
+     "sources": {
+      "SK하이닉스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a87",
+   "group": "nickname_chosung",
+   "input": "엔솔",
+   "expected": "LG에너지솔루션",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "LG에너지솔루션"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "LG에너지솔루션"
+     ],
+     "sources": {
+      "LG에너지솔루션": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "LG에너지솔루션"
+     ],
+     "sources": {
+      "LG에너지솔루션": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "LG에너지솔루션"
+     ],
+     "sources": {
+      "LG에너지솔루션": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a88",
+   "group": "nickname_chosung",
+   "input": "ㅎㄷㅈㄷㅊ",
+   "expected": "현대자동차",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "현대자동차"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "현대자동차"
+     ],
+     "sources": {
+      "현대자동차": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "현대자동차"
+     ],
+     "sources": {
+      "현대자동차": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "현대자동차"
+     ],
+     "sources": {
+      "현대자동차": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a89",
+   "group": "nickname_chosung",
+   "input": "ㅎㅇㄴㅅ",
+   "expected": "SK하이닉스",
+   "auto": true,
+   "code_only": {
+    "names": [
+     "SK하이닉스"
+    ],
+    "hit1": true,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "SK하이닉스"
+     ],
+     "sources": {
+      "SK하이닉스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "SK하이닉스"
+     ],
+     "sources": {
+      "SK하이닉스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "SK하이닉스"
+     ],
+     "sources": {
+      "SK하이닉스": "유명 별칭"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": null,
+     "ms": 0.0,
+     "auto": true,
+     "hit1": true,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a90",
+   "group": "nickname_chosung",
+   "input": "ㅅㅅㅈㅈ",
+   "expected": "삼성전자",
+   "code_only": {
+    "names": [
+     "상신전자",
+     "삼성전자"
+    ],
+    "hit1": false,
+    "hit5": true
+   },
+   "runs": [
+    {
+     "names": [
+      "상신전자",
+      "삼성전자"
+     ],
+     "sources": {
+      "상신전자": "초성 일치",
+      "삼성전자": "초성 일치"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 1117.4477000022307,
+     "hit1": false,
+     "hit5": true
+    },
+    {
+     "names": [
+      "상신전자",
+      "삼성전자"
+     ],
+     "sources": {
+      "상신전자": "초성 일치",
+      "삼성전자": "초성 일치"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 970.00550001394,
+     "hit1": false,
+     "hit5": true
+    },
+    {
+     "names": [
+      "상신전자",
+      "삼성전자"
+     ],
+     "sources": {
+      "상신전자": "초성 일치",
+      "삼성전자": "초성 일치"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 741.6360999923199,
+     "hit1": false,
+     "hit5": true
+    }
+   ]
+  },
+  {
+   "id": "a91",
+   "group": "nickname_chosung",
+   "input": "ㄴㅇㅂ",
+   "expected": "NAVER",
+   "code_only": {
+    "names": [
+     "네이블",
+     "나이벡",
+     "네오뷰"
+    ],
+    "hit1": false,
+    "hit5": false
+   },
+   "runs": [
+    {
+     "names": [
+      "NAVER",
+      "네이블",
+      "나이벡",
+      "네오뷰"
+     ],
+     "sources": {
+      "NAVER": "AI 제안 (상장사 목록에서 확인됨)",
+      "네이블": "초성 일치",
+      "나이벡": "초성 일치",
+      "네오뷰": "초성 일치"
+     },
+     "ai_proposed": [
+      "NAVER"
+     ],
+     "ai_verified": [
+      "NAVER"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 876.3034999719821,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "NAVER",
+      "네이블",
+      "나이벡",
+      "네오뷰"
+     ],
+     "sources": {
+      "NAVER": "AI 제안 (상장사 목록에서 확인됨)",
+      "네이블": "초성 일치",
+      "나이벡": "초성 일치",
+      "네오뷰": "초성 일치"
+     },
+     "ai_proposed": [
+      "NAVER"
+     ],
+     "ai_verified": [
+      "NAVER"
+     ],
+     "ai_error": false,
+     "kind": "korean_listed",
+     "ms": 1257.9827000154182,
+     "hit1": true,
+     "hit5": true
+    },
+    {
+     "names": [
+      "네이블",
+      "나이벡",
+      "네오뷰"
+     ],
+     "sources": {
+      "네이블": "초성 일치",
+      "나이벡": "초성 일치",
+      "네오뷰": "초성 일치"
+     },
+     "ai_proposed": [],
+     "ai_verified": [],
+     "ai_error": false,
+     "kind": "unclear",
+     "ms": 785.738600010518,
+     "hit1": false,
+     "hit5": false
+    }
+   ]
+  }
+ ]
+}

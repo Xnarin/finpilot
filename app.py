@@ -48,6 +48,8 @@ if rec["error_code"]:
 else:
     r = rec["result"]
     st.caption(f"기업 {r['company']} · {r['year']}사업연도 · {r['basis']}재무제표 · 단위 {r['unit']} · {DATA_KIND}")
+    if rec["inputs"].get("기업") and rec["inputs"]["기업"].strip() != r["company"]:
+        st.caption(f"입력 '{rec['inputs']['기업'].strip()}' → {r['company']}(으)로 해석했습니다.")
     st.caption(f"접수번호 {r['rcept_no']} · 조회 시점 {r['fetched_at']}")
     a, b = st.columns(2)
     a.metric("매출액", won(r["revenue"]))

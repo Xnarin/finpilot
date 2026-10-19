@@ -1,5 +1,5 @@
 {
- "_note": "회사명 입력 -> 되묻기 후보 평가. expected는 상장사 목록(OpenDART corpCode)의 정식명(사람이 확인), none은 해외·비상장·모호해서 후보가 없거나 여러 개여야 하는 입력. dict 그룹은 별칭 사전에 넣은 항목이라 일반화 성능을 보지 않는다. 엔씨소프트·케이티앤지·삼성SDS 별칭은 이 평가셋을 만들며 목록에서 이름이 다른 것을 발견한 뒤 사전에 추가했다. foreign(해외 기업 14)·unlisted(한국 비상장 4) 그룹은 2026-10-19에 후보 소음 개선(AI 분류) 후에 추가한 미튜닝 입력이다. 애플·테슬라·구글·토요타·우리집(none 그룹)은 개선 전에 확인한 입력이다.",
+ "_note": "회사명 입력 -> 되묻기 후보 평가. expected는 상장사 목록(OpenDART corpCode)의 정식명(사람이 확인), none은 해외·비상장·모호해서 후보가 없거나 여러 개여야 하는 입력. dict 그룹은 별칭 사전에 넣은 항목이라 일반화 성능을 보지 않는다. 엔씨소프트·케이티앤지·삼성SDS 별칭은 이 평가셋을 만들며 목록에서 이름이 다른 것을 발견한 뒤 사전에 추가했다. foreign(해외 기업 14)·unlisted(한국 비상장 4) 그룹은 2026-10-19에 후보 소음 개선(AI 분류) 후에 추가한 미튜닝 입력이다. 애플·테슬라·구글·토요타·우리집(none 그룹)은 개선 전에 확인한 입력이다. ambiguous_group(그룹·모호한 이름 10개)는 자동 확정되면 안 되는 입력, nickname_chosung(6개)은 유명 별칭·초성 사전 항목이다(사전 포함 항목이라 일반화 성능이 아니라 오확정 점검용). ㅅㅅㅈㅈ·ㄴㅇㅂ는 목록의 다른 회사와 초성이 겹쳐 후보로만 나오는 것이 정답 동작이므로 정답을 후보 1번으로 본다.",
  "items": [
   {
    "id": "a01",
@@ -450,6 +450,102 @@
    "group": "unlisted",
    "input": "당근마켓",
    "expected": null
+  },
+  {
+   "id": "a76",
+   "group": "ambiguous_group",
+   "input": "포스코",
+   "expected": null
+  },
+  {
+   "id": "a77",
+   "group": "ambiguous_group",
+   "input": "삼성",
+   "expected": null
+  },
+  {
+   "id": "a78",
+   "group": "ambiguous_group",
+   "input": "현대",
+   "expected": null
+  },
+  {
+   "id": "a79",
+   "group": "ambiguous_group",
+   "input": "엘지",
+   "expected": null
+  },
+  {
+   "id": "a80",
+   "group": "ambiguous_group",
+   "input": "롯데",
+   "expected": null
+  },
+  {
+   "id": "a81",
+   "group": "ambiguous_group",
+   "input": "한화그룹",
+   "expected": null
+  },
+  {
+   "id": "a82",
+   "group": "ambiguous_group",
+   "input": "SK그룹",
+   "expected": null
+  },
+  {
+   "id": "a83",
+   "group": "ambiguous_group",
+   "input": "LG그룹",
+   "expected": null
+  },
+  {
+   "id": "a84",
+   "group": "ambiguous_group",
+   "input": "두산그룹",
+   "expected": null
+  },
+  {
+   "id": "a85",
+   "group": "ambiguous_group",
+   "input": "CJ그룹",
+   "expected": null
+  },
+  {
+   "id": "a86",
+   "group": "nickname_chosung",
+   "input": "닉스",
+   "expected": "SK하이닉스"
+  },
+  {
+   "id": "a87",
+   "group": "nickname_chosung",
+   "input": "엔솔",
+   "expected": "LG에너지솔루션"
+  },
+  {
+   "id": "a88",
+   "group": "nickname_chosung",
+   "input": "ㅎㄷㅈㄷㅊ",
+   "expected": "현대자동차"
+  },
+  {
+   "id": "a89",
+   "group": "nickname_chosung",
+   "input": "ㅎㅇㄴㅅ",
+   "expected": "SK하이닉스"
+  },
+  {
+   "id": "a90",
+   "group": "nickname_chosung",
+   "input": "ㅅㅅㅈㅈ",
+   "expected": "삼성전자"
+  },
+  {
+   "id": "a91",
+   "group": "nickname_chosung",
+   "input": "ㄴㅇㅂ",
+   "expected": "NAVER"
   }
  ]
 }

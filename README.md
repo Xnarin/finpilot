@@ -47,7 +47,7 @@ python -m pytest tests_live   # 실제 OpenDART 호출(키 필요), 사용자가
 ## 회사 선택
 
 - 정확한 상장사명을 입력합니다(예: `SK하이닉스`). 최초 실행 때 OpenDART `corpCode.xml`로 상장사 목록을 받아 `.cache/corp_codes.json`에 저장합니다(신규 상장·사명 변경 반영은 이 파일을 지우면 됩니다).
-- 후보는 별칭 사전(`네이버`→NAVER 등), 우선주(`삼성전자우`→삼성전자), 영문명, AI 제안(Gemini가 낸 이름 중 상장사 목록에 정확히 있는 것만)을 합쳐 최대 5개이고 버튼에 출처가 표시됩니다. 별칭이든 AI 제안이든 자동 확정하지 않고 사용자가 눌러야 진행합니다("처음엔 되묻기"). AI가 해외·비상장 기업으로 분류하고 강한 후보(별칭·영문명·AI 확인)가 없으면 약한 후보(철자·약칭 추정 등)를 버리고 "조회할 수 없다"고 안내합니다(`COMPANY_NOT_SUPPORTED`). 평가는 `python -m eval.run_alias_eval`입니다.
+- 후보는 별칭 사전(`네이버`→NAVER 등), 우선주(`삼성전자우`→삼성전자), 영문명, AI 제안(Gemini가 낸 이름 중 상장사 목록에 정확히 있는 것만)을 합쳐 최대 5개이고 버튼에 출처가 표시됩니다. **누구나 쓰는 유명 별칭·초성(삼전·하닉·닉스·네이버 등)은 바로 확정**하고 화면에 "입력 → 해석"을 표시합니다. 그 밖의 별칭, 모호한 이름, AI 제안은 자동 확정하지 않고 사용자가 눌러야 진행합니다("처음엔 되묻기"). AI가 해외·비상장 기업으로 분류하고 강한 후보(별칭·영문명·AI 확인)가 없으면 약한 후보(철자·약칭 추정 등)를 버리고 "조회할 수 없다"고 안내합니다(`COMPANY_NOT_SUPPORTED`). 평가는 `python -m eval.run_alias_eval`입니다.
 - 공백·대소문자만 다른 경우(`sk 하이닉스`, `naver`)는 한 곳으로 확정합니다. 약칭·부분 이름·오타(`삼전`, `하이닉스`)는 자동으로 고르지 않고 후보 버튼을 보여 주며, 사용자가 고르면 같은 연도·작업으로 다시 조회합니다(선택은 실행 기록에 남음). 후보는 순위 신호가 없어 노이즈가 섞일 수 있습니다. 이름이 같은 상장사가 둘 이상이면 오류를 보여줍니다.
 - 은행·보험·증권사처럼 매출 계정(`ifrs-full_Revenue`)이 없는 회사는 `ACCOUNT_NOT_UNIQUE` 오류로 중단합니다. 업종별 계정 매핑은 아직 없습니다.
 
@@ -67,6 +67,8 @@ python -m pytest tests_live   # 실제 OpenDART 호출(키 필요), 사용자가
 | 2026-10-18 | 평가 질문 114개의 정답을 사용자가 검토 (확인자: 사용자) | 이견 없음(별도 수정 메모 없음). 기준선 태그 `baseline-single-request` 생성 |
 | 2026-10-19 | 회사 후보 평가(입력 57개, AI 제안 포함 3회) + 후보 단위 테스트 11개 | AI 포함 hit@1 사전 외 한글 별칭 43/48, 우선주 12/12, 오타 15/15. 상세는 `docs/evaluation/eval_results.md` 5차 |
 | 2026-10-19 | 해외·비상장 기업 소음 제거(AI 분류) 평가: 입력 75개 3회 + 단위 테스트 5개 추가 | 해외 14개 42/42 안내, 비상장 4개 12/12, 한국 상장사 오분류 0건, 사전 외 한글 별칭 46/48. 프롬프트 1안은 후보 이름이 나빠져 2안으로 수정. `docs/evaluation/eval_results.md` 6차 |
+| 2026-10-19 | 도구 함수 정의(`tools.py`) + 단위 테스트 62개(전체 110개) + 변이 점검 5건 + 실제 호출 테스트 9개(전체 22개) | 통과. 정정공시 확인: 조회는 최신 기재정정본을 주고 접수번호·접수일·정정 여부를 표시. 동명 회사(삼성물산)는 현재 상장 법인으로 확정. `docs/backlog/policies.md` |
+| 2026-10-19 | 유명 별칭·초성 즉시 확정: 단위 테스트 28개 추가(전체 138개), 실제 목록 점검(오프라인 30개), 평가 91개 입력 3회 | 바로 확정 20개 중 오확정 0, 모호한 그룹명 10개 확정 0. 초성 ㅅㅅㅈㅈ·ㄴㅇㅂ는 다른 회사와 겹쳐 후보로만. `docs/evaluation/eval_results.md` 7차 |
 
 원문 대조 방법: `https://dart.fss.or.kr/dsaf001/main.do?rcpNo=<접수번호>` → 연결 손익계산서의 당기 열, 단위(백만원) 환산 후 비교. 새 회사나 계정 규칙을 추가할 때마다 같은 방법으로 대조하고 이 표에 추가한다.
 
@@ -76,12 +78,14 @@ python -m pytest tests_live   # 실제 OpenDART 호출(키 필요), 사용자가
 - LangSmith: `ask` → `parse_question`(llm) → `run` → `fetch_financials`(tool) 흐름이 한 요청의 trace로 남습니다. 전송 입력은 질문 문장과 회사·연도·작업뿐이며 키는 포함하지 않습니다. 화면은 tracing 켜짐/꺼짐만 보여 주고, 전송 성공 여부는 SDK가 백그라운드로 처리해 확인하지 못합니다. 이 trace는 실제 실행 관찰용이며 품질 평가가 아닙니다.
 - 평가: `python -m eval.run_eval dev|final|dev_hard|final_hard|all [반복횟수]` (실제 Gemini 호출, LangSmith 프로젝트 `finpilot-eval`). 질문 45개(`eval/questions.json`: dev 14·final 11·dev_hard 10·final_hard 10, 검토용 목록 `docs/evaluation/eval_questions.md`, 질문별 응답 `docs/evaluation/eval_responses.md`, 답하지 못한 경우 백로그 `docs/backlog/unresolved_cases.md`)의 정답은 사람이 정했고 필드별 일치를 코드로 판정합니다. 결과·모델·프롬프트/데이터셋 해시는 `eval/results/`에 저장됩니다.
 
+- 테스트(`pytest`)는 LangSmith로 trace를 보내지 않습니다(`tests/conftest.py`). 평가 실행과 화면 실행은 `.env` 설정대로 전송합니다.
+
 ## 문서 목차
 
 모든 문서와 평가 결과 파일의 목차: [docs/index.md](docs/index.md)
 
 ## 구조
 
-`app.py` 화면 · `finance.py` 계산·실행 기록·`ask` · `dart.py` OpenDART 조회 · `question.py` 질문 해석 · `eval/` 평가셋과 실행기 · `tests/test_finance.py`
+`app.py` 화면 · `tools.py` 에이전트용 도구(연도 해석·회사 확정·재무 조회·비율 계산) · `finance.py` 계산·실행 기록·`ask` · `dart.py` OpenDART 조회 · `question.py` 질문 해석 · `eval/` 평가셋과 실행기 · `tests/test_finance.py`
 
 실행 기록(실행 ID, 시각, 단계 상태, 오류 코드)은 현재 화면에서만 확인하며 저장하지 않습니다. 표시 시간은 이번 실행의 조회·계산 시간이며 성능 평가가 아닙니다.

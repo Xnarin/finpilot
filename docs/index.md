@@ -13,6 +13,7 @@ docs/
 │   ├─ eval_questions.md
 │   └─ eval_responses.md
 └─ backlog/                  앞으로 할 일과 설계 메모
+    ├─ policies.md
     ├─ unresolved_cases.md
     └─ future_requirements.md
 eval/                        평가 데이터·실행기·결과 파일 (코드 쪽)
@@ -32,9 +33,9 @@ tests/, tests_live/          자동 테스트
 
 | 문서 | 내용 | 읽을 때 |
 |---|---|---|
-| [verification/test_results.md](verification/test_results.md) | 자동 테스트 48개 목록, 실제 OpenDART 회귀 테스트 13개, DART 원문 대조, 오류 상황 확인, LangSmith trace 비밀값 점검 | 조회·계산이 맞는지 확인할 때 |
+| [verification/test_results.md](verification/test_results.md) | 자동 테스트 138개 목록, 실제 OpenDART 회귀 테스트 13개, DART 원문 대조, 오류 상황 확인, LangSmith trace 비밀값 점검 | 조회·계산이 맞는지 확인할 때 |
 
-관련 코드: [../tests/test_finance.py](../tests/test_finance.py)(오프라인), [../tests_live/test_verified_values.py](../tests_live/test_verified_values.py)(사용자가 원문과 대조한 12개 조합의 수치)
+관련 코드: [../tests/test_finance.py](../tests/test_finance.py), [../tests/test_candidates.py](../tests/test_candidates.py), [../tests/test_tools.py](../tests/test_tools.py), [../tests/test_famous.py](../tests/test_famous.py)(오프라인), [../tests_live/test_verified_values.py](../tests_live/test_verified_values.py)(사용자가 원문과 대조한 12개 조합의 수치), [../tests_live/test_tools_live.py](../tests_live/test_tools_live.py)(도구의 실제 호출)
 
 ## 파트 3. 평가 — 질문 해석이 맞는가 (`docs/evaluation/`)
 
@@ -49,7 +50,7 @@ tests/, tests_live/          자동 테스트
 | 파일 | 내용 |
 |---|---|
 | [../eval/questions.json](../eval/questions.json) | 질문 114개와 정답 원본. 묶음(split): `dev` 14, `final` 11, `dev_hard` 10, `final_hard` 10, `real` 69 |
-| [../eval/alias_cases.json](../eval/alias_cases.json) | 회사명 입력 75개와 정식명 정답(회사 후보 평가용, 그룹: dict·not_in_dict_kr·english·preferred·typo·none·foreign·unlisted) |
+| [../eval/alias_cases.json](../eval/alias_cases.json) | 회사명 입력 91개와 정식명 정답(회사 후보 평가용, 그룹: dict·not_in_dict_kr·english·preferred·typo·none·foreign·unlisted) |
 
 묶음별 용도: `dev`, `dev_hard`는 프롬프트 개선에 쓴 묶음이다. `final`, `final_hard`, `real`은 최종 확인용이며 **이미 한 번 이상 사용됐다**. 구조나 프롬프트를 바꾼 뒤의 확인에는 새 묶음이 필요하다.
 
@@ -75,7 +76,8 @@ tests/, tests_live/          자동 테스트
 
 | [20261019-093314-alias-x3.json](../eval/results/20261019-093314-alias-x3.json) | 10-19 09:33 | alias 57(회사명 입력) | 3 | 해당 없음(회사 후보 단계) | AI 포함 hit@1 141/147(정답이 있는 49개 입력×3회) | **회사 후보 기준선**: 코드 후보만 vs AI 제안 포함, `python -m eval.run_alias_eval` |
 | [20261019-102053-alias-x3.json](../eval/results/20261019-102053-alias-x3.json) | 10-19 10:20 | alias 75(해외·비상장 18 추가) | 3 | 해당 없음 | 사전 외 한글 별칭 38/48 | 분류 추가 직후, 제안 프롬프트 1안(후보 이름이 나빠짐) |
-| [20261019-102436-alias-x3.json](../eval/results/20261019-102436-alias-x3.json) | 10-19 10:24 | alias 75 | 3 | 해당 없음 | 사전 외 한글 별칭 46/48, 해외 42/42 | **현재 회사 후보**: 제안 프롬프트 2안, 해외·비상장 안내 |
+| [20261019-102436-alias-x3.json](../eval/results/20261019-102436-alias-x3.json) | 10-19 10:24 | alias 75 | 3 | 해당 없음 | 사전 외 한글 별칭 46/48, 해외 42/42 | 제안 프롬프트 2안, 해외·비상장 안내 |
+| [20261019-113942-alias-x3.json](../eval/results/20261019-113942-alias-x3.json) | 10-19 11:39 | alias 91(모호한 그룹명·초성 16 추가) | 3 | 해당 없음 | 바로 확정 20개 중 오확정 0 | **현재 회사 후보**: 유명 별칭·초성 즉시 확정 점검 |
 
 - 비교 기준으로는 `x3` 결과 세 개를 쓴다(질문 해석 두 개, 회사 후보 한 개). 앞의 11개는 반복 1회라 같은 질문의 비일관성을 알 수 없고 형식도 이전 방식이다.
 
@@ -84,6 +86,7 @@ tests/, tests_live/          자동 테스트
 | 문서 | 내용 | 읽을 때 |
 |---|---|---|
 | [backlog/unresolved_cases.md](backlog/unresolved_cases.md) | 현재 시스템이 답하지 못한 64문항을 원인별 6유형(A~F)으로 묶고 해결 후보(도구·에이전트)를 적음 | 다음에 무엇을 고칠지 정할 때 |
+| [backlog/policies.md](backlog/policies.md) | MVP 정책 결정(상대 연도, 되묻기, 별도·분기, 정정본)과 구현 위치, 정정공시·동명 회사 확인 결과 | 정책을 확인할 때 |
 | [backlog/future_requirements.md](backlog/future_requirements.md) | 복수 연도·회사 등 앞으로의 요구, 예외 상황 카탈로그, 에이전트 구조 메모, 정책 결정 항목 | 에이전트를 설계할 때 |
 
 기계가 읽는 원본: [../eval/unresolved_cases.json](../eval/unresolved_cases.json)(64문항의 유형·원하는 동작·해결 후보). 나중에 golden set의 출발점으로 쓴다.

@@ -12,16 +12,17 @@ CORPS = [
     ["4", "NAVER", "035420", "NAVER Corporation"],
     ["5", "현대자동차", "005380", "Hyundai Motor Company"],
     ["6", "삼성전자서비스", "000001", ""],
+    ["9", "POSCO홀딩스", "005490", "POSCO Holdings Inc."],
+    ["10", "포스코퓨처엠", "003670", "POSCO FUTURE M"],
 ]
 
 
 def test_alias_comes_first_with_source():
-    assert candidate_list("네이버", CORPS)[0] == ("NAVER", "별칭 사전")
-    assert candidate_list("삼전", CORPS)[0] == ("삼성전자", "별칭 사전")
+    assert candidate_list("포스코", CORPS)[0] == ("POSCO홀딩스", "별칭 사전")      # 모호한 별칭은 후보로만
 
 
 def test_alias_target_missing_from_list_is_not_suggested():
-    assert "NAVER" not in [c for c, _ in candidate_list("네이버", [c for c in CORPS if c[1] != "NAVER"])]
+    assert "POSCO홀딩스" not in [c for c, _ in candidate_list("포스코", [c for c in CORPS if c[1] != "POSCO홀딩스"])]
 
 
 def test_preferred_stock_maps_to_common_stock_company_with_note():
@@ -41,9 +42,9 @@ def test_formatting_only_difference_is_still_accepted_directly():
 
 def test_alias_is_never_auto_confirmed():
     with pytest.raises(FinError) as e:
-        find_company("네이버", CORPS)
-    assert e.value.code == "COMPANY_NOT_FOUND" and e.value.candidates[0] == "NAVER"
-    assert e.value.sources["NAVER"] == "별칭 사전"
+        find_company("포스코", CORPS)
+    assert e.value.code == "COMPANY_NOT_FOUND" and e.value.candidates[0] == "POSCO홀딩스"
+    assert e.value.sources["POSCO홀딩스"] == "별칭 사전"
 
 
 def test_all_alias_keys_are_normalized_form():
@@ -64,19 +65,19 @@ def test_ai_suggestion_failure_or_bad_output_is_harmless():
 
 
 def test_candidates_for_order_alias_then_ai_then_rest_with_sources():
-    names, src, ai = candidates_for("삼전", CORPS, suggest=lambda n, c: {"proposed": ["삼성전기"], "verified": ["삼성전기"]})
-    assert names[:2] == ["삼성전자", "삼성전기"]
-    assert src["삼성전자"] == "별칭 사전" and src["삼성전기"] == AI_SOURCE
+    names, src, ai = candidates_for("포스코", CORPS, suggest=lambda n, c: {"proposed": ["포스코퓨처엠"], "verified": ["포스코퓨처엠"]})
+    assert names[:2] == ["POSCO홀딩스", "포스코퓨처엠"]
+    assert src["POSCO홀딩스"] == "별칭 사전" and src["포스코퓨처엠"] == AI_SOURCE
 
 
 def test_run_adds_candidates_and_ai_step_but_never_picks_one():
     def f(company, year, basis="연결"):
         raise FinError("COMPANY_NOT_FOUND", "없음", [], {})
     cf = lambda name, suggest=None: candidates_for(name, CORPS, suggest=suggest)
-    r = run("실적 조회", 2024, "네이버", fetch=f, suggest=lambda n, c: {"proposed": ["NAVER"], "verified": ["NAVER"]}, candidates_fn=cf)
+    r = run("실적 조회", 2024, "포스코", fetch=f, suggest=lambda n, c: {"proposed": ["POSCO홀딩스"], "verified": ["POSCO홀딩스"]}, candidates_fn=cf)
     assert r["error_code"] == "COMPANY_NOT_FOUND" and r["result"] is None      # 자동으로 회사를 고르지 않는다
-    assert r["candidates"] == ["NAVER"] and r["candidate_sources"]["NAVER"] == "별칭 사전"
-    assert r["steps"][-1]["name"].startswith("회사 후보 제안") and r["steps"][-1]["data"]["목록에 있는 것"] == ["NAVER"]
+    assert r["candidates"][0] == "POSCO홀딩스" and r["candidate_sources"]["POSCO홀딩스"] == "별칭 사전"
+    assert r["steps"][-1]["name"].startswith("회사 후보 제안") and r["steps"][-1]["data"]["목록에 있는 것"] == ["POSCO홀딩스"]
 
 
 APPLE_CORPS = CORPS + [["7", "애니플러스", "310200", "Aniplus Inc."], ["8", "비디아이", "148780", "VIDI"]]
@@ -100,7 +101,7 @@ def test_foreign_classification_drops_weak_candidates():
 
 def test_foreign_classification_keeps_strong_candidates():
     # 별칭 사전·영문명·AI 확인 후보는 AI가 해외라고 해도 지우지 않는다(사용자가 확인)
-    assert candidates_for("네이버", CORPS, suggest=ai("foreign"))[0] == ["NAVER"]
+    assert candidates_for("포스코", CORPS, suggest=ai("foreign"))[0][0] == "POSCO홀딩스"
     assert candidates_for("Samsung Electronics", CORPS, suggest=ai("foreign"))[0][0] == "삼성전자"
 
 

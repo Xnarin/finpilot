@@ -180,9 +180,10 @@ def test_candidates_abbreviation_substring_and_typo():
 def test_formatting_only_difference_is_accepted_but_abbreviation_is_not():
     assert find_company("sk 하이닉스", CORPS2) == ("3", "SK하이닉스")
     assert find_company("naver", CORPS2) == ("4", "NAVER")
+    assert find_company("삼전", CORPS2) == ("1", "삼성전자")     # 유명 별칭은 바로 확정
     with pytest.raises(FinError) as e:
-        find_company("삼전", CORPS2)
-    assert e.value.code == "COMPANY_NOT_FOUND" and e.value.candidates[0] == "삼성전자"  # 자동 확정하지 않고 되묻기
+        find_company("삼성", CORPS2)                             # 모호한 이름은 확정하지 않고 되묻기
+    assert e.value.code == "COMPANY_NOT_FOUND" and "삼성전자" in e.value.candidates
 
 
 def test_pick_company_reruns_with_chosen_name_and_records_choice():
