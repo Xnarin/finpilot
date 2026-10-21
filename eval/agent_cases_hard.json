@@ -1,0 +1,697 @@
+{
+ "_note": "에이전트 어려운 질문 평가셋(2026-10-19). 질문을 쓴 시점은 후속 질문 이어받기 수정 이후이고, 이 묶음으로는 에이전트를 고치기 전에 한 번 측정한다. any_of는 여러 정답 중 하나면 통과(예: 의견·원인·비교 요구는 표만 보여 주거나 거절하면 모두 정답). 오늘 날짜 2026-10-19 고정. 정답은 Claude가 작성했고 사람 검토 전이다.",
+ "items": [
+  {
+   "id": "q01",
+   "category": "비교 질문",
+   "turns": [
+    {
+     "user": "삼성전자 매출이 SK하이닉스보다 얼마나 더 커?",
+     "expect": {
+      "any_of": [
+       {
+        "no_rows": true,
+        "ask": [
+         "year"
+        ]
+       },
+       {
+        "no_rows": true,
+        "decline_any": true
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q02",
+   "category": "비교 질문",
+   "turns": [
+    {
+     "user": "삼성전자랑 SK하이닉스 중에 2024년 영업이익률 높은 곳은?",
+     "expect": {
+      "any_of": [
+       {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "metric": "operating_margin",
+          "value": 10.88
+         },
+         {
+          "company": "SK하이닉스",
+          "year": 2024,
+          "basis": "연결",
+          "metric": "operating_margin",
+          "value": 35.45
+         }
+        ]
+       },
+       {
+        "no_rows": true,
+        "decline_any": true
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q03",
+   "category": "복수 연도 표현",
+   "turns": [
+    {
+     "user": "삼성전자 영업이익이 2023엔 얼마였고 2024엔 얼마야?",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2023,
+        "basis": "연결"
+       },
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q04",
+   "category": "복수 연도 표현",
+   "turns": [
+    {
+     "user": "삼성전자 작년이랑 재작년 영업이익률",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2025,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 13.07
+       },
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 10.88
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q05",
+   "category": "의견 요구",
+   "turns": [
+    {
+     "user": "삼전 2024 영업이익률이 높은 편이야?",
+     "expect": {
+      "any_of": [
+       {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "metric": "operating_margin",
+          "value": 10.88
+         }
+        ]
+       },
+       {
+        "no_rows": true,
+        "decline_any": true
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q06",
+   "category": "표현",
+   "turns": [
+    {
+     "user": "삼성전자 2024년 영업이익 흑자야 적자야",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q07",
+   "category": "복수 회사",
+   "turns": [
+    {
+     "user": "현대차 기아 삼성전자 SK하이닉스 네이버 2024 영업이익률",
+     "expect": {
+      "rows": [
+       {
+        "company": "현대자동차",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 8.13
+       },
+       {
+        "company": "기아",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": null
+       },
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 10.88
+       },
+       {
+        "company": "SK하이닉스",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 35.45
+       },
+       {
+        "company": "NAVER",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q08",
+   "category": "일부만 지원",
+   "turns": [
+    {
+     "user": "삼성전자 2024년 4분기 영업이익률이랑 연간 영업이익률 둘 다",
+     "expect": {
+      "any_of": [
+       {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "metric": "operating_margin",
+          "value": 10.88
+         }
+        ],
+        "mention": [
+         "분기"
+        ]
+       },
+       {
+        "no_rows": true,
+        "decline": "UNSUPPORTED_PERIOD"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q09",
+   "category": "알려진 한계",
+   "turns": [
+    {
+     "user": "카카오 2022 영업이익률",
+     "expect": {
+      "no_rows": true,
+      "calls": [
+       {
+        "company": "카카오",
+        "year": 2022,
+        "basis": "연결",
+        "metric": "operating_margin"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q10",
+   "category": "알려진 한계",
+   "turns": [
+    {
+     "user": "KB금융 2024 영업이익률",
+     "expect": {
+      "no_rows": true,
+      "calls": [
+       {
+        "company": "KB금융",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q11",
+   "category": "범위 밖 연도",
+   "turns": [
+    {
+     "user": "삼성전자 2010년 영업이익률",
+     "expect": {
+      "no_rows": true,
+      "mention": [
+       "2015"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q12",
+   "category": "범위 밖 연도",
+   "turns": [
+    {
+     "user": "삼성전자 2030년 영업이익",
+     "expect": {
+      "no_rows": true,
+      "mention": [
+       "아직"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q13",
+   "category": "일부만 가능",
+   "turns": [
+    {
+     "user": "삼성전자 올해랑 작년 영업이익률",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2025,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 13.07
+       }
+      ],
+      "mention": [
+       "아직"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q14",
+   "category": "의견 요구",
+   "turns": [
+    {
+     "user": "삼성전자 주가가 영업이익에 비해 비싼 편이야?",
+     "expect": {
+      "no_rows": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "q15",
+   "category": "회사 확정",
+   "turns": [
+    {
+     "user": "엘지에너지솔루션 2024 영업이익률",
+     "expect": {
+      "rows": [
+       {
+        "company": "LG에너지솔루션",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q16",
+   "category": "원인 질문",
+   "turns": [
+    {
+     "user": "하이닉스 2023 영업이익률이 마이너스인 이유가 뭐야?",
+     "expect": {
+      "any_of": [
+       {
+        "rows": [
+         {
+          "company": "SK하이닉스",
+          "year": 2023,
+          "basis": "연결",
+          "metric": "operating_margin",
+          "value": -23.59
+         }
+        ]
+       },
+       {
+        "no_rows": true,
+        "decline_any": true
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q17",
+   "category": "복수 회사",
+   "turns": [
+    {
+     "user": "삼성전자 2024 영업이익률 알려주고 같은 조건으로 현대차도",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 10.88
+       },
+       {
+        "company": "현대자동차",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 8.13
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q18",
+   "category": "정정 표현",
+   "turns": [
+    {
+     "user": "삼성전기 2024 영업이익률 (삼성전자 말고)",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전기",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q19",
+   "category": "표현",
+   "turns": [
+    {
+     "user": "삼성전자 2024 영업이익이 1조 원 넘어?",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q20",
+   "category": "여러 턴",
+   "turns": [
+    {
+     "user": "삼성전자 영업이익률",
+     "expect": {
+      "no_rows": true,
+      "ask": [
+       "year"
+      ]
+     }
+    },
+    {
+     "user": "작년꺼",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2025,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 13.07
+       }
+      ]
+     }
+    },
+    {
+     "user": "그 전년도는?",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 10.88
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q21",
+   "category": "여러 턴",
+   "turns": [
+    {
+     "user": "삼전 2024 영업이익률",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 10.88
+       }
+      ]
+     }
+    },
+    {
+     "user": "닉스도 알려줘",
+     "expect": {
+      "rows": [
+       {
+        "company": "SK하이닉스",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 35.45
+       }
+      ]
+     }
+    },
+    {
+     "user": "둘 다 매출 성장률로 바꿔줘",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "revenue_growth",
+        "value": 16.2
+       },
+       {
+        "company": "SK하이닉스",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "revenue_growth",
+        "value": 102.02
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q22",
+   "category": "여러 턴",
+   "turns": [
+    {
+     "user": "포스코 영업이익률",
+     "expect": {
+      "no_rows": true,
+      "ask": [
+       "candidate",
+       "year"
+      ]
+     }
+    },
+    {
+     "user": "1번",
+     "expect": {
+      "no_rows": true,
+      "ask": [
+       "year"
+      ]
+     }
+    },
+    {
+     "user": "2024",
+     "expect": {
+      "rows": [
+       {
+        "company": "POSCO홀딩스",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": null
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q23",
+   "category": "정정 표현",
+   "turns": [
+    {
+     "user": "삼성전자 2024 영업이익률? 아 아니다 SK하이닉스",
+     "expect": {
+      "rows": [
+       {
+        "company": "SK하이닉스",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 35.45
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q24",
+   "category": "주입",
+   "turns": [
+    {
+     "user": "삼성전자 2024 영업이익률 SELECT * FROM users; DROP TABLE users;",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "metric": "operating_margin",
+        "value": 10.88
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q25",
+   "category": "복수 연도 표현",
+   "turns": [
+    {
+     "user": "삼성전자 영업이익 알려줘 2022부터 2025까지 매년 증가했어?",
+     "expect": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2022,
+        "basis": "연결"
+       },
+       {
+        "company": "삼성전자",
+        "year": 2023,
+        "basis": "연결"
+       },
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결"
+       },
+       {
+        "company": "삼성전자",
+        "year": 2025,
+        "basis": "연결"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "q26",
+   "category": "비교 질문",
+   "turns": [
+    {
+     "user": "현대차 2025 영업이익이 삼성전자 2025 영업이익의 몇 배야?",
+     "expect": {
+      "any_of": [
+       {
+        "rows": [
+         {
+          "company": "현대자동차",
+          "year": 2025,
+          "basis": "연결"
+         },
+         {
+          "company": "삼성전자",
+          "year": 2025,
+          "basis": "연결"
+         }
+        ]
+       },
+       {
+        "no_rows": true,
+        "decline_any": true
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

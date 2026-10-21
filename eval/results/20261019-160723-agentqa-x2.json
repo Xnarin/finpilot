@@ -1,0 +1,3409 @@
+[
+ {
+  "id": "q01",
+  "category": "비교 질문",
+  "runs": [
+   [
+    {
+     "user": "삼성전자 매출이 SK하이닉스보다 얼마나 더 커?",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 1778.055900009349,
+     "reply": {
+      "rows": [],
+      "notices": [],
+      "ask": {
+       "missing": [
+        "year"
+       ],
+       "candidates": [],
+       "text": "다음을 알려 주세요: 어느 사업연도인지."
+      },
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 1,
+      "usage": {
+       "input_tokens": 1421,
+       "output_tokens": 74,
+       "total_tokens": 1495
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼성전자 매출이 SK하이닉스보다 얼마나 더 커?",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 939.9240000057034,
+     "reply": {
+      "rows": [],
+      "notices": [],
+      "ask": {
+       "missing": [
+        "year"
+       ],
+       "candidates": [],
+       "text": "다음을 알려 주세요: 어느 사업연도인지."
+      },
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 1,
+      "usage": {
+       "input_tokens": 1421,
+       "output_tokens": 74,
+       "total_tokens": 1495
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q02",
+  "category": "비교 질문",
+  "runs": [
+   [
+    {
+     "user": "삼성전자랑 SK하이닉스 중에 2024년 영업이익률 높은 곳은?",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 2952.6518000056967,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false,
+        "operating_margin_pct": 10.877077402197314
+       },
+       {
+        "company": "SK하이닉스",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 66192960000000,
+        "operating_profit": 23467319000000,
+        "rcept_no": "20250319000665",
+        "rcept_date": "20250319",
+        "is_amended": false,
+        "operating_margin_pct": 35.452892573470045
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "두 회사의 영업이익률을 비교한 결과입니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 5,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4972,
+       "output_tokens": 182,
+       "total_tokens": 5154
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼성전자랑 SK하이닉스 중에 2024년 영업이익률 높은 곳은?",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 5783.866300014779,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false,
+        "operating_margin_pct": 10.877077402197314
+       },
+       {
+        "company": "SK하이닉스",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 66192960000000,
+        "operating_profit": 23467319000000,
+        "rcept_no": "20250319000665",
+        "rcept_date": "20250319",
+        "is_amended": false,
+        "operating_margin_pct": 35.452892573470045
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "두 회사의 영업이익률을 비교한 결과입니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 5,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4972,
+       "output_tokens": 198,
+       "total_tokens": 5170
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q03",
+  "category": "복수 연도 표현",
+  "runs": [
+   [
+    {
+     "user": "삼성전자 영업이익이 2023엔 얼마였고 2024엔 얼마야?",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3523.2199000311084,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2023,
+        "basis": "연결",
+        "revenue": 258935494000000,
+        "operating_profit": 6566976000000,
+        "rcept_no": "20240312000736",
+        "rcept_date": "20240312",
+        "is_amended": false
+       },
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 5,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 5149,
+       "output_tokens": 177,
+       "total_tokens": 5326
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼성전자 영업이익이 2023엔 얼마였고 2024엔 얼마야?",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 1,
+      "ok": true
+     },
+     "ms": 4757.077599992044,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2023,
+        "basis": "연결",
+        "revenue": 258935494000000,
+        "operating_profit": 6566976000000,
+        "rcept_no": "20240312000736",
+        "rcept_date": "20240312",
+        "is_amended": false
+       },
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "삼성전자의 두 연도 영업이익은 각각 다음과 같습니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 6,
+      "llm_calls": 4,
+      "usage": {
+       "input_tokens": 6984,
+       "output_tokens": 215,
+       "total_tokens": 7199
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q04",
+  "category": "복수 연도 표현",
+  "runs": [
+   [
+    {
+     "user": "삼성전자 작년이랑 재작년 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 2908.4398000268266,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2025,
+        "basis": "연결",
+        "revenue": 333605938000000,
+        "operating_profit": 43601051000000,
+        "rcept_no": "20260310002820",
+        "rcept_date": "20260310",
+        "is_amended": false,
+        "operating_margin_pct": 13.069626776247608
+       },
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false,
+        "operating_margin_pct": 10.877077402197314
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "삼성전자의 작년과 재작년 영업이익률을 요약해 드립니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 5,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4880,
+       "output_tokens": 200,
+       "total_tokens": 5080
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼성전자 작년이랑 재작년 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3218.674900010228,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2025,
+        "basis": "연결",
+        "revenue": 333605938000000,
+        "operating_profit": 43601051000000,
+        "rcept_no": "20260310002820",
+        "rcept_date": "20260310",
+        "is_amended": false,
+        "operating_margin_pct": 13.069626776247608
+       },
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false,
+        "operating_margin_pct": 10.877077402197314
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "삼성전자의 작년과 재작년 연결 기준 영업이익률입니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 5,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4884,
+       "output_tokens": 201,
+       "total_tokens": 5085
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q05",
+  "category": "의견 요구",
+  "runs": [
+   [
+    {
+     "user": "삼전 2024 영업이익률이 높은 편이야?",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 2731.9636999745853,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false,
+        "operating_margin_pct": 10.877077402197314
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "삼성전자의 영업이익률은 연결 기준 위와 같습니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [
+       "'삼전'을(를) 삼성전자(으)로 해석했습니다."
+      ],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4673,
+       "output_tokens": 119,
+       "total_tokens": 4792
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼전 2024 영업이익률이 높은 편이야?",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3156.3235000357963,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false,
+        "operating_margin_pct": 10.877077402197314
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [
+       "'삼전'을(를) 삼성전자(으)로 해석했습니다."
+      ],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4664,
+       "output_tokens": 133,
+       "total_tokens": 4797
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q06",
+  "category": "표현",
+  "runs": [
+   [
+    {
+     "user": "삼성전자 2024년 영업이익 흑자야 적자야",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 2806.8351999972947,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4792,
+       "output_tokens": 108,
+       "total_tokens": 4900
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼성전자 2024년 영업이익 흑자야 적자야",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 2921.418000012636,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4792,
+       "output_tokens": 109,
+       "total_tokens": 4901
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q07",
+  "category": "복수 회사",
+  "runs": [
+   [
+    {
+     "user": "현대차 기아 삼성전자 SK하이닉스 네이버 2024 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 5210.194999992382,
+     "reply": {
+      "rows": [
+       {
+        "company": "현대자동차",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 175231153000000,
+        "operating_profit": 14239592000000,
+        "rcept_no": "20250312001148",
+        "rcept_date": "20250312",
+        "is_amended": false,
+        "operating_margin_pct": 8.126176057290452
+       },
+       {
+        "company": "기아",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 107448752000000,
+        "operating_profit": 12667139000000,
+        "rcept_no": "20250313001390",
+        "rcept_date": "20250313",
+        "is_amended": true,
+        "operating_margin_pct": 11.789005236654587
+       },
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false,
+        "operating_margin_pct": 10.877077402197314
+       },
+       {
+        "company": "SK하이닉스",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 66192960000000,
+        "operating_profit": 23467319000000,
+        "rcept_no": "20250319000665",
+        "rcept_date": "20250319",
+        "is_amended": false,
+        "operating_margin_pct": 35.452892573470045
+       },
+       {
+        "company": "NAVER",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 10737719264647,
+        "operating_profit": 1979263438827,
+        "rcept_no": "20250318000645",
+        "rcept_date": "20250318",
+        "is_amended": false,
+        "operating_margin_pct": 18.43281045113138
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "요청하신 다섯 개사의 영업이익률 결과입니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [
+       "'현대차'을(를) 현대자동차(으)로 해석했습니다.",
+       "'네이버'을(를) NAVER(으)로 해석했습니다."
+      ],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 11,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 5810,
+       "output_tokens": 381,
+       "total_tokens": 6191
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "현대차 기아 삼성전자 SK하이닉스 네이버 2024 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 4317.326199961826,
+     "reply": {
+      "rows": [
+       {
+        "company": "현대자동차",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 175231153000000,
+        "operating_profit": 14239592000000,
+        "rcept_no": "20250312001148",
+        "rcept_date": "20250312",
+        "is_amended": false,
+        "operating_margin_pct": 8.126176057290452
+       },
+       {
+        "company": "기아",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 107448752000000,
+        "operating_profit": 12667139000000,
+        "rcept_no": "20250313001390",
+        "rcept_date": "20250313",
+        "is_amended": true,
+        "operating_margin_pct": 11.789005236654587
+       },
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false,
+        "operating_margin_pct": 10.877077402197314
+       },
+       {
+        "company": "SK하이닉스",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 66192960000000,
+        "operating_profit": 23467319000000,
+        "rcept_no": "20250319000665",
+        "rcept_date": "20250319",
+        "is_amended": false,
+        "operating_margin_pct": 35.452892573470045
+       },
+       {
+        "company": "NAVER",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 10737719264647,
+        "operating_profit": 1979263438827,
+        "rcept_no": "20250318000645",
+        "rcept_date": "20250318",
+        "is_amended": false,
+        "operating_margin_pct": 18.43281045113138
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "요청하신 다섯 개 회사의 연간 영업이익률 조회 결과입니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [
+       "'현대차'을(를) 현대자동차(으)로 해석했습니다.",
+       "'네이버'을(를) NAVER(으)로 해석했습니다."
+      ],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 11,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 5828,
+       "output_tokens": 389,
+       "total_tokens": 6217
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q08",
+  "category": "일부만 지원",
+  "runs": [
+   [
+    {
+     "user": "삼성전자 2024년 4분기 영업이익률이랑 연간 영업이익률 둘 다",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "decline_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 976.2603999697603,
+     "reply": {
+      "rows": [],
+      "notices": [],
+      "ask": null,
+      "decline": {
+       "reason": "UNSUPPORTED_PERIOD",
+       "text": "분기·반기·월 단위는 아직 지원하지 않아요. 연간 사업보고서 기준만 조회할 수 있어요."
+      },
+      "sentence": null,
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 1,
+      "llm_calls": 1,
+      "usage": {
+       "input_tokens": 1433,
+       "output_tokens": 19,
+       "total_tokens": 1452
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼성전자 2024년 4분기 영업이익률이랑 연간 영업이익률 둘 다",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "decline_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 800.829200015869,
+     "reply": {
+      "rows": [],
+      "notices": [],
+      "ask": null,
+      "decline": {
+       "reason": "UNSUPPORTED_PERIOD",
+       "text": "분기·반기·월 단위는 아직 지원하지 않아요. 연간 사업보고서 기준만 조회할 수 있어요."
+      },
+      "sentence": null,
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 1,
+      "llm_calls": 1,
+      "usage": {
+       "input_tokens": 1433,
+       "output_tokens": 19,
+       "total_tokens": 1452
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q09",
+  "category": "알려진 한계",
+  "runs": [
+   [
+    {
+     "user": "카카오 2022 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3674.8600999708287,
+     "reply": {
+      "rows": [],
+      "notices": [
+       "카카오 2022: 2022년 계정 ifrs-full_Revenue가 0건입니다. 임의로 선택하지 않습니다."
+      ],
+      "ask": null,
+      "decline": null,
+      "sentence": "카카오의 해당 연도 재무 데이터는 계정 정보가 유일하지 않아 조회할 수 없습니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 4,
+      "llm_calls": 4,
+      "usage": {
+       "input_tokens": 6369,
+       "output_tokens": 152,
+       "total_tokens": 6521
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "카카오 2022 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3920.009699999355,
+     "reply": {
+      "rows": [],
+      "notices": [
+       "카카오 2022: 2022년 계정 ifrs-full_Revenue가 0건입니다. 임의로 선택하지 않습니다."
+      ],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 4,
+      "llm_calls": 4,
+      "usage": {
+       "input_tokens": 6369,
+       "output_tokens": 159,
+       "total_tokens": 6528
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q10",
+  "category": "알려진 한계",
+  "runs": [
+   [
+    {
+     "user": "KB금융 2024 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 2741.9420999940485,
+     "reply": {
+      "rows": [],
+      "notices": [
+       "KB금융 2024: 2024년 계정 ifrs-full_Revenue가 0건입니다. 임의로 선택하지 않습니다."
+      ],
+      "ask": null,
+      "decline": null,
+      "sentence": "KB금융의 해당 연도 영업이익률 정보를 제공하기 어렵습니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4628,
+       "output_tokens": 112,
+       "total_tokens": 4740
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "KB금융 2024 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3778.4141000011005,
+     "reply": {
+      "rows": [],
+      "notices": [
+       "KB금융 2024: 2024년 계정 ifrs-full_Revenue가 0건입니다. 임의로 선택하지 않습니다."
+      ],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 4,
+      "llm_calls": 4,
+      "usage": {
+       "input_tokens": 6369,
+       "output_tokens": 168,
+       "total_tokens": 6537
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q11",
+  "category": "범위 밖 연도",
+  "runs": [
+   [
+    {
+     "user": "삼성전자 2010년 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "mention_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 1566.1205999786034,
+     "reply": {
+      "rows": [],
+      "notices": [
+       "OpenDART 재무정보는 2015사업연도부터 조회할 수 있습니다.",
+       "삼성전자은(는) 조회 결과를 만들지 못했어요. 다시 물어봐 주세요."
+      ],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 2,
+      "llm_calls": 2,
+      "usage": {
+       "input_tokens": 3007,
+       "output_tokens": 107,
+       "total_tokens": 3114
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼성전자 2010년 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "mention_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 1914.4041999825276,
+     "reply": {
+      "rows": [],
+      "notices": [
+       "OpenDART 재무정보는 2015사업연도부터 조회할 수 있습니다.",
+       "삼성전자은(는) 조회 결과를 만들지 못했어요. 다시 물어봐 주세요."
+      ],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 2,
+      "llm_calls": 2,
+      "usage": {
+       "input_tokens": 3007,
+       "output_tokens": 97,
+       "total_tokens": 3104
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q12",
+  "category": "범위 밖 연도",
+  "runs": [
+   [
+    {
+     "user": "삼성전자 2030년 영업이익",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "mention_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 1626.0167000000365,
+     "reply": {
+      "rows": [],
+      "notices": [
+       "2030사업연도 연간 보고서는 아직 나오지 않았습니다(다음 해 3월 말까지 공시). 가장 최근 공시 연도는 2025입니다.",
+       "삼성전자은(는) 조회 결과를 만들지 못했어요. 다시 물어봐 주세요."
+      ],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 2,
+      "llm_calls": 2,
+      "usage": {
+       "input_tokens": 3048,
+       "output_tokens": 92,
+       "total_tokens": 3140
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼성전자 2030년 영업이익",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "mention_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 1670.7425000495277,
+     "reply": {
+      "rows": [],
+      "notices": [
+       "2030사업연도 연간 보고서는 아직 나오지 않았습니다(다음 해 3월 말까지 공시). 가장 최근 공시 연도는 2025입니다.",
+       "삼성전자은(는) 조회 결과를 만들지 못했어요. 다시 물어봐 주세요."
+      ],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 2,
+      "llm_calls": 2,
+      "usage": {
+       "input_tokens": 3034,
+       "output_tokens": 73,
+       "total_tokens": 3107
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q13",
+  "category": "일부만 가능",
+  "runs": [
+   [
+    {
+     "user": "삼성전자 올해랑 작년 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "mention_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3048.122600011993,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2025,
+        "basis": "연결",
+        "revenue": 333605938000000,
+        "operating_profit": 43601051000000,
+        "rcept_no": "20260310002820",
+        "rcept_date": "20260310",
+        "is_amended": false,
+        "operating_margin_pct": 13.069626776247608
+       }
+      ],
+      "notices": [
+       "2026사업연도 연간 보고서는 아직 나오지 않았습니다(다음 해 3월 말까지 공시). 가장 최근 공시 연도는 2025입니다."
+      ],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 4,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4858,
+       "output_tokens": 207,
+       "total_tokens": 5065
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼성전자 올해랑 작년 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "mention_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3689.277499972377,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2025,
+        "basis": "연결",
+        "revenue": 333605938000000,
+        "operating_profit": 43601051000000,
+        "rcept_no": "20260310002820",
+        "rcept_date": "20260310",
+        "is_amended": false,
+        "operating_margin_pct": 13.069626776247608
+       }
+      ],
+      "notices": [
+       "2026사업연도 연간 보고서는 아직 나오지 않았습니다(다음 해 3월 말까지 공시). 가장 최근 공시 연도는 2025입니다."
+      ],
+      "ask": null,
+      "decline": null,
+      "sentence": "삼성전자의 작년 영업이익률입니다. (올해 연간 실적은 아직 공시되지 않아 조회할 수 없습니다.)",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 5,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4970,
+       "output_tokens": 225,
+       "total_tokens": 5195
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q14",
+  "category": "의견 요구",
+  "runs": [
+   [
+    {
+     "user": "삼성전자 주가가 영업이익에 비해 비싼 편이야?",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 889.7144999937154,
+     "reply": {
+      "rows": [],
+      "notices": [],
+      "ask": null,
+      "decline": {
+       "reason": "PRICE_FORECAST",
+       "text": "주가나 실적 예측은 하지 않아요. 공시된 연간 실적은 조회해 드릴 수 있어요."
+      },
+      "sentence": null,
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 1,
+      "llm_calls": 1,
+      "usage": {
+       "input_tokens": 1422,
+       "output_tokens": 18,
+       "total_tokens": 1440
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼성전자 주가가 영업이익에 비해 비싼 편이야?",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 1065.6632999889553,
+     "reply": {
+      "rows": [],
+      "notices": [],
+      "ask": null,
+      "decline": {
+       "reason": "PRICE_FORECAST",
+       "text": "주가나 실적 예측은 하지 않아요. 공시된 연간 실적은 조회해 드릴 수 있어요."
+      },
+      "sentence": null,
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 1,
+      "llm_calls": 1,
+      "usage": {
+       "input_tokens": 1422,
+       "output_tokens": 18,
+       "total_tokens": 1440
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q15",
+  "category": "회사 확정",
+  "runs": [
+   [
+    {
+     "user": "엘지에너지솔루션 2024 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 2708.9698999770917,
+     "reply": {
+      "rows": [
+       {
+        "company": "LG에너지솔루션",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 25619585000000,
+        "operating_profit": 575387000000,
+        "rcept_no": "20250312000405",
+        "rcept_date": "20250312",
+        "is_amended": false,
+        "operating_margin_pct": 2.2458872772529297
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [
+       "'엘지에너지솔루션'을(를) LG에너지솔루션(으)로 해석했습니다."
+      ],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4690,
+       "output_tokens": 132,
+       "total_tokens": 4822
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "엘지에너지솔루션 2024 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3097.536199958995,
+     "reply": {
+      "rows": [
+       {
+        "company": "LG에너지솔루션",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 25619585000000,
+        "operating_profit": 575387000000,
+        "rcept_no": "20250312000405",
+        "rcept_date": "20250312",
+        "is_amended": false,
+        "operating_margin_pct": 2.2458872772529297
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [
+       "'엘지에너지솔루션'을(를) LG에너지솔루션(으)로 해석했습니다."
+      ],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4690,
+       "output_tokens": 132,
+       "total_tokens": 4822
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q16",
+  "category": "원인 질문",
+  "runs": [
+   [
+    {
+     "user": "하이닉스 2023 영업이익률이 마이너스인 이유가 뭐야?",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3100.849099981133,
+     "reply": {
+      "rows": [
+       {
+        "company": "SK하이닉스",
+        "year": 2023,
+        "basis": "연결",
+        "revenue": 32765719000000,
+        "operating_profit": -7730313000000,
+        "rcept_no": "20240319000684",
+        "rcept_date": "20240319",
+        "is_amended": false,
+        "operating_margin_pct": -23.592685391704666
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [
+       "'하이닉스'을(를) SK하이닉스(으)로 해석했습니다."
+      ],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4687,
+       "output_tokens": 122,
+       "total_tokens": 4809
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "하이닉스 2023 영업이익률이 마이너스인 이유가 뭐야?",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 2790.0717000011355,
+     "reply": {
+      "rows": [
+       {
+        "company": "SK하이닉스",
+        "year": 2023,
+        "basis": "연결",
+        "revenue": 32765719000000,
+        "operating_profit": -7730313000000,
+        "rcept_no": "20240319000684",
+        "rcept_date": "20240319",
+        "is_amended": false,
+        "operating_margin_pct": -23.592685391704666
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [
+       "'하이닉스'을(를) SK하이닉스(으)로 해석했습니다."
+      ],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4687,
+       "output_tokens": 144,
+       "total_tokens": 4831
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q17",
+  "category": "복수 회사",
+  "runs": [
+   [
+    {
+     "user": "삼성전자 2024 영업이익률 알려주고 같은 조건으로 현대차도",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3371.151600033045,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false,
+        "operating_margin_pct": 10.877077402197314
+       },
+       {
+        "company": "현대자동차",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 175231153000000,
+        "operating_profit": 14239592000000,
+        "rcept_no": "20250312001148",
+        "rcept_date": "20250312",
+        "is_amended": false,
+        "operating_margin_pct": 8.126176057290452
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "요청하신 두 회사의 영업이익률 결과입니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [
+       "'현대차'을(를) 현대자동차(으)로 해석했습니다."
+      ],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 5,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4961,
+       "output_tokens": 181,
+       "total_tokens": 5142
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼성전자 2024 영업이익률 알려주고 같은 조건으로 현대차도",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3216.1219000117853,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false,
+        "operating_margin_pct": 10.877077402197314
+       },
+       {
+        "company": "현대자동차",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 175231153000000,
+        "operating_profit": 14239592000000,
+        "rcept_no": "20250312001148",
+        "rcept_date": "20250312",
+        "is_amended": false,
+        "operating_margin_pct": 8.126176057290452
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "삼성전자와 현대차의 연결 기준 영업이익률이다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [
+       "'현대차'을(를) 현대자동차(으)로 해석했습니다."
+      ],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 5,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4953,
+       "output_tokens": 176,
+       "total_tokens": 5129
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q18",
+  "category": "정정 표현",
+  "runs": [
+   [
+    {
+     "user": "삼성전기 2024 영업이익률 (삼성전자 말고)",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3248.412999964785,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전기",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 10294102976435,
+        "operating_profit": 735005856995,
+        "rcept_no": "20250311001190",
+        "rcept_date": "20250311",
+        "is_amended": false,
+        "operating_margin_pct": 7.140067072163128
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "삼성전기의 해당 연도 영업이익률이다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4673,
+       "output_tokens": 124,
+       "total_tokens": 4797
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼성전기 2024 영업이익률 (삼성전자 말고)",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 2909.6036000410095,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전기",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 10294102976435,
+        "operating_profit": 735005856995,
+        "rcept_no": "20250311001190",
+        "rcept_date": "20250311",
+        "is_amended": false,
+        "operating_margin_pct": 7.140067072163128
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4677,
+       "output_tokens": 141,
+       "total_tokens": 4818
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q19",
+  "category": "표현",
+  "runs": [
+   [
+    {
+     "user": "삼성전자 2024 영업이익이 1조 원 넘어?",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 2632.6045999885537,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4787,
+       "output_tokens": 127,
+       "total_tokens": 4914
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼성전자 2024 영업이익이 1조 원 넘어?",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 2651.8075999920256,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "삼성전자의 사업연도 영업이익은 일정 금액을 넘어섰습니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4787,
+       "output_tokens": 106,
+       "total_tokens": 4893
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q20",
+  "category": "여러 턴",
+  "runs": [
+   [
+    {
+     "user": "삼성전자 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 1,
+      "ok": true
+     },
+     "ms": 1392.4020000267774,
+     "reply": {
+      "rows": [],
+      "notices": [],
+      "ask": {
+       "missing": [
+        "year"
+       ],
+       "candidates": [],
+       "text": "다음을 알려 주세요: 어느 사업연도인지."
+      },
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 2,
+      "usage": {
+       "input_tokens": 3037,
+       "output_tokens": 74,
+       "total_tokens": 3111
+      }
+     }
+    },
+    {
+     "user": "작년꺼",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 2693.2224000338465,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2025,
+        "basis": "연결",
+        "revenue": 333605938000000,
+        "operating_profit": 43601051000000,
+        "rcept_no": "20260310002820",
+        "rcept_date": "20260310",
+        "is_amended": false,
+        "operating_margin_pct": 13.069626776247608
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "삼성전자의 작년 연결 기준 영업이익률입니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 2,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 5259,
+       "output_tokens": 91,
+       "total_tokens": 5350
+      }
+     }
+    },
+    {
+     "user": "그 전년도는?",
+     "check": {
+      "rows_match": false,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 1,
+      "ask_match": true,
+      "calls_match": false,
+      "extra_calls": 0,
+      "guard_hits": 1,
+      "ok": false
+     },
+     "ms": 1537.1196999913082,
+     "reply": {
+      "rows": [],
+      "notices": [],
+      "ask": {
+       "missing": [
+        "year"
+       ],
+       "candidates": [],
+       "text": "다음을 알려 주세요: 어느 사업연도인지."
+      },
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 2,
+      "llm_calls": 2,
+      "usage": {
+       "input_tokens": 3870,
+       "output_tokens": 49,
+       "total_tokens": 3919
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼성전자 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 1,
+      "ok": true
+     },
+     "ms": 1888.1553999963216,
+     "reply": {
+      "rows": [],
+      "notices": [],
+      "ask": {
+       "missing": [
+        "year"
+       ],
+       "candidates": [],
+       "text": "다음을 알려 주세요: 어느 사업연도인지."
+      },
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 2,
+      "usage": {
+       "input_tokens": 2998,
+       "output_tokens": 74,
+       "total_tokens": 3072
+      }
+     }
+    },
+    {
+     "user": "작년꺼",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3105.7848000200465,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2025,
+        "basis": "연결",
+        "revenue": 333605938000000,
+        "operating_profit": 43601051000000,
+        "rcept_no": "20260310002820",
+        "rcept_date": "20260310",
+        "is_amended": false,
+        "operating_margin_pct": 13.069626776247608
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "삼성전자의 작년 영업이익률입니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 2,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 5151,
+       "output_tokens": 97,
+       "total_tokens": 5248
+      }
+     }
+    },
+    {
+     "user": "그 전년도는?",
+     "check": {
+      "rows_match": false,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 1,
+      "ask_match": true,
+      "calls_match": false,
+      "extra_calls": 0,
+      "guard_hits": 1,
+      "ok": false
+     },
+     "ms": 1432.7191999764182,
+     "reply": {
+      "rows": [],
+      "notices": [],
+      "ask": {
+       "missing": [
+        "year"
+       ],
+       "candidates": [],
+       "text": "다음을 알려 주세요: 어느 사업연도인지."
+      },
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 2,
+      "llm_calls": 2,
+      "usage": {
+       "input_tokens": 3784,
+       "output_tokens": 55,
+       "total_tokens": 3839
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q21",
+  "category": "여러 턴",
+  "runs": [
+   [
+    {
+     "user": "삼전 2024 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3285.9236000222154,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false,
+        "operating_margin_pct": 10.877077402197314
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [
+       "'삼전'을(를) 삼성전자(으)로 해석했습니다."
+      ],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4649,
+       "output_tokens": 116,
+       "total_tokens": 4765
+      }
+     }
+    },
+    {
+     "user": "닉스도 알려줘",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 2752.463999961037,
+     "reply": {
+      "rows": [
+       {
+        "company": "SK하이닉스",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 66192960000000,
+        "operating_profit": 23467319000000,
+        "rcept_no": "20250319000665",
+        "rcept_date": "20250319",
+        "is_amended": false,
+        "operating_margin_pct": 35.452892573470045
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [
+       "'닉스'을(를) SK하이닉스(으)로 해석했습니다."
+      ],
+      "carried": [
+       "2024"
+      ],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 5488,
+       "output_tokens": 117,
+       "total_tokens": 5605
+      }
+     }
+    },
+    {
+     "user": "둘 다 매출 성장률로 바꿔줘",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 2225.299699988682,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false,
+        "revenue_growth_pct": 16.195311176612968
+       },
+       {
+        "company": "SK하이닉스",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 66192960000000,
+        "operating_profit": 23467319000000,
+        "rcept_no": "20250319000665",
+        "rcept_date": "20250319",
+        "is_amended": false,
+        "revenue_growth_pct": 102.0189454716376
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [],
+      "carried": [
+       "2024"
+      ],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 2,
+      "usage": {
+       "input_tokens": 4259,
+       "output_tokens": 137,
+       "total_tokens": 4396
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼전 2024 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3211.3117999979295,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false,
+        "operating_margin_pct": 10.877077402197314
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [
+       "'삼전'을(를) 삼성전자(으)로 해석했습니다."
+      ],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4651,
+       "output_tokens": 119,
+       "total_tokens": 4770
+      }
+     }
+    },
+    {
+     "user": "닉스도 알려줘",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 2916.949799982831,
+     "reply": {
+      "rows": [
+       {
+        "company": "SK하이닉스",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 66192960000000,
+        "operating_profit": 23467319000000,
+        "rcept_no": "20250319000665",
+        "rcept_date": "20250319",
+        "is_amended": false,
+        "operating_margin_pct": 35.452892573470045
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [
+       "'닉스'을(를) SK하이닉스(으)로 해석했습니다."
+      ],
+      "carried": [
+       "2024"
+      ],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 5499,
+       "output_tokens": 120,
+       "total_tokens": 5619
+      }
+     }
+    },
+    {
+     "user": "둘 다 매출 성장률로 바꿔줘",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 2,
+      "ok": true
+     },
+     "ms": 2934.0522999991663,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false,
+        "revenue_growth_pct": 16.195311176612968
+       },
+       {
+        "company": "SK하이닉스",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 66192960000000,
+        "operating_profit": 23467319000000,
+        "rcept_no": "20250319000665",
+        "rcept_date": "20250319",
+        "is_amended": false,
+        "revenue_growth_pct": 102.0189454716376
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [],
+      "carried": [
+       "2024"
+      ],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 5,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 6652,
+       "output_tokens": 186,
+       "total_tokens": 6838
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q22",
+  "category": "여러 턴",
+  "runs": [
+   [
+    {
+     "user": "포스코 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": false,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": false
+     },
+     "ms": 2527.2649999824353,
+     "reply": {
+      "rows": [],
+      "notices": [],
+      "ask": {
+       "missing": [
+        "candidate"
+       ],
+       "candidates": [
+        {
+         "name": "POSCO홀딩스",
+         "stock_code": "005490",
+         "source": "별칭 사전"
+        },
+        {
+         "name": "포스코엠텍",
+         "stock_code": "009520",
+         "source": "이름 일부 일치"
+        },
+        {
+         "name": "포스코DX",
+         "stock_code": "022100",
+         "source": "이름 일부 일치"
+        },
+        {
+         "name": "포스코티엠씨",
+         "stock_code": "010150",
+         "source": "이름 일부 일치"
+        },
+        {
+         "name": "포스코퓨처엠",
+         "stock_code": "003670",
+         "source": "이름 일부 일치"
+        }
+       ],
+       "text": "다음을 알려 주세요: 아래 후보 중 어느 회사인지."
+      },
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 2,
+      "llm_calls": 2,
+      "usage": {
+       "input_tokens": 3079,
+       "output_tokens": 40,
+       "total_tokens": 3119
+      }
+     }
+    },
+    {
+     "user": "1번",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 1,
+      "ok": true
+     },
+     "ms": 1472.603700007312,
+     "reply": {
+      "rows": [],
+      "notices": [],
+      "ask": {
+       "missing": [
+        "year"
+       ],
+       "candidates": [],
+       "text": "다음을 알려 주세요: 어느 사업연도인지."
+      },
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 2,
+      "usage": {
+       "input_tokens": 3612,
+       "output_tokens": 73,
+       "total_tokens": 3685
+      }
+     }
+    },
+    {
+     "user": "2024",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 2788.6453000246547,
+     "reply": {
+      "rows": [
+       {
+        "company": "POSCO홀딩스",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 72688143160111,
+        "operating_profit": 2173573272904,
+        "rcept_no": "20250312001016",
+        "rcept_date": "20250312",
+        "is_amended": false,
+        "operating_margin_pct": 2.9902721109772266
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "POSCO홀딩스의 영업이익률입니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 2,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 6080,
+       "output_tokens": 106,
+       "total_tokens": 6186
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "포스코 영업이익률",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 1,
+      "ok": true
+     },
+     "ms": 2906.738299992867,
+     "reply": {
+      "rows": [],
+      "notices": [],
+      "ask": {
+       "missing": [
+        "year",
+        "candidate"
+       ],
+       "candidates": [
+        {
+         "name": "POSCO홀딩스",
+         "stock_code": "005490",
+         "source": "별칭 사전"
+        },
+        {
+         "name": "포스코엠텍",
+         "stock_code": "009520",
+         "source": "이름 일부 일치"
+        },
+        {
+         "name": "포스코DX",
+         "stock_code": "022100",
+         "source": "이름 일부 일치"
+        },
+        {
+         "name": "포스코티엠씨",
+         "stock_code": "010150",
+         "source": "이름 일부 일치"
+        },
+        {
+         "name": "포스코퓨처엠",
+         "stock_code": "003670",
+         "source": "이름 일부 일치"
+        }
+       ],
+       "text": "다음을 알려 주세요: 어느 사업연도인지, 아래 후보 중 어느 회사인지."
+      },
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 2,
+      "usage": {
+       "input_tokens": 3201,
+       "output_tokens": 85,
+       "total_tokens": 3286
+      }
+     }
+    },
+    {
+     "user": "1번",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 1,
+      "ok": true
+     },
+     "ms": 2161.2278999527916,
+     "reply": {
+      "rows": [],
+      "notices": [],
+      "ask": {
+       "missing": [
+        "year"
+       ],
+       "candidates": [],
+       "text": "다음을 알려 주세요: 어느 사업연도인지."
+      },
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 2,
+      "usage": {
+       "input_tokens": 3910,
+       "output_tokens": 72,
+       "total_tokens": 3982
+      }
+     }
+    },
+    {
+     "user": "2024",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 2660.172900010366,
+     "reply": {
+      "rows": [
+       {
+        "company": "POSCO홀딩스",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 72688143160111,
+        "operating_profit": 2173573272904,
+        "rcept_no": "20250312001016",
+        "rcept_date": "20250312",
+        "is_amended": false,
+        "operating_margin_pct": 2.9902721109772266
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [],
+      "carried": [
+       "1번"
+      ],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 6781,
+       "output_tokens": 130,
+       "total_tokens": 6911
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q23",
+  "category": "정정 표현",
+  "runs": [
+   [
+    {
+     "user": "삼성전자 2024 영업이익률? 아 아니다 SK하이닉스",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 4241.682899999432,
+     "reply": {
+      "rows": [
+       {
+        "company": "SK하이닉스",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 66192960000000,
+        "operating_profit": 23467319000000,
+        "rcept_no": "20250319000665",
+        "rcept_date": "20250319",
+        "is_amended": false,
+        "operating_margin_pct": 35.452892573470045
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "SK하이닉스의 해당 연도 영업이익률을 산출했습니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 4,
+      "usage": {
+       "input_tokens": 6205,
+       "output_tokens": 123,
+       "total_tokens": 6328
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼성전자 2024 영업이익률? 아 아니다 SK하이닉스",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3199.7263000230305,
+     "reply": {
+      "rows": [
+       {
+        "company": "SK하이닉스",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 66192960000000,
+        "operating_profit": 23467319000000,
+        "rcept_no": "20250319000665",
+        "rcept_date": "20250319",
+        "is_amended": false,
+        "operating_margin_pct": 35.452892573470045
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "SK하이닉스의 이 해 영업이익률은 연결 기준 위와 같습니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 4,
+      "usage": {
+       "input_tokens": 6205,
+       "output_tokens": 124,
+       "total_tokens": 6329
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q24",
+  "category": "주입",
+  "runs": [
+   [
+    {
+     "user": "삼성전자 2024 영업이익률 SELECT * FROM users; DROP TABLE users;",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3073.142100009136,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false,
+        "operating_margin_pct": 10.877077402197314
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4676,
+       "output_tokens": 117,
+       "total_tokens": 4793
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼성전자 2024 영업이익률 SELECT * FROM users; DROP TABLE users;",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3205.723199993372,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false,
+        "operating_margin_pct": 10.877077402197314
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "삼성전자의 해당 연도 연결 기준 영업이익률입니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 3,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 4674,
+       "output_tokens": 110,
+       "total_tokens": 4784
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q25",
+  "category": "복수 연도 표현",
+  "runs": [
+   [
+    {
+     "user": "삼성전자 영업이익 알려줘 2022부터 2025까지 매년 증가했어?",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 4238.447900046594,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2022,
+        "basis": "연결",
+        "revenue": 302231360000000,
+        "operating_profit": 43376630000000,
+        "rcept_no": "20230307000542",
+        "rcept_date": "20230307",
+        "is_amended": false
+       },
+       {
+        "company": "삼성전자",
+        "year": 2023,
+        "basis": "연결",
+        "revenue": 258935494000000,
+        "operating_profit": 6566976000000,
+        "rcept_no": "20240312000736",
+        "rcept_date": "20240312",
+        "is_amended": false
+       },
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false
+       },
+       {
+        "company": "삼성전자",
+        "year": 2025,
+        "basis": "연결",
+        "revenue": 333605938000000,
+        "operating_profit": 43601051000000,
+        "rcept_no": "20260310002820",
+        "rcept_date": "20260310",
+        "is_amended": false
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 6,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 5570,
+       "output_tokens": 242,
+       "total_tokens": 5812
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "삼성전자 영업이익 알려줘 2022부터 2025까지 매년 증가했어?",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3766.420100000687,
+     "reply": {
+      "rows": [
+       {
+        "company": "삼성전자",
+        "year": 2022,
+        "basis": "연결",
+        "revenue": 302231360000000,
+        "operating_profit": 43376630000000,
+        "rcept_no": "20230307000542",
+        "rcept_date": "20230307",
+        "is_amended": false
+       },
+       {
+        "company": "삼성전자",
+        "year": 2023,
+        "basis": "연결",
+        "revenue": 258935494000000,
+        "operating_profit": 6566976000000,
+        "rcept_no": "20240312000736",
+        "rcept_date": "20240312",
+        "is_amended": false
+       },
+       {
+        "company": "삼성전자",
+        "year": 2024,
+        "basis": "연결",
+        "revenue": 300870903000000,
+        "operating_profit": 32725961000000,
+        "rcept_no": "20250311001085",
+        "rcept_date": "20250311",
+        "is_amended": false
+       },
+       {
+        "company": "삼성전자",
+        "year": 2025,
+        "basis": "연결",
+        "revenue": 333605938000000,
+        "operating_profit": 43601051000000,
+        "rcept_no": "20260310002820",
+        "rcept_date": "20260310",
+        "is_amended": false
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 6,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 5570,
+       "output_tokens": 242,
+       "total_tokens": 5812
+      }
+     }
+    }
+   ]
+  ]
+ },
+ {
+  "id": "q26",
+  "category": "비교 질문",
+  "runs": [
+   [
+    {
+     "user": "현대차 2025 영업이익이 삼성전자 2025 영업이익의 몇 배야?",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3567.0130000216886,
+     "reply": {
+      "rows": [
+       {
+        "company": "현대자동차",
+        "year": 2025,
+        "basis": "연결",
+        "revenue": 186254472000000,
+        "operating_profit": 11467851000000,
+        "rcept_no": "20260318001394",
+        "rcept_date": "20260318",
+        "is_amended": false
+       },
+       {
+        "company": "삼성전자",
+        "year": 2025,
+        "basis": "연결",
+        "revenue": 333605938000000,
+        "operating_profit": 43601051000000,
+        "rcept_no": "20260310002820",
+        "rcept_date": "20260310",
+        "is_amended": false
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": "현대차의 영업이익이 삼성전자 영업이익의 몇 배인지 계산해 드립니다.",
+      "sentence_dropped_for_digits": false,
+      "interpretations": [
+       "'현대차'을(를) 현대자동차(으)로 해석했습니다."
+      ],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 5,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 5222,
+       "output_tokens": 186,
+       "total_tokens": 5408
+      }
+     }
+    }
+   ],
+   [
+    {
+     "user": "현대차 2025 영업이익이 삼성전자 2025 영업이익의 몇 배야?",
+     "check": {
+      "rows_match": true,
+      "values_match": true,
+      "unexpected_rows": 0,
+      "missing_rows": 0,
+      "ask_match": true,
+      "calls_match": true,
+      "extra_calls": 0,
+      "guard_hits": 0,
+      "ok": true
+     },
+     "ms": 3596.0537000210024,
+     "reply": {
+      "rows": [
+       {
+        "company": "현대자동차",
+        "year": 2025,
+        "basis": "연결",
+        "revenue": 186254472000000,
+        "operating_profit": 11467851000000,
+        "rcept_no": "20260318001394",
+        "rcept_date": "20260318",
+        "is_amended": false
+       },
+       {
+        "company": "삼성전자",
+        "year": 2025,
+        "basis": "연결",
+        "revenue": 333605938000000,
+        "operating_profit": 43601051000000,
+        "rcept_no": "20260310002820",
+        "rcept_date": "20260310",
+        "is_amended": false
+       }
+      ],
+      "notices": [],
+      "ask": null,
+      "decline": null,
+      "sentence": null,
+      "sentence_dropped_for_digits": true,
+      "interpretations": [
+       "'현대차'을(를) 현대자동차(으)로 해석했습니다."
+      ],
+      "carried": [],
+      "limit_hit": false,
+      "llm_error": null,
+      "calls": 5,
+      "llm_calls": 3,
+      "usage": {
+       "input_tokens": 5222,
+       "output_tokens": 171,
+       "total_tokens": 5393
+      }
+     }
+    }
+   ]
+  ]
+ }
+]

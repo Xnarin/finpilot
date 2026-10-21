@@ -1,17 +1,19 @@
 # 문서·결과 목차
 
-기준일 2026-10-18. 문서를 목적별 폴더로 나눴다. 새 문서나 결과가 생기면 해당 파트의 표에 한 줄 추가한다.
+기준일 2026-10-19. 문서를 목적별 폴더로 나눴다. 새 문서나 결과가 생기면 해당 파트의 표에 한 줄 추가한다.
 
 ```
 docs/
 ├─ index.md                  이 목차
 ├─ 회고.md                   고민과 해결 기록
+├─ reference.md              조회 기준·회사 선택·검증 기록 상세
 ├─ verification/             구현이 맞는지 확인한 기록
 │   └─ test_results.md
 ├─ evaluation/               질문 해석 평가 (질문, 결과, 응답)
 │   ├─ eval_results.md
 │   ├─ eval_questions.md
-│   └─ eval_responses.md
+│   ├─ eval_responses.md
+│   └─ agent_hard_qa.md
 └─ backlog/                  앞으로 할 일과 설계 메모
     ├─ agent_design.md        (에이전트 설계와 구현 현황)
     ├─ policies.md
@@ -25,6 +27,7 @@ tests/, tests_live/          자동 테스트
 
 | 문서 | 내용 | 읽을 때 |
 |---|---|---|
+| [reference.md](reference.md) | README에서 옮긴 상세: 조회 기준, 회사 선택 규칙, 질문 해석과 모니터링, 날짜별 검증 기록 표 | 세부 규칙·검증 이력이 필요할 때 |
 | [../README.md](../README.md) | 설치·설정·실행·테스트 방법, 조회 기준, 검증 기록 요약 | 처음 볼 때 |
 | [회고.md](회고.md) | 사용자가 던진 고민, 결정, 해결, 남은 문제, 배운 점을 시간순·주제별로 정리 | 지금까지의 흐름을 볼 때 |
 | [../AGENT.md](../AGENT.md) | 개발 에이전트 지침과 단계별 로드맵 | 작업 원칙 확인 |
@@ -34,9 +37,9 @@ tests/, tests_live/          자동 테스트
 
 | 문서 | 내용 | 읽을 때 |
 |---|---|---|
-| [verification/test_results.md](verification/test_results.md) | 자동 테스트 203개 목록, 실제 OpenDART 회귀 테스트 13개, DART 원문 대조, 오류 상황 확인, LangSmith trace 비밀값 점검 | 조회·계산이 맞는지 확인할 때 |
+| [verification/test_results.md](verification/test_results.md) | 자동 테스트 219개 목록, 실제 OpenDART 회귀 테스트 13개, DART 원문 대조, 오류 상황 확인, LangSmith trace 비밀값 점검 | 조회·계산이 맞는지 확인할 때 |
 
-관련 코드: [../tests/test_finance.py](../tests/test_finance.py), [../tests/test_candidates.py](../tests/test_candidates.py), [../tests/test_tools.py](../tests/test_tools.py), [../tests/test_famous.py](../tests/test_famous.py), [../tests/test_agent.py](../tests/test_agent.py)(오프라인, 에이전트는 가짜 LLM), [../tests_live/test_verified_values.py](../tests_live/test_verified_values.py)(사용자가 원문과 대조한 12개 조합의 수치), [../tests_live/test_tools_live.py](../tests_live/test_tools_live.py)(도구의 실제 호출)
+관련 코드: [../tests/test_finance.py](../tests/test_finance.py), [../tests/test_candidates.py](../tests/test_candidates.py), [../tests/test_tools.py](../tests/test_tools.py), [../tests/test_famous.py](../tests/test_famous.py), [../tests/test_agent.py](../tests/test_agent.py)(오프라인, 에이전트는 가짜 LLM), [../tests/test_mcp_server.py](../tests/test_mcp_server.py)(MCP 서버), [../tests_live/test_verified_values.py](../tests_live/test_verified_values.py)(사용자가 원문과 대조한 12개 조합의 수치), [../tests_live/test_tools_live.py](../tests_live/test_tools_live.py)(도구의 실제 호출), [../tests_live/test_mcp_stdio.py](../tests_live/test_mcp_stdio.py)(MCP 서버를 별도 프로세스로 띄워 호출)
 
 ## 파트 3. 평가 — 질문 해석이 맞는가 (`docs/evaluation/`)
 
@@ -44,6 +47,7 @@ tests/, tests_live/          자동 테스트
 |---|---|---|
 | [evaluation/eval_results.md](evaluation/eval_results.md) | 평가 1~4차 결과와 해석(프롬프트 수정 경위, 반복 실행, 실사용자형 질문, 위험 오답 발견) | 점수와 원인을 볼 때 |
 | [evaluation/eval_questions.md](evaluation/eval_questions.md) | 질문 114개와 정답, 모델 결과. 정답 검토용 | 정답이 맞는지 검토할 때 |
+| [evaluation/agent_hard_qa.md](evaluation/agent_hard_qa.md) | 에이전트에 어려운 질문 26개를 던진 질문·기대·답변·도구 호출·판정 전문(2회씩) | 에이전트가 실제로 어떻게 답하는지 볼 때 |
 | [evaluation/eval_responses.md](evaluation/eval_responses.md) | 질문별 모델 해석(3회)과 파이프라인이 실제로 낸 응답 | 시스템이 어떻게 답했는지 볼 때 |
 
 ### 질문·정답 데이터 (`eval/`)
@@ -52,6 +56,7 @@ tests/, tests_live/          자동 테스트
 |---|---|
 | [../eval/questions.json](../eval/questions.json) | 질문 114개와 정답 원본. 묶음(split): `dev` 14, `final` 11, `dev_hard` 10, `final_hard` 10, `real` 69 |
 | [../eval/agent_cases.json](../eval/agent_cases.json) | 에이전트 평가 dev 묶음: 42개 케이스·47턴(고치면서 쓴 묶음) |
+| [../eval/agent_cases_hard.json](../eval/agent_cases_hard.json) | 에이전트 어려운 질문 26개 케이스·30턴(비교·의견·정정·한계·여러 턴 등, 일부 정답은 "또는" 허용) |
 | [../eval/agent_cases_heldout.json](../eval/agent_cases_heldout.json) | 에이전트 평가 held-out 묶음: 25개 케이스·28턴(결과를 본 뒤 에이전트를 고쳤으므로 소진됨) |
 | [../eval/alias_cases.json](../eval/alias_cases.json) | 회사명 입력 91개와 정식명 정답(회사 후보 평가용, 그룹: dict·not_in_dict_kr·english·preferred·typo·none·foreign·unlisted) |
 
@@ -86,6 +91,7 @@ tests/, tests_live/          자동 테스트
 | [20261019-143427-agent-x3.json](../eval/results/20261019-143427-agent-x3.json) | 10-19 14:34 | agent dev 42 | 3 | 에이전트 1차 | 120/126 | 첫 구현(근거 인용이 약함) |
 | [20261019-144342-agent-x3.json](../eval/results/20261019-144342-agent-x3.json) | 10-19 14:43 | agent dev 42 | 3 | 에이전트 2차 | 123/126 | 인용·지표 검사 강화 |
 | [20261019-145038-agent-x3.json](../eval/results/20261019-145038-agent-x3.json) | 10-19 14:50 | agent dev 42 | 3 | 에이전트 3차 | 126/126 | 후보 자동 되묻기 |
+| [20261019-160723-agentqa-x2.json](../eval/results/20261019-160723-agentqa-x2.json) | 10-19 16:07 | agent hard 26 | 2 | 에이전트(이어받기 수정 후) | 49/52, 정답에 없는 행 0 | 어려운 질문 Q&A, `agent_hard_qa.md`의 원본 |
 | [20261019-145646-agent-x3.json](../eval/results/20261019-145646-agent-x3.json) | 10-19 14:56 | agent held-out 25 | 3 | 에이전트 3차 | 65/75 (평가셋 오류 정정 시 71/75) | **에이전트 일반화 점수**, 정답에 없는 행 0 |
 
 - 비교 기준으로는 `x3` 결과들을 쓴다(질문 해석 두 개, 회사 후보 한 개, 에이전트 held-out 한 개). 에이전트 dev는 고치면서 쓴 묶음이라 일반화 점수가 아니다. 앞의 11개는 반복 1회라 같은 질문의 비일관성을 알 수 없고 형식도 이전 방식이다.
@@ -109,6 +115,8 @@ tests/, tests_live/          자동 테스트
 | 실제 OpenDART 회귀 테스트(키 필요) | `python -m pytest tests_live` | 화면 출력 |
 | 질문 해석 평가(Gemini 호출) | `python -m eval.run_eval <묶음> [반복횟수]` | `eval/results/` |
 | 에이전트 평가(Gemini·OpenDART 호출) | `python -m eval.run_agent_eval [반복] [--baseline] [--cases=agent_cases_heldout.json]` | `eval/results/` |
+| 어려운 질문 Q&A 기록 | `python -m eval.run_agent_qa [--cases=…] [--repeats=2]` | `docs/evaluation/agent_hard_qa.md`, `eval/results/` |
+| MCP 서버 실행 | `python mcp_server.py` (stdio) | — |
 | 챗봇 화면 실행 | `streamlit run chat_app.py` | 화면 |
 | 회사명 후보 평가(Gemini 호출) | `python -m eval.run_alias_eval [반복횟수]` | `eval/results/` |
 | 질문별 응답 문서 생성(OpenDART 호출) | `python -m eval.export_responses <결과.json>…` | `docs/evaluation/eval_responses.md` |
