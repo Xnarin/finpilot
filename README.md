@@ -2,7 +2,7 @@
 
 ### OpenDART 공시로 한국 상장사 재무를 조회하고, 출처(접수번호)와 함께 답하는 AI 에이전트
 
-`Python` `LangGraph` `Gemini` `OpenDART` `MCP` `Streamlit` `pytest`
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langgraph&logoColor=white) ![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=googlegemini&logoColor=white) ![OpenDART](https://img.shields.io/badge/OpenDART-0B5CAB?style=flat-square) ![MCP](https://img.shields.io/badge/MCP-000000?style=flat-square&logo=modelcontextprotocol&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white) ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
 
 | 기간 | 형태 | 진행 방식 | AI 도구 |
 |---|---|---|---|
