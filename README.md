@@ -27,6 +27,12 @@ OpenDART 공시로 한국 상장사의 연간 **매출액·영업이익·영업�
 
 위 대화는 평가 때 실제로 나온 답변을 이어 붙인 예시입니다(앞 세 턴은 한 대화, 뒤 두 질문은 각각 별도 대화).
 
+실제 화면(Streamlit, 2026-10-21 직접 실행):
+
+| 이어받기·성장률 변경 | 모호한 회사 → 후보 선택 |
+|---|---|
+| ![대화 화면](docs/assets/chat_conversation.jpg) | ![후보 선택 화면](docs/assets/chat_candidates.jpg) |
+
 더 많은 실제 질문·답변은 [어려운 질문 26개 Q&A](docs/evaluation/agent_hard_qa.md)에 도구 호출 기록과 함께 있습니다.
 
 ## 설계 핵심
@@ -92,7 +98,7 @@ GEMINI_API_KEY=...   # 에이전트·질문 해석(MCP 서버만 쓸 때는 불�
 streamlit run chat_app.py        # 챗봇형 에이전트 (LangGraph)
 streamlit run app.py             # 입력 폼형 단일 요청 파이프라인 (비교 기준선)
 python mcp_server.py             # MCP 서버 (stdio)
-python -m pytest                 # 오프라인 테스트 219개 (키·네트워크 불필요)
+python -m pytest                 # 오프라인 테스트 220개 (키·네트워크 불필요)
 python -m pytest tests_live      # 실제 OpenDART·MCP 별도 프로세스 호출 (키 필요)
 python -m eval.run_agent_eval 3  # 에이전트 평가 (Gemini·OpenDART 호출)
 ```
@@ -105,7 +111,8 @@ MCP 클라이언트 설정에 서버를 등록합니다(경로는 본인 환경�
 {"mcpServers": {"finpilot": {"command": "C:/경로/FINPILOT/.venv/Scripts/python.exe", "args": ["C:/경로/FINPILOT/mcp_server.py"]}}}
 ```
 
-제공 도구: `resolve_years`(연도 표현 → 사업연도, 오늘 날짜 기준), `resolve_company`(회사 확정), `get_financials`(연간 매출·영업이익), `compute_ratio`(영업이익률·매출 성장률). 이 서버는 자체 MCP 클라이언트(프로세스 내와 별도 프로세스 stdio)로 검증했고, Claude Desktop 같은 외부 앱에서의 연결은 직접 확인하지 않았습니다.
+제공 도구: `resolve_years`(연도 표현 → 사업연도, 오늘 날짜 기준), `resolve_company`(회사 확정), `get_financials`(연간 매출·영업이익), `compute_ratio`(영업이익률·매출 성장률). 이 서버는 자체 MCP 클라이언트(프로세스 내와 별도 프로세스 stdio)로 검증했고, Claude Code의 `claude mcp list`에서 연결(Connected)까지 확인했습니다. 외부 LLM 앱이 도구를 실제로 호출하는 것까지는 확인하지 못했습니다.
+`mcp` 패키지는 2.x가 Claude Code 2.1.222와 프로토콜 협상에 실패해(오류 -32022) `mcp<2`(1.30.0, FastMCP)로 고정했습니다.
 
 ## 기술 스택
 Python 3.14 · LangGraph · Gemini(`gemini-3.5-flash-lite`, Tool Calling) · OpenDART API · MCP(Python SDK) · Streamlit · LangSmith(추적, 월 한도로 평가에서는 끔) · pytest

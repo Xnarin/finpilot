@@ -63,7 +63,10 @@ if "thread" not in st.session_state:
 
 for i, h in enumerate(st.session_state.history):
     with st.chat_message(h["role"]):
-        st.write(h["text"]) if h["role"] == "user" else render_reply(h["reply"], f"h{i}")
+        if h["role"] == "user":
+            st.write(h["text"])
+        else:
+            render_reply(h["reply"], f"h{i}")
 
 typed = st.chat_input("예: 삼전이랑 닉스 2024년 영업이익률 알려줘")
 text = typed or st.session_state.pop("pending", None)

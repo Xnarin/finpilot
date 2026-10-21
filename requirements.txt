@@ -6,4 +6,4 @@ pydantic
 langgraph
 langchain-google-genai
 pandas
-mcp
+mcp<2

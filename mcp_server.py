@@ -6,13 +6,18 @@ MCP 클라이언트(예: Claude Desktop, MCP Inspector, 자체 클라이언트)�
 - 에이전트(agent_core.py)의 근거 인용 검사·호출 한도·답변 조립은 에이전트 쪽 보호 장치라서 여기에는 없다. 서버는 값의 범위·형식·기준을 검증한다.
 - 서버는 상태가 없다. 호출마다 OpenDART를 조회한다(캐시 없음).
 """
+import os
+
+# 도구 서버는 LangSmith로 trace를 보내지 않는다(.env의 설정을 이어받지 않음). 네트워크 전송이 도구 응답을 막는 일을 피하려는 것이고, 켜려면 FINPILOT_MCP_TRACING=true를 준다.
+os.environ["LANGSMITH_TRACING"] = os.environ.get("FINPILOT_MCP_TRACING", "false")
+
 from typing import Any, Literal, Optional
 
-from mcp.server.mcpserver import MCPServer
+from mcp.server.fastmcp import FastMCP
 
 import tools as T
 
-mcp = MCPServer(
+mcp = FastMCP(
     "finpilot",
     instructions=("한국 상장사의 연간(사업보고서) 매출액·영업이익을 OpenDART에서 조회하고 영업이익률·매출 성장률을 계산한다. "
                   "기본은 연결재무제표이고 분기·반기·월은 지원하지 않는다. 회사는 resolve_company로 먼저 확정하고 그 corp_code를 쓴다. "
