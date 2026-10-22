@@ -93,6 +93,11 @@ tests/, tests_live/          자동 테스트
 | [20261019-145038-agent-x3.json](../eval/results/20261019-145038-agent-x3.json) | 10-19 14:50 | agent dev 42 | 3 | 에이전트 3차 | 126/126 | 후보 자동 되묻기 |
 | [20261019-160723-agentqa-x2.json](../eval/results/20261019-160723-agentqa-x2.json) | 10-19 16:07 | agent hard 26 | 2 | 에이전트(이어받기 수정 후) | 49/52, 정답에 없는 행 0 | 어려운 질문 Q&A, `agent_hard_qa.md`의 원본 |
 | [20261019-145646-agent-x3.json](../eval/results/20261019-145646-agent-x3.json) | 10-19 14:56 | agent held-out 25 | 3 | 에이전트 3차 | 65/75 (평가셋 오류 정정 시 71/75) | **에이전트 일반화 점수**, 정답에 없는 행 0 |
+| [20261021-173851-agent-gemini-3.5-flash-lite-full-x3.json](../eval/results/20261021-173851-agent-gemini-3.5-flash-lite-full-x3.json) | 10-21 17:38 | agent held-out 25(소진) | 3 | 3.5-flash-lite · 전체 프롬프트 | 75/75, 정답에 없는 행 0 | **모델 비교 기준**(현재 설정), eval_results 10차 |
+| [20261021-174305-agent-gemini-3.5-flash-lite-core-x3.json](../eval/results/20261021-174305-agent-gemini-3.5-flash-lite-core-x3.json) | 10-21 17:43 | agent held-out 25(소진) | 3 | 3.5-flash-lite · 규칙 1~5만 | 71/75, 정답에 없는 행 0 | 프롬프트 축소 비교, eval_results 10차 |
+| [20261022-092110-agent-gemini-3.5-flash-full-x3.json](../eval/results/20261022-092110-agent-gemini-3.5-flash-full-x3.json) | 10-22 09:21 | agent held-out 25(소진) | 3 | 3.5-flash · 전체 | 72/75, 정답에 없는 행 0 | 모델 비교, eval_results 10차 |
+| [20261022-092555-agent-gemini-3.1-flash-lite-full-x3.json](../eval/results/20261022-092555-agent-gemini-3.1-flash-lite-full-x3.json) | 10-22 09:25 | agent held-out 25(소진) | 3 | 3.1-flash-lite · 전체 | 75/75, 정답에 없는 행 0 | 모델 비교(비용 약 18% 낮음), eval_results 10차 |
+| [20261022-093425-agent-gemini-2.5-flash-full-x3.json](../eval/results/20261022-093425-agent-gemini-2.5-flash-full-x3.json) | 10-22 09:34 | agent held-out 25(소진) | 3 | 2.5-flash · 전체 | 72/75, 정답에 없는 행 0 | 모델 비교, eval_results 10차 |
 
 - 비교 기준으로는 `x3` 결과들을 쓴다(질문 해석 두 개, 회사 후보 한 개, 에이전트 held-out 한 개). 에이전트 dev는 고치면서 쓴 묶음이라 일반화 점수가 아니다. 앞의 11개는 반복 1회라 같은 질문의 비일관성을 알 수 없고 형식도 이전 방식이다.
 
@@ -114,7 +119,7 @@ tests/, tests_live/          자동 테스트
 | 오프라인 단위 테스트 | `python -m pytest` | 화면 출력 |
 | 실제 OpenDART 회귀 테스트(키 필요) | `python -m pytest tests_live` | 화면 출력 |
 | 질문 해석 평가(Gemini 호출) | `python -m eval.run_eval <묶음> [반복횟수]` | `eval/results/` |
-| 에이전트 평가(Gemini·OpenDART 호출) | `python -m eval.run_agent_eval [반복] [--baseline] [--cases=agent_cases_heldout.json]` | `eval/results/` |
+| 에이전트 평가(Gemini·OpenDART 호출) | `python -m eval.run_agent_eval [반복] [--baseline] [--cases=agent_cases_heldout.json] [--model=…] [--prompt=core]` | `eval/results/` |
 | 어려운 질문 Q&A 기록 | `python -m eval.run_agent_qa [--cases=…] [--repeats=2]` | `docs/evaluation/agent_hard_qa.md`, `eval/results/` |
 | MCP 서버 실행 | `python mcp_server.py` (stdio) | — |
 | 챗봇 화면 실행 | `streamlit run chat_app.py` | 화면 |

@@ -1,6 +1,7 @@
-"""에이전트 평가: python -m eval.run_agent_eval [반복횟수] [--baseline] [--cases=agent_cases_heldout.json]
+"""에이전트 평가: python -m eval.run_agent_eval [반복횟수] [--baseline] [--cases=agent_cases_heldout.json] [--model=gemini-3.5-flash] [--prompt=core]
 실제 Gemini와 OpenDART를 호출한다. 오늘 날짜는 2026-10-19로 고정한다. 정답은 최종 표 + 도구 호출 집합이고, 같은 질문을 반복해 일관성을 본다.
---baseline: 단일 요청 질문을 기존 파이프라인(baseline-single-request의 ask)으로도 돌려 같은 기준으로 비교한다."""
+--baseline: 단일 요청 질문을 기존 파이프라인(baseline-single-request의 ask)으로도 돌려 같은 기준으로 비교한다.
+--model: 비교 실험용 모델. --prompt=core: 시스템 프롬프트를 규칙 1~5만 남긴 판으로 바꿔, 나머지 규칙(6~12, 실패를 고치며 추가)의 효과를 본다."""
 import hashlib
 import json
 import os
@@ -90,11 +91,13 @@ def check_turn(expect, reply, names):
     return res
 
 
-def main(repeats=3, baseline=False, cases_file="agent_cases.json"):
+def main(repeats=3, baseline=False, cases_file="agent_cases.json", model=agent_core.MODEL, prompt="full"):
+    if prompt == "core":
+        agent_core.SYSTEM = "\n".join(agent_core.SYSTEM.split("\n")[:7])   # 소개 + "규칙:" + 규칙 1~5
     cases = json.loads((ROOT / cases_file).read_text(encoding="utf-8"))
     names = corp_names()
     deps = agent_core.Deps(today=lambda: FIXED_TODAY)
-    graph = agent_core.build_graph(agent_core.make_llm(), deps)
+    graph = agent_core.build_graph(agent_core.make_llm(model), deps)
     rows = []
     for it in cases["items"]:
         runs = []
@@ -131,10 +134,10 @@ def main(repeats=3, baseline=False, cases_file="agent_cases.json"):
                "llm_errors": sum(bool(t["llm_error"]) for t in allturns), "mean_turn_ms": sum(t["ms"] for t in allturns) / n,
                "mean_tool_calls_per_turn": sum(t["calls"] for t in allturns) / n, "mean_llm_calls_per_turn": sum(t["llm_calls"] for t in allturns) / n,
                "mean_tokens_per_turn": sum(t["usage"].get("total_tokens", 0) for t in allturns) / n, "by_category": cat}
-    meta = {"run_at": datetime.now().isoformat(timespec="seconds"), "model": agent_core.MODEL, "temperature": 0, "repeats": repeats, "fixed_today": FIXED_TODAY.isoformat(),
+    meta = {"run_at": datetime.now().isoformat(timespec="seconds"), "model": model, "prompt": prompt, "temperature": 0, "repeats": repeats, "fixed_today": FIXED_TODAY.isoformat(),
             "system_prompt_sha256": hashlib.sha256(agent_core.SYSTEM.encode()).hexdigest()[:12], "dataset": cases_file, "dataset_sha256": hashlib.sha256((ROOT / cases_file).read_bytes()).hexdigest()[:12],
             "max_calls": agent_core.MAX_CALLS, "max_requests": agent_core.MAX_REQUESTS}
-    out = ROOT / "results" / f"{datetime.now():%Y%m%d-%H%M%S}-agent-x{repeats}.json"
+    out = ROOT / "results" / f"{datetime.now():%Y%m%d-%H%M%S}-agent-{model}-{prompt}-x{repeats}.json"
     out.write_text(json.dumps({"meta": meta, "summary": summary, "rows": rows}, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps({k: v for k, v in summary.items() if k != "by_category"}, ensure_ascii=False))
     for c, v in cat.items():
@@ -182,4 +185,5 @@ def run_baseline(cases, names, repeats):
 if __name__ == "__main__":
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     cf = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--cases=")), "agent_cases.json")
-    main(int(args[0]) if args else 3, "--baseline" in sys.argv, cf)
+    opt = lambda k, d: next((a.split("=", 1)[1] for a in sys.argv if a.startswith(f"--{k}=")), d)
+    main(int(args[0]) if args else 3, "--baseline" in sys.argv, cf, opt("model", agent_core.MODEL), opt("prompt", "full"))

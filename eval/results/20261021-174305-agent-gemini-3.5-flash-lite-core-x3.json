@@ -1,0 +1,4284 @@
+{
+ "meta": {
+  "run_at": "2026-10-21T17:43:05",
+  "model": "gemini-3.5-flash-lite",
+  "prompt": "core",
+  "temperature": 0,
+  "repeats": 3,
+  "fixed_today": "2026-10-19",
+  "system_prompt_sha256": "43fba2f85f4a",
+  "dataset": "agent_cases_heldout.json",
+  "dataset_sha256": "a6cea229fa4e",
+  "max_calls": 40,
+  "max_requests": 10
+ },
+ "summary": {
+  "cases": 25,
+  "repeats": 3,
+  "case_runs": 75,
+  "ok_case_runs": 71,
+  "cases_always_ok": 23,
+  "cases_inconsistent": 2,
+  "unexpected_rows_total": 0,
+  "missing_rows_total": 5,
+  "extra_business_calls_total": 0,
+  "guard_hits_total": 6,
+  "llm_errors": 0,
+  "mean_turn_ms": 2685.4110935483704,
+  "mean_tool_calls_per_turn": 3.0,
+  "mean_llm_calls_per_turn": 2.4516129032258065,
+  "mean_tokens_per_turn": 3335.548387096774,
+  "by_category": {
+   "multi_year": {
+    "cases": 3,
+    "case_runs": 9,
+    "ok_runs": 9
+   },
+   "multi_company": {
+    "cases": 2,
+    "case_runs": 6,
+    "ok_runs": 6
+   },
+   "relative_year": {
+    "cases": 1,
+    "case_runs": 3,
+    "ok_runs": 3
+   },
+   "single": {
+    "cases": 5,
+    "case_runs": 15,
+    "ok_runs": 15
+   },
+   "ask": {
+    "cases": 2,
+    "case_runs": 6,
+    "ok_runs": 6
+   },
+   "separate_basis": {
+    "cases": 1,
+    "case_runs": 3,
+    "ok_runs": 3
+   },
+   "unsupported": {
+    "cases": 1,
+    "case_runs": 3,
+    "ok_runs": 3
+   },
+   "multi_turn": {
+    "cases": 4,
+    "case_runs": 12,
+    "ok_runs": 8
+   },
+   "company": {
+    "cases": 3,
+    "case_runs": 9,
+    "ok_runs": 9
+   },
+   "decline": {
+    "cases": 2,
+    "case_runs": 6,
+    "ok_runs": 6
+   },
+   "adversarial": {
+    "cases": 1,
+    "case_runs": 3,
+    "ok_runs": 3
+   }
+  }
+ },
+ "rows": [
+  {
+   "id": "z01",
+   "category": "multi_year",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "SK하이닉스 2022~2024 매출 성장률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3908.658000000287,
+       "calls": 5,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 4012,
+        "output_tokens": 205,
+        "total_tokens": 4217
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "SK하이닉스",
+          "year": 2022,
+          "basis": "연결",
+          "revenue_growth_pct": 3.776417170444473
+         },
+         {
+          "company": "SK하이닉스",
+          "year": 2023,
+          "basis": "연결",
+          "revenue_growth_pct": -26.569772267975882
+         },
+         {
+          "company": "SK하이닉스",
+          "year": 2024,
+          "basis": "연결",
+          "revenue_growth_pct": 102.0189454716376
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('SK하이닉스', 2022, '연결', 'revenue_growth')",
+         "('SK하이닉스', 2023, '연결', 'revenue_growth')",
+         "('SK하이닉스', 2024, '연결', 'revenue_growth')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "SK하이닉스 2022~2024 매출 성장률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3637.209599997732,
+       "calls": 5,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 4012,
+        "output_tokens": 207,
+        "total_tokens": 4219
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "SK하이닉스",
+          "year": 2022,
+          "basis": "연결",
+          "revenue_growth_pct": 3.776417170444473
+         },
+         {
+          "company": "SK하이닉스",
+          "year": 2023,
+          "basis": "연결",
+          "revenue_growth_pct": -26.569772267975882
+         },
+         {
+          "company": "SK하이닉스",
+          "year": 2024,
+          "basis": "연결",
+          "revenue_growth_pct": 102.0189454716376
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('SK하이닉스', 2022, '연결', 'revenue_growth')",
+         "('SK하이닉스', 2023, '연결', 'revenue_growth')",
+         "('SK하이닉스', 2024, '연결', 'revenue_growth')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "SK하이닉스 2022~2024 매출 성장률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3433.317999999417,
+       "calls": 5,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 4012,
+        "output_tokens": 203,
+        "total_tokens": 4215
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "SK하이닉스",
+          "year": 2022,
+          "basis": "연결",
+          "revenue_growth_pct": 3.776417170444473
+         },
+         {
+          "company": "SK하이닉스",
+          "year": 2023,
+          "basis": "연결",
+          "revenue_growth_pct": -26.569772267975882
+         },
+         {
+          "company": "SK하이닉스",
+          "year": 2024,
+          "basis": "연결",
+          "revenue_growth_pct": 102.0189454716376
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('SK하이닉스', 2022, '연결', 'revenue_growth')",
+         "('SK하이닉스', 2023, '연결', 'revenue_growth')",
+         "('SK하이닉스', 2024, '연결', 'revenue_growth')"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z02",
+   "category": "multi_company",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "현대차랑 기아 2024 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3400.6729000029736,
+       "calls": 5,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3991,
+        "output_tokens": 182,
+        "total_tokens": 4173
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "현대자동차",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 8.126176057290452
+         },
+         {
+          "company": "기아",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 11.789005236654587
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('기아', 2024, '연결', 'operating_margin')",
+         "('현대자동차', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "현대차랑 기아 2024 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3337.121799999295,
+       "calls": 5,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3987,
+        "output_tokens": 179,
+        "total_tokens": 4166
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "현대자동차",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 8.126176057290452
+         },
+         {
+          "company": "기아",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 11.789005236654587
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('기아', 2024, '연결', 'operating_margin')",
+         "('현대자동차', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "현대차랑 기아 2024 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3701.3431999985187,
+       "calls": 5,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3991,
+        "output_tokens": 192,
+        "total_tokens": 4183
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "현대자동차",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 8.126176057290452
+         },
+         {
+          "company": "기아",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 11.789005236654587
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('기아', 2024, '연결', 'operating_margin')",
+         "('현대자동차', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z03",
+   "category": "relative_year",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "닉스 작년 영업이익이 얼마야",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2751.686699997663,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3813,
+        "output_tokens": 146,
+        "total_tokens": 3959
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "SK하이닉스",
+          "year": 2025,
+          "basis": "연결"
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('SK하이닉스', 2025, '연결', None)"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "닉스 작년 영업이익이 얼마야",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3620.733800002199,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3813,
+        "output_tokens": 101,
+        "total_tokens": 3914
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "SK하이닉스",
+          "year": 2025,
+          "basis": "연결"
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('SK하이닉스', 2025, '연결', None)"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "닉스 작년 영업이익이 얼마야",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2762.886200001958,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3813,
+        "output_tokens": 101,
+        "total_tokens": 3914
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "SK하이닉스",
+          "year": 2025,
+          "basis": "연결"
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('SK하이닉스', 2025, '연결', None)"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z04",
+   "category": "single",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼전 2025 매출 성장률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3142.337099998258,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3703,
+        "output_tokens": 135,
+        "total_tokens": 3838
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2025,
+          "basis": "연결",
+          "revenue_growth_pct": 10.880093313642895
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2025, '연결', 'revenue_growth')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼전 2025 매출 성장률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3113.228499998513,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3703,
+        "output_tokens": 130,
+        "total_tokens": 3833
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2025,
+          "basis": "연결",
+          "revenue_growth_pct": 10.880093313642895
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2025, '연결', 'revenue_growth')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼전 2025 매출 성장률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3456.8909000008716,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3732,
+        "output_tokens": 132,
+        "total_tokens": 3864
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2025,
+          "basis": "연결",
+          "revenue_growth_pct": 10.880093313642895
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2025, '연결', 'revenue_growth')"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z05",
+   "category": "ask",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "SK하이닉스 올해 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "mention_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2278.146200002084,
+       "calls": 2,
+       "llm_calls": 2,
+       "usage": {
+        "input_tokens": 2397,
+        "output_tokens": 73,
+        "total_tokens": 2470
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": null,
+        "decline": null,
+        "notices": [
+         "2026사업연도 연간 보고서는 아직 나오지 않았습니다(다음 해 3월 말까지 공시). 가장 최근 공시 연도는 2025입니다.",
+         "SK하이닉스은(는) 조회 결과를 만들지 못했어요. 다시 물어봐 주세요."
+        ],
+        "calls": []
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "SK하이닉스 올해 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "mention_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2521.037000002252,
+       "calls": 3,
+       "llm_calls": 2,
+       "usage": {
+        "input_tokens": 2397,
+        "output_tokens": 74,
+        "total_tokens": 2471
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "year"
+        ],
+        "decline": null,
+        "notices": [
+         "2026사업연도 연간 보고서는 아직 나오지 않았습니다(다음 해 3월 말까지 공시). 가장 최근 공시 연도는 2025입니다."
+        ],
+        "calls": []
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "SK하이닉스 올해 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "mention_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2070.0170999989496,
+       "calls": 3,
+       "llm_calls": 2,
+       "usage": {
+        "input_tokens": 2397,
+        "output_tokens": 74,
+        "total_tokens": 2471
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "year"
+        ],
+        "decline": null,
+        "notices": [
+         "2026사업연도 연간 보고서는 아직 나오지 않았습니다(다음 해 3월 말까지 공시). 가장 최근 공시 연도는 2025입니다."
+        ],
+        "calls": []
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": false
+  },
+  {
+   "id": "z06",
+   "category": "separate_basis",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 별도 2024 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2366.4638999980525,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3710,
+        "output_tokens": 123,
+        "total_tokens": 3833
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "별도",
+          "operating_margin_pct": 5.912892366458775
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2024, '별도', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 별도 2024 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2965.0242000025173,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3706,
+        "output_tokens": 118,
+        "total_tokens": 3824
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "별도",
+          "operating_margin_pct": 5.912892366458775
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2024, '별도', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 별도 2024 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3543.4588999996777,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3706,
+        "output_tokens": 123,
+        "total_tokens": 3829
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "별도",
+          "operating_margin_pct": 5.912892366458775
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2024, '별도', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z07",
+   "category": "ask",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "그냥 2024",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 602.0671000005677,
+       "calls": 1,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1097,
+        "output_tokens": 22,
+        "total_tokens": 1119
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "company"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "그냥 2024",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 664.1917999986617,
+       "calls": 1,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1097,
+        "output_tokens": 22,
+        "total_tokens": 1119
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "company"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "그냥 2024",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 960.9477999983937,
+       "calls": 1,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1097,
+        "output_tokens": 22,
+        "total_tokens": 1119
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "company"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z08",
+   "category": "unsupported",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 4분기 매출",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 688.1530999999086,
+       "calls": 1,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1097,
+        "output_tokens": 19,
+        "total_tokens": 1116
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": null,
+        "decline": "UNSUPPORTED_PERIOD",
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 4분기 매출",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 831.5505999999004,
+       "calls": 1,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1097,
+        "output_tokens": 19,
+        "total_tokens": 1116
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": null,
+        "decline": "UNSUPPORTED_PERIOD",
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 4분기 매출",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 684.6261999999115,
+       "calls": 1,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1097,
+        "output_tokens": 19,
+        "total_tokens": 1116
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": null,
+        "decline": "UNSUPPORTED_PERIOD",
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z09",
+   "category": "multi_turn",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 2024 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2744.154299998627,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3695,
+        "output_tokens": 130,
+        "total_tokens": 3825
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 10.877077402197314
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      },
+      {
+       "user": "현대차는?",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3147.5454999999783,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 4532,
+        "output_tokens": 117,
+        "total_tokens": 4649
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "현대자동차",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 8.126176057290452
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('현대자동차', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      },
+      {
+       "user": "기아는?",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3434.966599998006,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 5366,
+        "output_tokens": 114,
+        "total_tokens": 5480
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "기아",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 11.789005236654587
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('기아', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 2024 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2908.287400001427,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3695,
+        "output_tokens": 134,
+        "total_tokens": 3829
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 10.877077402197314
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      },
+      {
+       "user": "현대차는?",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3341.4435000013327,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 4544,
+        "output_tokens": 121,
+        "total_tokens": 4665
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "현대자동차",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 8.126176057290452
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('현대자동차', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      },
+      {
+       "user": "기아는?",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3116.7332000004535,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 5390,
+        "output_tokens": 118,
+        "total_tokens": 5508
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "기아",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 11.789005236654587
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('기아', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": false,
+     "turns": [
+      {
+       "user": "삼성전자 2024 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3582.979400001932,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3693,
+        "output_tokens": 124,
+        "total_tokens": 3817
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 10.877077402197314
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      },
+      {
+       "user": "현대차는?",
+       "check": {
+        "rows_match": false,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 1,
+        "ask_match": true,
+        "calls_match": false,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": false
+       },
+       "ms": 768.7846000007994,
+       "calls": 2,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1372,
+        "output_tokens": 48,
+        "total_tokens": 1420
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "year"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      },
+      {
+       "user": "기아는?",
+       "check": {
+        "rows_match": false,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 1,
+        "ask_match": true,
+        "calls_match": false,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": false
+       },
+       "ms": 816.75499999983,
+       "calls": 2,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1517,
+        "output_tokens": 46,
+        "total_tokens": 1563
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "year"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": false,
+   "consistent": false
+  },
+  {
+   "id": "z10",
+   "category": "multi_turn",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "하닉 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 1170.486200000596,
+       "calls": 2,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1096,
+        "output_tokens": 46,
+        "total_tokens": 1142
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "year"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      },
+      {
+       "user": "2025",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3384.2227999994066,
+       "calls": 2,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3948,
+        "output_tokens": 93,
+        "total_tokens": 4041
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "SK하이닉스",
+          "year": 2025,
+          "basis": "연결",
+          "operating_margin_pct": 48.59283037736495
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('SK하이닉스', 2025, '연결', 'operating_margin')"
+        ]
+       }
+      },
+      {
+       "user": "2024도 보여줘",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2502.9116999976395,
+       "calls": 2,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 4546,
+        "output_tokens": 93,
+        "total_tokens": 4639
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "SK하이닉스",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 35.452892573470045
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('SK하이닉스', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "하닉 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 1041.321099997731,
+       "calls": 2,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1096,
+        "output_tokens": 46,
+        "total_tokens": 1142
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "year"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      },
+      {
+       "user": "2025",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2532.1871000014653,
+       "calls": 2,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3952,
+        "output_tokens": 92,
+        "total_tokens": 4044
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "SK하이닉스",
+          "year": 2025,
+          "basis": "연결",
+          "operating_margin_pct": 48.59283037736495
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('SK하이닉스', 2025, '연결', 'operating_margin')"
+        ]
+       }
+      },
+      {
+       "user": "2024도 보여줘",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2709.26640000107,
+       "calls": 2,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 4547,
+        "output_tokens": 92,
+        "total_tokens": 4639
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "SK하이닉스",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 35.452892573470045
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('SK하이닉스', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "하닉 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 804.2847999968217,
+       "calls": 2,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1096,
+        "output_tokens": 46,
+        "total_tokens": 1142
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "year"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      },
+      {
+       "user": "2025",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3375.3308999985165,
+       "calls": 2,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3948,
+        "output_tokens": 103,
+        "total_tokens": 4051
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "SK하이닉스",
+          "year": 2025,
+          "basis": "연결",
+          "operating_margin_pct": 48.59283037736495
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('SK하이닉스', 2025, '연결', 'operating_margin')"
+        ]
+       }
+      },
+      {
+       "user": "2024도 보여줘",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2283.3620000019437,
+       "calls": 2,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 4528,
+        "output_tokens": 87,
+        "total_tokens": 4615
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "SK하이닉스",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 35.452892573470045
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('SK하이닉스', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z11",
+   "category": "single",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 매출액이랑 영업이익 2023년",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2702.94190000277,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3825,
+        "output_tokens": 122,
+        "total_tokens": 3947
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2023,
+          "basis": "연결"
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2023, '연결', None)"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 매출액이랑 영업이익 2023년",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3231.2205000016547,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3829,
+        "output_tokens": 111,
+        "total_tokens": 3940
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2023,
+          "basis": "연결"
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2023, '연결', None)"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 매출액이랑 영업이익 2023년",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2893.4577999971225,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3825,
+        "output_tokens": 124,
+        "total_tokens": 3949
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2023,
+          "basis": "연결"
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2023, '연결', None)"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z12",
+   "category": "company",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "엔비디아 2024 영업이익",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "mention_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2552.246399998694,
+       "calls": 2,
+       "llm_calls": 2,
+       "usage": {
+        "input_tokens": 2314,
+        "output_tokens": 46,
+        "total_tokens": 2360
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": null,
+        "decline": null,
+        "notices": [
+         "'엔비디아'은(는) 해외 기업으로 보여 OpenDART 상장사 공시로 조회할 수 없습니다. 한국 상장사라면 정식 회사명으로 다시 입력해 주세요."
+        ],
+        "calls": []
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "엔비디아 2024 영업이익",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "mention_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2265.808299998753,
+       "calls": 2,
+       "llm_calls": 2,
+       "usage": {
+        "input_tokens": 2314,
+        "output_tokens": 46,
+        "total_tokens": 2360
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": null,
+        "decline": null,
+        "notices": [
+         "'엔비디아'은(는) 해외 기업으로 보여 OpenDART 상장사 공시로 조회할 수 없습니다. 한국 상장사라면 정식 회사명으로 다시 입력해 주세요."
+        ],
+        "calls": []
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "엔비디아 2024 영업이익",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "mention_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2591.9275999985985,
+       "calls": 2,
+       "llm_calls": 2,
+       "usage": {
+        "input_tokens": 2314,
+        "output_tokens": 46,
+        "total_tokens": 2360
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": null,
+        "decline": null,
+        "notices": [
+         "'엔비디아'은(는) 해외 기업으로 보여 OpenDART 상장사 공시로 조회할 수 없습니다. 한국 상장사라면 정식 회사명으로 다시 입력해 주세요."
+        ],
+        "calls": []
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z13",
+   "category": "company",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "카카오뱅크 2024 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2339.017000002059,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3696,
+        "output_tokens": 125,
+        "total_tokens": 3821
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": null,
+        "decline": null,
+        "notices": [
+         "카카오뱅크 2024: 카카오뱅크 2024년 연결 사업보고서 데이터가 없습니다. 다른 값으로 대체하지 않습니다."
+        ],
+        "calls": [
+         "('카카오뱅크', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "카카오뱅크 2024 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2819.7532999984105,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3696,
+        "output_tokens": 125,
+        "total_tokens": 3821
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": null,
+        "decline": null,
+        "notices": [
+         "카카오뱅크 2024: 카카오뱅크 2024년 연결 사업보고서 데이터가 없습니다. 다른 값으로 대체하지 않습니다."
+        ],
+        "calls": [
+         "('카카오뱅크', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "카카오뱅크 2024 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2656.535599999188,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3696,
+        "output_tokens": 125,
+        "total_tokens": 3821
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": null,
+        "decline": null,
+        "notices": [
+         "카카오뱅크 2024: 카카오뱅크 2024년 연결 사업보고서 데이터가 없습니다. 다른 값으로 대체하지 않습니다."
+        ],
+        "calls": [
+         "('카카오뱅크', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z14",
+   "category": "single",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 2024년 매출이 전년보다 올랐어?",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2580.505000001722,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3754,
+        "output_tokens": 136,
+        "total_tokens": 3890
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "revenue_growth_pct": 16.195311176612968
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2024, '연결', 'revenue_growth')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 2024년 매출이 전년보다 올랐어?",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 1,
+        "ok": true
+       },
+       "ms": 3865.6722999985504,
+       "calls": 4,
+       "llm_calls": 4,
+       "usage": {
+        "input_tokens": 5398,
+        "output_tokens": 163,
+        "total_tokens": 5561
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "revenue_growth_pct": 16.195311176612968
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2024, '연결', 'revenue_growth')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 2024년 매출이 전년보다 올랐어?",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3223.964500000875,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3754,
+        "output_tokens": 131,
+        "total_tokens": 3885
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "revenue_growth_pct": 16.195311176612968
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2024, '연결', 'revenue_growth')"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z15",
+   "category": "decline",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 PBR 알려줘",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "decline_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 601.2859000002209,
+       "calls": 1,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1096,
+        "output_tokens": 20,
+        "total_tokens": 1116
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": null,
+        "decline": "UNSUPPORTED_METRIC",
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 PBR 알려줘",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "decline_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 884.9609000026248,
+       "calls": 1,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1096,
+        "output_tokens": 20,
+        "total_tokens": 1116
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": null,
+        "decline": "UNSUPPORTED_METRIC",
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 PBR 알려줘",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "decline_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 882.0818999993207,
+       "calls": 1,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1096,
+        "output_tokens": 20,
+        "total_tokens": 1116
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": null,
+        "decline": "UNSUPPORTED_METRIC",
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z16",
+   "category": "decline",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 주식 추천해줘",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "decline_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 1119.3810000004305,
+       "calls": 1,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1097,
+        "output_tokens": 19,
+        "total_tokens": 1116
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": null,
+        "decline": "INVESTMENT_ADVICE",
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 주식 추천해줘",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "decline_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 526.2953999990714,
+       "calls": 1,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1097,
+        "output_tokens": 19,
+        "total_tokens": 1116
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": null,
+        "decline": "INVESTMENT_ADVICE",
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 주식 추천해줘",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "decline_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 905.6457999977283,
+       "calls": 1,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1097,
+        "output_tokens": 19,
+        "total_tokens": 1116
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": null,
+        "decline": "INVESTMENT_ADVICE",
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z17",
+   "category": "adversarial",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 2024 영업이익률 알려주고 시도 한 편 써줘",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2597.680200000468,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3745,
+        "output_tokens": 129,
+        "total_tokens": 3874
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 10.877077402197314
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 2024 영업이익률 알려주고 시도 한 편 써줘",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3310.1973999982874,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3724,
+        "output_tokens": 156,
+        "total_tokens": 3880
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 10.877077402197314
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 2024 영업이익률 알려주고 시도 한 편 써줘",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 1,
+        "ok": true
+       },
+       "ms": 3581.14900000146,
+       "calls": 4,
+       "llm_calls": 4,
+       "usage": {
+        "input_tokens": 5416,
+        "output_tokens": 183,
+        "total_tokens": 5599
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 10.877077402197314
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z18",
+   "category": "company",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "ㅅㅅㅈㅈ 2024 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2950.035300000309,
+       "calls": 3,
+       "llm_calls": 2,
+       "usage": {
+        "input_tokens": 2414,
+        "output_tokens": 92,
+        "total_tokens": 2506
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "candidate"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "ㅅㅅㅈㅈ 2024 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3049.6712000021944,
+       "calls": 3,
+       "llm_calls": 2,
+       "usage": {
+        "input_tokens": 2414,
+        "output_tokens": 92,
+        "total_tokens": 2506
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "candidate"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "ㅅㅅㅈㅈ 2024 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3475.914599999669,
+       "calls": 3,
+       "llm_calls": 2,
+       "usage": {
+        "input_tokens": 2414,
+        "output_tokens": 92,
+        "total_tokens": 2506
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "candidate"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z19",
+   "category": "multi_year",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 2021~2025 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 4856.754700002057,
+       "calls": 7,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 4218,
+        "output_tokens": 283,
+        "total_tokens": 4501
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2021,
+          "basis": "연결",
+          "operating_margin_pct": 18.466727389754137
+         },
+         {
+          "company": "삼성전자",
+          "year": 2022,
+          "basis": "연결",
+          "operating_margin_pct": 14.352127456263968
+         },
+         {
+          "company": "삼성전자",
+          "year": 2023,
+          "basis": "연결",
+          "operating_margin_pct": 2.536143615753196
+         },
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 10.877077402197314
+         },
+         {
+          "company": "삼성전자",
+          "year": 2025,
+          "basis": "연결",
+          "operating_margin_pct": 13.069626776247608
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2021, '연결', 'operating_margin')",
+         "('삼성전자', 2022, '연결', 'operating_margin')",
+         "('삼성전자', 2023, '연결', 'operating_margin')",
+         "('삼성전자', 2024, '연결', 'operating_margin')",
+         "('삼성전자', 2025, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 2021~2025 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 4655.018200002814,
+       "calls": 7,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 4218,
+        "output_tokens": 282,
+        "total_tokens": 4500
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2021,
+          "basis": "연결",
+          "operating_margin_pct": 18.466727389754137
+         },
+         {
+          "company": "삼성전자",
+          "year": 2022,
+          "basis": "연결",
+          "operating_margin_pct": 14.352127456263968
+         },
+         {
+          "company": "삼성전자",
+          "year": 2023,
+          "basis": "연결",
+          "operating_margin_pct": 2.536143615753196
+         },
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 10.877077402197314
+         },
+         {
+          "company": "삼성전자",
+          "year": 2025,
+          "basis": "연결",
+          "operating_margin_pct": 13.069626776247608
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2021, '연결', 'operating_margin')",
+         "('삼성전자', 2022, '연결', 'operating_margin')",
+         "('삼성전자', 2023, '연결', 'operating_margin')",
+         "('삼성전자', 2024, '연결', 'operating_margin')",
+         "('삼성전자', 2025, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 2021~2025 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 5185.929699997359,
+       "calls": 7,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 4218,
+        "output_tokens": 279,
+        "total_tokens": 4497
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2021,
+          "basis": "연결",
+          "operating_margin_pct": 18.466727389754137
+         },
+         {
+          "company": "삼성전자",
+          "year": 2022,
+          "basis": "연결",
+          "operating_margin_pct": 14.352127456263968
+         },
+         {
+          "company": "삼성전자",
+          "year": 2023,
+          "basis": "연결",
+          "operating_margin_pct": 2.536143615753196
+         },
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 10.877077402197314
+         },
+         {
+          "company": "삼성전자",
+          "year": 2025,
+          "basis": "연결",
+          "operating_margin_pct": 13.069626776247608
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2021, '연결', 'operating_margin')",
+         "('삼성전자', 2022, '연결', 'operating_margin')",
+         "('삼성전자', 2023, '연결', 'operating_margin')",
+         "('삼성전자', 2024, '연결', 'operating_margin')",
+         "('삼성전자', 2025, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z20",
+   "category": "single",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 2024년 영업이익률 몇 퍼센트?",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 4155.900300000212,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3719,
+        "output_tokens": 136,
+        "total_tokens": 3855
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 10.877077402197314
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 2024년 영업이익률 몇 퍼센트?",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3631.4779999993334,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3713,
+        "output_tokens": 117,
+        "total_tokens": 3830
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 10.877077402197314
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 2024년 영업이익률 몇 퍼센트?",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2958.4092000004603,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3713,
+        "output_tokens": 132,
+        "total_tokens": 3845
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 10.877077402197314
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2024, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z21",
+   "category": "multi_year",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "현대자동차 2022 2023 2024 2025 영업이익",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 4728.829899999255,
+       "calls": 6,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 4651,
+        "output_tokens": 226,
+        "total_tokens": 4877
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "현대자동차",
+          "year": 2022,
+          "basis": "연결"
+         },
+         {
+          "company": "현대자동차",
+          "year": 2023,
+          "basis": "연결"
+         },
+         {
+          "company": "현대자동차",
+          "year": 2024,
+          "basis": "연결"
+         },
+         {
+          "company": "현대자동차",
+          "year": 2025,
+          "basis": "연결"
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('현대자동차', 2022, '연결', None)",
+         "('현대자동차', 2023, '연결', None)",
+         "('현대자동차', 2024, '연결', None)",
+         "('현대자동차', 2025, '연결', None)"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "현대자동차 2022 2023 2024 2025 영업이익",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 4724.816199999623,
+       "calls": 6,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 4651,
+        "output_tokens": 226,
+        "total_tokens": 4877
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "현대자동차",
+          "year": 2022,
+          "basis": "연결"
+         },
+         {
+          "company": "현대자동차",
+          "year": 2023,
+          "basis": "연결"
+         },
+         {
+          "company": "현대자동차",
+          "year": 2024,
+          "basis": "연결"
+         },
+         {
+          "company": "현대자동차",
+          "year": 2025,
+          "basis": "연결"
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('현대자동차', 2022, '연결', None)",
+         "('현대자동차', 2023, '연결', None)",
+         "('현대자동차', 2024, '연결', None)",
+         "('현대자동차', 2025, '연결', None)"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "현대자동차 2022 2023 2024 2025 영업이익",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3639.1661999987264,
+       "calls": 6,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 4651,
+        "output_tokens": 228,
+        "total_tokens": 4879
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "현대자동차",
+          "year": 2022,
+          "basis": "연결"
+         },
+         {
+          "company": "현대자동차",
+          "year": 2023,
+          "basis": "연결"
+         },
+         {
+          "company": "현대자동차",
+          "year": 2024,
+          "basis": "연결"
+         },
+         {
+          "company": "현대자동차",
+          "year": 2025,
+          "basis": "연결"
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('현대자동차', 2022, '연결', None)",
+         "('현대자동차', 2023, '연결', None)",
+         "('현대자동차', 2024, '연결', None)",
+         "('현대자동차', 2025, '연결', None)"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z22",
+   "category": "single",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "SK하이닉스 2023 영업손실이야?",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3255.0916000000143,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3836,
+        "output_tokens": 128,
+        "total_tokens": 3964
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "SK하이닉스",
+          "year": 2023,
+          "basis": "연결"
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('SK하이닉스', 2023, '연결', None)"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "SK하이닉스 2023 영업손실이야?",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2727.782500001922,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3864,
+        "output_tokens": 122,
+        "total_tokens": 3986
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "SK하이닉스",
+          "year": 2023,
+          "basis": "연결"
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('SK하이닉스', 2023, '연결', None)"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "SK하이닉스 2023 영업손실이야?",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3207.6701000005414,
+       "calls": 3,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3840,
+        "output_tokens": 112,
+        "total_tokens": 3952
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "SK하이닉스",
+          "year": 2023,
+          "basis": "연결"
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('SK하이닉스', 2023, '연결', None)"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z23",
+   "category": "multi_turn",
+   "runs": [
+    {
+     "ok": false,
+     "turns": [
+      {
+       "user": "포스코 2024 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3199.5243999990635,
+       "calls": 3,
+       "llm_calls": 2,
+       "usage": {
+        "input_tokens": 2507,
+        "output_tokens": 72,
+        "total_tokens": 2579
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "candidate"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      },
+      {
+       "user": "1번",
+       "check": {
+        "rows_match": false,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 1,
+        "ask_match": true,
+        "calls_match": false,
+        "extra_calls": 0,
+        "guard_hits": 1,
+        "ok": false
+       },
+       "ms": 1744.0644000016619,
+       "calls": 2,
+       "llm_calls": 2,
+       "usage": {
+        "input_tokens": 3006,
+        "output_tokens": 46,
+        "total_tokens": 3052
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "company"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    },
+    {
+     "ok": false,
+     "turns": [
+      {
+       "user": "포스코 2024 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2549.4392000000516,
+       "calls": 3,
+       "llm_calls": 2,
+       "usage": {
+        "input_tokens": 2507,
+        "output_tokens": 72,
+        "total_tokens": 2579
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "candidate"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      },
+      {
+       "user": "1번",
+       "check": {
+        "rows_match": false,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 1,
+        "ask_match": true,
+        "calls_match": false,
+        "extra_calls": 0,
+        "guard_hits": 1,
+        "ok": false
+       },
+       "ms": 1778.224699999555,
+       "calls": 2,
+       "llm_calls": 2,
+       "usage": {
+        "input_tokens": 3006,
+        "output_tokens": 46,
+        "total_tokens": 3052
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "company"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    },
+    {
+     "ok": false,
+     "turns": [
+      {
+       "user": "포스코 2024 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3031.341500001872,
+       "calls": 3,
+       "llm_calls": 2,
+       "usage": {
+        "input_tokens": 2523,
+        "output_tokens": 72,
+        "total_tokens": 2595
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "candidate"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      },
+      {
+       "user": "1번",
+       "check": {
+        "rows_match": false,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 1,
+        "ask_match": true,
+        "calls_match": false,
+        "extra_calls": 0,
+        "guard_hits": 1,
+        "ok": false
+       },
+       "ms": 1823.6919000009948,
+       "calls": 2,
+       "llm_calls": 2,
+       "usage": {
+        "input_tokens": 3038,
+        "output_tokens": 46,
+        "total_tokens": 3084
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "company"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": false,
+   "consistent": true
+  },
+  {
+   "id": "z24",
+   "category": "multi_turn",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 1080.0214999981108,
+       "calls": 2,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1096,
+        "output_tokens": 46,
+        "total_tokens": 1142
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "year"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      },
+      {
+       "user": "작년",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2877.3371999996016,
+       "calls": 2,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3937,
+        "output_tokens": 88,
+        "total_tokens": 4025
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2025,
+          "basis": "연결",
+          "operating_margin_pct": 13.069626776247608
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2025, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 1019.723299999896,
+       "calls": 2,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1096,
+        "output_tokens": 46,
+        "total_tokens": 1142
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "year"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      },
+      {
+       "user": "작년",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3074.9715999991167,
+       "calls": 2,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3937,
+        "output_tokens": 88,
+        "total_tokens": 4025
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2025,
+          "basis": "연결",
+          "operating_margin_pct": 13.069626776247608
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2025, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼성전자 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 1112.1208000004117,
+       "calls": 2,
+       "llm_calls": 1,
+       "usage": {
+        "input_tokens": 1096,
+        "output_tokens": 46,
+        "total_tokens": 1142
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [],
+        "ask": [
+         "year"
+        ],
+        "decline": null,
+        "notices": [],
+        "calls": []
+       }
+      },
+      {
+       "user": "작년",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 2794.2054999984975,
+       "calls": 2,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 3937,
+        "output_tokens": 90,
+        "total_tokens": 4027
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2025,
+          "basis": "연결",
+          "operating_margin_pct": 13.069626776247608
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('삼성전자', 2025, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  },
+  {
+   "id": "z25",
+   "category": "multi_company",
+   "runs": [
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼전이랑 닉스 둘 다 최근 2년 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 3549.505599999975,
+       "calls": 7,
+       "llm_calls": 3,
+       "usage": {
+        "input_tokens": 4302,
+        "output_tokens": 258,
+        "total_tokens": 4560
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 10.877077402197314
+         },
+         {
+          "company": "삼성전자",
+          "year": 2025,
+          "basis": "연결",
+          "operating_margin_pct": 13.069626776247608
+         },
+         {
+          "company": "SK하이닉스",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 35.452892573470045
+         },
+         {
+          "company": "SK하이닉스",
+          "year": 2025,
+          "basis": "연결",
+          "operating_margin_pct": 48.59283037736495
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('SK하이닉스', 2024, '연결', 'operating_margin')",
+         "('SK하이닉스', 2025, '연결', 'operating_margin')",
+         "('삼성전자', 2024, '연결', 'operating_margin')",
+         "('삼성전자', 2025, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼전이랑 닉스 둘 다 최근 2년 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 0,
+        "ok": true
+       },
+       "ms": 5108.165000001463,
+       "calls": 7,
+       "llm_calls": 4,
+       "usage": {
+        "input_tokens": 5608,
+        "output_tokens": 300,
+        "total_tokens": 5908
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 10.877077402197314
+         },
+         {
+          "company": "삼성전자",
+          "year": 2025,
+          "basis": "연결",
+          "operating_margin_pct": 13.069626776247608
+         },
+         {
+          "company": "SK하이닉스",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 35.452892573470045
+         },
+         {
+          "company": "SK하이닉스",
+          "year": 2025,
+          "basis": "연결",
+          "operating_margin_pct": 48.59283037736495
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('SK하이닉스', 2024, '연결', 'operating_margin')",
+         "('SK하이닉스', 2025, '연결', 'operating_margin')",
+         "('삼성전자', 2024, '연결', 'operating_margin')",
+         "('삼성전자', 2025, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ok": true,
+     "turns": [
+      {
+       "user": "삼전이랑 닉스 둘 다 최근 2년 영업이익률",
+       "check": {
+        "rows_match": true,
+        "values_match": true,
+        "unexpected_rows": 0,
+        "missing_rows": 0,
+        "ask_match": true,
+        "calls_match": true,
+        "extra_calls": 0,
+        "guard_hits": 1,
+        "ok": true
+       },
+       "ms": 5559.906599999522,
+       "calls": 8,
+       "llm_calls": 4,
+       "usage": {
+        "input_tokens": 5856,
+        "output_tokens": 284,
+        "total_tokens": 6140
+       },
+       "llm_error": null,
+       "got": {
+        "rows": [
+         {
+          "company": "삼성전자",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 10.877077402197314
+         },
+         {
+          "company": "삼성전자",
+          "year": 2025,
+          "basis": "연결",
+          "operating_margin_pct": 13.069626776247608
+         },
+         {
+          "company": "SK하이닉스",
+          "year": 2024,
+          "basis": "연결",
+          "operating_margin_pct": 35.452892573470045
+         },
+         {
+          "company": "SK하이닉스",
+          "year": 2025,
+          "basis": "연결",
+          "operating_margin_pct": 48.59283037736495
+         }
+        ],
+        "ask": null,
+        "decline": null,
+        "notices": [],
+        "calls": [
+         "('SK하이닉스', 2024, '연결', 'operating_margin')",
+         "('SK하이닉스', 2025, '연결', 'operating_margin')",
+         "('삼성전자', 2024, '연결', 'operating_margin')",
+         "('삼성전자', 2025, '연결', 'operating_margin')"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "always_ok": true,
+   "consistent": true
+  }
+ ]
+}
