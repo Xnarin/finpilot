@@ -4,6 +4,7 @@
 """
 import uuid
 
+import altair as alt
 import pandas as pd
 import streamlit as st
 
@@ -30,11 +31,20 @@ def render_chart(rows):
                        for x in rows if metric_value(x, key) is not None])
     if len(df) < 2:
         return
-    st.caption(f"{label} ({unit})")
+    y = alt.Y("값:Q", title=f"{label} ({unit})")
+    tip = ["회사", "연도", alt.Tooltip("값:Q", format=",.2f", title=label)]
     if df["연도"].nunique() > 1:
-        st.line_chart(df.pivot_table(index="연도", columns="회사", values="값"))
+        base = alt.Chart(df).encode(x=alt.X("연도:O", title=None, axis=alt.Axis(labelAngle=0)), y=y, color=alt.Color("회사:N", legend=alt.Legend(orient="top", title=None)))
+        text = alt.Text("값:Q", format=",.2f")   # 값 라벨은 양수는 점 위, 음수는 점 아래에 둬서 선과 겹치지 않게 한다
+        marks = (base.mark_line(point=alt.OverlayMarkDef(size=70), strokeWidth=3).encode(tooltip=tip)
+                 + base.transform_filter("datum.값 >= 0").mark_text(dy=-14, fontSize=12).encode(text=text)
+                 + base.transform_filter("datum.값 < 0").mark_text(dy=16, fontSize=12).encode(text=text))
     else:
-        st.bar_chart(df.set_index("회사")["값"])
+        base = alt.Chart(df).encode(x=alt.X("회사:N", title=None, sort="-y", axis=alt.Axis(labelAngle=0)), y=y)
+        marks = base.mark_bar(cornerRadiusTopLeft=4, cornerRadiusTopRight=4, size=48).encode(tooltip=tip) + base.mark_text(dy=-10, fontSize=12).encode(text=alt.Text("값:Q", format=",.2f"))
+    if (df["값"] < 0).any():   # 적자 연도가 있으면 0 기준선을 그어 음수임을 분명히 한다
+        marks += alt.Chart(pd.DataFrame({"값": [0]})).mark_rule(strokeDash=[4, 4], opacity=0.6).encode(y="값:Q")
+    st.altair_chart(marks.properties(height=320), width="stretch")
 
 
 def render_reply(r, key):

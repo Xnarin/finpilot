@@ -431,3 +431,5 @@ def test_compare_ranks_companies_per_year_and_shows_change_over_years():
     level = [{k: v for k, v in r.items() if k != "operating_margin_pct"} for r in rows[1:]]   # 비율이 없으면 영업이익(조 원)으로 비교
     assert compare(level) == ["2024 연결 영업이익: 삼성전자 32.73조 원 > SK하이닉스 23.47조 원 (최고·최저 차이 9.26조 원)"]
     assert compare(rows[:1]) == []
+    three = [{"company": "삼성전자", "year": y, "basis": "연결", "operating_profit": 1, "operating_margin_pct": v} for y, v in ((2022, 14.35), (2023, 2.54), (2025, 13.07))]
+    assert compare(three) == ["삼성전자 연결 영업이익률: 2022 14.35% → 2025 13.07% (-1.28%p), 최고 2022 14.35% · 최저 2023 2.54%"]

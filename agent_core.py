@@ -439,7 +439,11 @@ def compare(rows):
         if len(g) > 1:
             g = sorted(g, key=lambda r: r["year"])
             a, b = metric_value(g[0], key), metric_value(g[-1], key)
-            out.append(f"{co} {basis} {label}: {g[0]['year']} {fmt(a)} → {g[-1]['year']} {fmt(b)} ({b - a:+,.2f}{diff_unit})")
+            line = f"{co} {basis} {label}: {g[0]['year']} {fmt(a)} → {g[-1]['year']} {fmt(b)} ({b - a:+,.2f}{diff_unit})"
+            if len(g) > 2:   # 처음·끝만 보면 중간의 급락·급등을 놓치므로 최고·최저 연도를 덧붙인다
+                hi, lo = max(g, key=lambda r: metric_value(r, key)), min(g, key=lambda r: metric_value(r, key))
+                line += f", 최고 {hi['year']} {fmt(metric_value(hi, key))} · 최저 {lo['year']} {fmt(metric_value(lo, key))}"
+            out.append(line)
     return out
 
 
