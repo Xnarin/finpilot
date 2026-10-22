@@ -7,7 +7,7 @@ import uuid
 import pandas as pd
 import streamlit as st
 
-from agent_core import build_graph, chat, make_llm
+from agent_core import build_graph, chat, make_llm, metric_value, pick_metric
 
 st.set_page_config(page_title="FinPilot 챗봇", layout="wide")
 st.title("FinPilot 챗봇")
@@ -23,6 +23,20 @@ def won(n):
     return f"{n:,}원 ({n / 1e12:,.2f}조 원)"
 
 
+def render_chart(rows):
+    """여러 연도면 연도별 선 그래프, 한 연도면 회사별 막대 그래프. 값은 표와 같은 행에서 코드가 꺼낸다."""
+    key, label, unit = pick_metric(rows)
+    df = pd.DataFrame([{"연도": str(x["year"]), "회사": x["company"] + ("" if x["basis"] == "연결" else f"({x['basis']})"), "값": metric_value(x, key)}
+                       for x in rows if metric_value(x, key) is not None])
+    if len(df) < 2:
+        return
+    st.caption(f"{label} ({unit})")
+    if df["연도"].nunique() > 1:
+        st.line_chart(df.pivot_table(index="연도", columns="회사", values="값"))
+    else:
+        st.bar_chart(df.set_index("회사")["값"])
+
+
 def render_reply(r, key):
     for t in r["interpretations"]:
         st.caption(t)
@@ -36,6 +50,10 @@ def render_reply(r, key):
             "접수번호": x["rcept_no"], "접수일": x.get("rcept_date") or "", "정정": "정정본" if x.get("is_amended") else ("" if x.get("is_amended") is False else "확인 못함")}
             for x in r["rows"]])
         st.dataframe(df, hide_index=True, width="stretch")
+        for c in r.get("comparisons", []):   # 이전 세션에 저장된 답변에는 없을 수 있다
+            st.write(c)
+        if len(r["rows"]) > 1:
+            render_chart(r["rows"])
     for n in r["notices"]:
         st.warning(n)
     if r["decline"]:

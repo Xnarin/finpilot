@@ -418,3 +418,16 @@ def test_bad_evidence_hint_points_to_explicit_when_the_quote_has_a_year_number()
     assert r["tool_log"][0]["code"] == "GUARD_BAD_EVIDENCE" and r["tool_log"][1]["status"] == "ok"
     msgs = [m.content for m in llm.seen[1] if type(m).__name__ == "ToolMessage"]
     assert any("kind=explicit" in c and "2024" in c for c in msgs)
+
+
+# ---------------- 비교 문장(코드 생성)
+def test_compare_ranks_companies_per_year_and_shows_change_over_years():
+    from agent_core import compare
+    rows = [{"company": "삼성전자", "year": 2023, "basis": "연결", "operating_profit": 6.57e12, "operating_margin_pct": 2.54},
+            {"company": "삼성전자", "year": 2024, "basis": "연결", "operating_profit": 32.73e12, "operating_margin_pct": 10.88},
+            {"company": "SK하이닉스", "year": 2024, "basis": "연결", "operating_profit": 23.47e12, "operating_margin_pct": 35.45}]
+    assert compare(rows) == ["2024 연결 영업이익률: SK하이닉스 35.45% > 삼성전자 10.88% (최고·최저 차이 24.57%p)",
+                             "삼성전자 연결 영업이익률: 2023 2.54% → 2024 10.88% (+8.34%p)"]
+    level = [{k: v for k, v in r.items() if k != "operating_margin_pct"} for r in rows[1:]]   # 비율이 없으면 영업이익(조 원)으로 비교
+    assert compare(level) == ["2024 연결 영업이익: 삼성전자 32.73조 원 > SK하이닉스 23.47조 원 (최고·최저 차이 9.26조 원)"]
+    assert compare(rows[:1]) == []

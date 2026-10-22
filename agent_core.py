@@ -405,6 +405,44 @@ def _row_key(d):
     return (d["corp_code"], d["year"], d["basis"])
 
 
+METRICS = (("operating_margin_pct", "영업이익률", "%"), ("revenue_growth_pct", "매출 성장률", "%"), ("operating_profit", "영업이익", "조 원"))
+
+
+def pick_metric(rows):
+    """비교·그래프에 쓸 지표: 계산한 비율이 있으면 그것, 없으면 영업이익."""
+    return next(m for m in METRICS if any(m[0] in r for r in rows))
+
+
+def metric_value(row, key):
+    v = row.get(key)   # 화면에 보이는 소수 둘째 자리로 맞춰, 차이를 사용자가 직접 빼 본 값과 같게 한다
+    return None if v is None else round(v / 1e12 if key == "operating_profit" else v, 2)
+
+
+def compare(rows):
+    """같은 연도의 여러 회사는 순위·차이, 같은 회사의 여러 연도는 처음→끝 변화를 코드가 문장으로 만든다(LLM은 숫자를 쓰지 않음)."""
+    if len(rows) < 2:
+        return []
+    key, label, unit = pick_metric(rows)
+    diff_unit = "%p" if unit == "%" else unit
+    fmt = lambda v: f"{v:,.2f}{unit}"
+    out, by_year, by_co = [], {}, {}
+    for r in rows:
+        if metric_value(r, key) is not None:
+            by_year.setdefault((r["year"], r["basis"]), []).append(r)
+            by_co.setdefault((r["company"], r["basis"]), []).append(r)
+    for (year, basis), g in sorted(by_year.items()):
+        if len(g) > 1:
+            g = sorted(g, key=lambda r: -metric_value(r, key))
+            hi, lo = metric_value(g[0], key), metric_value(g[-1], key)
+            out.append(f"{year} {basis} {label}: " + " > ".join(f"{r['company']} {fmt(metric_value(r, key))}" for r in g) + f" (최고·최저 차이 {hi - lo:,.2f}{diff_unit})")
+    for (co, basis), g in by_co.items():
+        if len(g) > 1:
+            g = sorted(g, key=lambda r: r["year"])
+            a, b = metric_value(g[0], key), metric_value(g[-1], key)
+            out.append(f"{co} {basis} {label}: {g[0]['year']} {fmt(a)} → {g[-1]['year']} {fmt(b)} ({b - a:+,.2f}{diff_unit})")
+    return out
+
+
 def build_reply(state):
     turn = state["turn"]
     entries = (state.get("tool_log") or [])[turn["log_start"]:]
@@ -473,7 +511,7 @@ def build_reply(state):
                     notices.append(msg)
     if turn.get("limit_hit") and not any("한도" in n or "넘었" in n for n in notices):
         notices.append("요청이 한도를 넘어 일부만 처리했어요. 회사나 연도를 줄여 다시 물어봐 주세요.")
-    return {"rows": list(rows.values()), "notices": notices, "ask": ask, "decline": decline, "sentence": sentence, "sentence_dropped_for_digits": dropped,
+    return {"rows": list(rows.values()), "comparisons": compare(list(rows.values())), "notices": notices, "ask": ask, "decline": decline, "sentence": sentence, "sentence_dropped_for_digits": dropped,
             "interpretations": list(dict.fromkeys(interp)), "carried": list(dict.fromkeys(c for c in carried if c)), "limit_hit": turn.get("limit_hit", False),
             "llm_error": turn.get("llm_error"), "calls": turn["calls"], "llm_calls": turn.get("llm_calls", 0), "usage": turn.get("usage", {}), "tool_log": [{k: v for k, v in e.items() if k != "result"} for e in entries]}
 
@@ -489,7 +527,7 @@ def chat(graph, thread_id, text):
     try:
         out = graph.invoke({"messages": [HumanMessage(text)]}, config={"configurable": {"thread_id": thread_id}, "recursion_limit": 60})
     except GraphRecursionError:   # 어떤 이유로든 도구 루프가 끝나지 않으면 예외를 그대로 내지 않고 안내한다
-        return {"rows": [], "notices": [], "ask": {"missing": [], "candidates": [], "text": "질문을 처리하지 못했어요. 회사, 연도, 알고 싶은 지표를 다시 알려 주세요."}, "decline": None,
+        return {"rows": [], "comparisons": [], "notices": [], "ask": {"missing": [], "candidates": [], "text": "질문을 처리하지 못했어요. 회사, 연도, 알고 싶은 지표를 다시 알려 주세요."}, "decline": None,
                 "sentence": None, "sentence_dropped_for_digits": False, "interpretations": [], "carried": [], "limit_hit": False, "llm_error": "GraphRecursionError",
                 "calls": 0, "llm_calls": 0, "usage": {}, "tool_log": []}
     return out["reply"]
